@@ -1,0 +1,28 @@
+$backgroundColor: radial-gradient(#949494, #f7f7f7);
+$backgroundHover: #ad6868;
+$textColor: #000000;
+$titleColor: #990100;
+
+
+$backgroundCarousel: #d3d3d39f;
+$BackTextCarousel: #9b3131d0;
+
+$iconFacebook: #3B5998;
+$iconTwitter: #55ACEE;
+$iconInstagram: #125688;
+$colorTextIcon: #ffffff;
+
+$borderNav: 1px solid #808080;
+
+
+@mixin flex ($display, $direction) {
+    display: $display;
+    flex-direction: $direction;
+}
+
+@mixin flex-center ($display, $direction, $align, $justify) {
+    display: $display;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}

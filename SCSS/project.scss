@@ -1,0 +1,584 @@
+@import "variables.scss";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-image: $backgroundColor;
+    font-family: 'Zilla Slab', serif;
+
+}
+
+header {
+    @include flex (flex, row);
+    padding: 20px 0 20px 10px;
+    justify-content: flex-start;
+    align-items: center;
+
+    .logo {
+        border-radius: 20px;
+        width: 60px;
+        height: 40px;
+    }
+
+    .titulo {
+        font-size: 25px;
+        font-weight: bold;
+        color: $titleColor;
+        padding-left: 10px;
+        margin-bottom: 0;
+    }
+}
+
+.navbar {
+    justify-content: flex-end;
+    border-top: $borderNav;
+    border-bottom: $borderNav;
+    background-color: $backgroundColor;
+
+    .navbar-nav {
+        .nav-link {
+            padding: 2px 15px;
+            color: $textColor;
+            font-size: 12px;
+        }
+    }
+
+    li {
+        a:hover {
+            background-color: $backgroundHover;
+            color: $textColor;
+        }
+    }
+}
+
+// MAIN // 
+
+.gridContainerHome {
+    @include flex (flex, column);
+
+    .containerCarousel {
+        padding: 20px 0;
+
+        h4 {
+            background-color: $backgroundCarousel;
+            color: $textColor;
+            font-weight: bold;
+        }
+
+        p {
+            background-color: $BackTextCarousel;
+        }
+
+        img {
+            padding: 10px;
+        }
+    }
+
+    .asideHome {
+        @include flex (flex, row);
+        padding-bottom: 5px;
+        justify-content: center;
+        align-items: center;
+
+        .fa {
+            padding: 5px;
+            width: auto;
+            font-size: 10px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .fa:hover {
+            transform: scale(1.1);
+        }
+
+        .fa-facebook {
+            background: $iconFacebook;
+            color: $colorTextIcon;
+        }
+
+        .fa-twitter {
+            @extend .fa-facebook;
+            background: $iconTwitter;
+        }
+
+        .fa-instagram {
+            @extend .fa-facebook;
+            background: $iconInstagram;
+        }
+    }
+}
+
+
+// PELICULAS Y LOCACIONES //
+
+.gridContainerPages {
+    @include flex (flex, column);
+
+    .tituloPages h2 {
+        font-weight: bold;
+        text-align: center;
+        font-size: 20px;
+        color: $textColor;
+        padding-top: 5px;
+    }
+
+    .container-img {
+        @include flex-center (flex, column, center, center);
+
+        a {
+            color: $textColor;
+            text-decoration: none;
+
+            div {
+                padding: 10px;
+
+                p {
+                    text-align: center;
+                    margin: 0;
+                    color: $textColor;
+                    text-decoration: none;
+                }
+
+                img {
+                    width: 250px;
+                    height: 160px;
+                }
+            }
+        }
+
+    }
+
+
+    .asidePages {
+        @include flex (flex, row);
+        padding: 5px 0;
+        align-self: center;
+
+        .fa {
+            padding: 5px;
+            width: auto;
+            font-size: 10px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .fa:hover {
+            transform: scale(1.1);
+        }
+
+        .fa-facebook {
+            background: $iconFacebook;
+            color: $colorTextIcon;
+        }
+
+        .fa-twitter {
+            @extend .fa-facebook;
+            background: $iconTwitter;
+        }
+
+        .fa-instagram {
+            @extend .fa-facebook;
+            background: $iconInstagram;
+        }
+    }
+}
+
+
+//DIRECTORES //
+
+.containerDirectores {
+    @include flex-center (flex, column, center, center);
+
+    a {
+        color: $textColor;
+        text-decoration: none;
+
+        div {
+            padding: 10px;
+
+            p {
+                text-align: center;
+                margin: 0;
+                color: $textColor;
+                text-decoration: none;
+            }
+
+            img {
+                width: 180px;
+                height: 240px;
+            }
+        }
+    }
+}
+
+//FORM //
+
+.formulario {
+    @include flex (flex, column);
+    align-items: center;
+    padding: 30px;
+
+    .formContacto fieldset {
+        margin: 10px;
+        width: auto;
+
+        .form-label {
+            margin-top: .5rem;
+        }
+
+        .form-select {
+            width: fit-content;
+        }
+
+        textarea {
+            resize: both;
+        }
+    }
+}
+
+// FOOTER //
+
+.piePaginaHome {
+    font-size: 12px;
+    text-align: center;
+    border-top: $borderNav;
+    padding: 10px 0;
+    line-height: 0;
+
+    a {
+        color: $textColor;
+        display: block;
+    }
+
+    p {
+        color: $textColor;
+    }
+}
+
+.volverInicio {
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0;
+    border-top: $borderNav;
+
+    a {
+        color: $textColor
+    }
+
+    p {
+        color: $textColor;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+
+    // SECCION HOME //
+    header {
+        .logo {
+            width: 80px;
+            height: 50px;
+        }
+
+        .titulo {
+            font-size: 30px;
+        }
+    }
+
+    .navbar {
+        .navbar-nav {
+            .nav-link {
+                border-right: 1px solid black;
+                font-size: 16px;
+            }
+        }
+
+        #nav-contacto a {
+            border-right: none;
+        }
+    }
+
+    .piePaginaHome {
+        grid-area: footer;
+        line-height: 0.5;
+        font-size: 16px;
+    }
+
+    // SECCION PELICULAS - LOCACIONES //
+
+    .gridContainerPages {
+        .tituloPages h2 {
+            font-size: 25px;
+            padding-top: 10px;
+        }
+
+        .container-img {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .volverInicio {
+            font-size: 16px;
+        }
+    }
+
+    // SECCION DIRECTORES //
+
+    .containerDirectores {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    // SECCION CONTACTO //
+
+    .formContacto fieldset {
+        width: 450px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    // SECCION PELICULAS - LOCACIONES //
+
+    .gridContainerPages {
+        .container-img {
+            a {
+                color: $textColor;
+                text-decoration: none;
+
+                div {
+                    img {
+                        width: 350px;
+                        height: 220px;
+                    }
+                }
+            }
+        }
+    }
+
+    .volverInicio {
+        grid-area: pie;
+        font-size: 16px;
+    }
+
+    // SECCION DIRECTORES //
+
+    .containerDirectores {
+
+        a {
+            color: $textColor;
+            text-decoration: none;
+            div {
+                padding: 20px;
+
+                img {
+                    width: 280px;
+                    height: 360px;
+                }
+            }
+        }
+    }
+
+    // SECCION CONTACTO //
+
+    .formContacto {
+        
+        border-radius: 20px;
+        border: 1px solid black;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    // SECCION HOME //
+
+    .gridContainerHome {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "main"
+            "footer";
+
+        .containerCarousel {
+            grid-area: main;
+            width: 60%;
+            justify-self: center;
+
+            img {
+                border: 2px solid white;
+            }
+        }
+
+        .asideHome {
+            flex-direction: column;
+            position: fixed;
+            right: 10px;
+            padding-top: 20px;
+
+            .fa {
+                padding: 10px;
+                width: 35px;
+                font-size: inherit;
+            }
+        }
+    }
+
+    // SECCION PELICULAS - LOCACIONES //
+
+    .gridContainerPages {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px auto 70px;
+        grid-template-areas:
+            "titulo"
+            "mainPages"
+            "pie";
+
+        .tituloPages {
+            grid-area: titulo;
+            align-self: center;
+        }
+
+        .container-img {
+            grid-area: mainPages;
+            margin-bottom: 30px;
+
+            a {
+
+                color: $textColor;
+                text-decoration: none;
+
+                div {
+                    padding: 20px;
+                }
+
+                // HOVER //
+
+                div:hover {
+                    transform: scale(1.05);
+                }
+
+                .hvr-trim {
+                    display: inline-block;
+                    vertical-align: middle;
+                    -webkit-transform: perspective(1px) translateZ(0);
+                    transform: perspective(1px) translateZ(0);
+                    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                    position: relative;
+                }
+
+                .hvr-trim:before {
+                    content: '';
+                    position: absolute;
+                    border: white solid 2px;
+                    top: 2px;
+                    left: 2px;
+                    right: 2px;
+                    bottom: 2px;
+                    opacity: 0;
+                    -webkit-transition-property: opacity;
+                    transition-property: opacity;
+                }
+
+                .hvr-trim:hover:before,
+                .hvr-trim:focus:before,
+                .hvr-trim:active:before {
+                    opacity: 1;
+                }
+
+                .hvr-trim-location {
+                    @extend .hvr-trim;
+                }
+
+                .hvr-trim-location:before {
+                    border: $titleColor solid 2px;
+                }
+            }
+        }
+
+        .asidePages {
+            flex-direction: column;
+            position: fixed;
+            right: 10px;
+            padding-top: 20px;
+
+            .fa {
+                padding: 10px;
+                width: 35px;
+                font-size: inherit;
+            }
+        }
+
+    }
+
+
+    // SECCION DIRECTORES //
+
+    .containerDirectores {
+        grid-area: mainPages;
+        margin-bottom: 30px;
+
+        a {
+
+            color: $textColor;
+            text-decoration: none;
+
+            // HOVER //
+
+            div:hover {
+                transform: scale(1.05);
+            }
+
+            .hvr-trim-director {
+                display: inline-block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                position: relative;
+            }
+
+            .hvr-trim-director:before {
+                content: '';
+                position: absolute;
+                border: $textColor solid 2px;
+                top: 2px;
+                left: 2px;
+                right: 2px;
+                bottom: 2px;
+                opacity: 0;
+                -webkit-transition-property: opacity;
+                transition-property: opacity;
+            }
+
+            .hvr-trim-director:hover:before,
+            .hvr-trim-director:focus:before,
+            .hvr-trim-director:active:before {
+                opacity: 1;
+            }
+        }
+    }
+
+
+
+    // SECCION CONTACTO //
+
+    .formulario {
+        .formContacto fieldset {
+            width: 700px;
+        }
+    }
+
+    .volverInicio {
+        grid-area: pie;
+        font-size: 16px;
+    }
+
+}

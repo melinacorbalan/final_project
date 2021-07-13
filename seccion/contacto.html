@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Mas</title>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <img class="logo" src="../Multimedia/logo.png" alt="Logo">
+        <h1 class="titulo">Un lugar de película</h1>
+    </header>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="justify-content-md-end pe-1">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="peliculas.html">Películas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="locaciones.html">Locaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="directores.html">Directores</a>
+                    </li>
+                    <li class="nav-item" id="nav-contacto">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- FORMULARIO -->
+
+        <section class="formulario">
+            <div class="formContacto">
+                <form action="" method="">
+                    <fieldset>
+                        <legend class="text-center">Información de contacto</legend>
+
+                        <!--NOMBRE USUARIO-->
+
+                        <label for="nombreUsuario" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="nombreUsuario" placeholder="Ingrese aquí su nombre">
+
+                        <!--APELLIDO USUARIO-->
+
+                        <label for="apellidoUsuario" class="form-label">Apellido:</label>
+                        <input type="text" class="form-control" id="apellidoUsuario"
+                            placeholder="Ingrese aquí su apellido">
+
+                        <!--EMAIL USUARIO-->
+
+                        <label for="emailUsuario" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="emailUsuario" placeholder="nombre@ejemplo.com">
+
+                        <!--SELECCIONAR GÉNERO-->
+
+                        <label for="sexoUsuario" class="form-label">Sexo:</label>
+                        <select id="sexoUsuario" class="form-select" aria-label="Default select">
+                            <option selected="">Selecciona una opción</option>
+                            <option value="Mujer">Mujer</option>
+                            <option value="Hombre">Hombre</option>
+                            <option value="noInformar">No Informar</option>
+                        </select>
+
+                        <!--SELECCIONAR EDAD-->
+
+                        <label for="edadUsuario" class="form-label">Fecha de nacimiento:</label>
+                        <input type="date" class="form-control" id="edadUsuario">
+
+
+                        <!--COMENTARIOS-->
+
+                        <div class="form-label">
+                            <label for="mensajeUsuario">Comentarios:</label>
+                            <textarea class="form-control" placeholder="Deja aquí tu comentario" id="mensajeUsuario"
+                                style="height: 100px"></textarea>
+                        </div>
+
+                        <!--CHECKBOX TERMINOS Y CONDICIONES-->
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="condiciones">
+                            <label class="form-check-label" for="condiciones">Aceptar términos y condiciones:</label>
+                        </div>
+
+                        <input class="form-label" type="reset" value="Limpiar formulario">
+                        <input class="form-label" type="submit" value="Enviar Formulario">
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer class="volverInicio">
+            <a href="../index.html">Página Principal</a>
+            <p>© 2021 Un lugar de pelicula, todos los derechos reservados.</p>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
