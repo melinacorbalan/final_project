@@ -10,7 +10,7 @@
 body {
 
     background-image: $backgroundColor;
-    font-family: 'Zilla Slab', serif;
+    font-family: $font;
 
 }
 
@@ -113,7 +113,43 @@ header {
             background: $iconInstagram;
         }
     }
+
+    .newsletter {
+        align-self: center;
+        margin-bottom: 20px;
+        width: 70%;
+
+        form {
+            @include flex-center (flex, column, center, center);
+            border-radius: 5px;
+            border: 1px solid $colorTextIcon;
+            padding: 10px;
+            background-color: rgba(241, 241, 241, 0.452);
+
+            legend {
+                font-size: $fontSizeNews;
+            }
+
+            label {
+                font-size: $fontSizeNews;
+            }
+
+            input {
+                font-size: $fontSizeNews;
+                text-align: center;
+            }
+
+            .btn {
+                background-color: $titleColor;
+                border: 1px solid transparent;
+                margin-top: 10px;
+                font-size: $fontSizeNews;
+            }
+        }
+    }
+
 }
+
 
 
 // PELICULAS Y LOCACIONES //
@@ -124,7 +160,7 @@ header {
     .tituloPages h2 {
         font-weight: bold;
         text-align: center;
-        font-size: 20px;
+        font-size: $fontSizeText;
         color: $textColor;
         padding-top: 5px;
     }
@@ -246,7 +282,7 @@ header {
 // FOOTER //
 
 .piePaginaHome {
-    font-size: 12px;
+    font-size: $fontSizeFooter;
     text-align: center;
     border-top: $borderNav;
     padding: 10px 0;
@@ -263,7 +299,7 @@ header {
 }
 
 .volverInicio {
-    font-size: 12px;
+    font-size: $fontSizeFooter;
     text-align: center;
     padding: 10px 0;
     border-top: $borderNav;
@@ -304,11 +340,36 @@ header {
         }
     }
 
-    .piePaginaHome {
-        grid-area: footer;
-        line-height: 0.5;
-        font-size: 16px;
+    .gridContainerHome {
+        .newsletter {
+
+            form {
+
+                legend {
+                    font-size: 16px;
+                }
+
+                label {
+                    font-size: 16px;
+                }
+
+                input {
+                    font-size: 16px;
+                }
+
+                .btn {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .piePaginaHome {
+            grid-area: footer;
+            line-height: 0.5;
+            font-size: 16px;
+        }
     }
+
 
     // SECCION PELICULAS - LOCACIONES //
 
@@ -344,6 +405,16 @@ header {
 
 @media only screen and (min-width: 768px) {
 
+    // HOME
+
+    .gridContainerHome {
+
+        .newsletter {
+            width: 50%;
+            margin: 50px;
+        }
+    }
+
     // SECCION PELICULAS - LOCACIONES //
 
     .gridContainerPages {
@@ -360,11 +431,11 @@ header {
                 }
             }
         }
+
     }
 
     .volverInicio {
         grid-area: pie;
-        font-size: 16px;
     }
 
     // SECCION DIRECTORES //
@@ -374,6 +445,7 @@ header {
         a {
             color: $textColor;
             text-decoration: none;
+
             div {
                 padding: 20px;
 
@@ -388,7 +460,7 @@ header {
     // SECCION CONTACTO //
 
     .formContacto {
-        
+
         border-radius: 20px;
         border: 1px solid black;
     }
@@ -404,6 +476,7 @@ header {
         grid-template-rows: auto;
         grid-template-areas:
             "main"
+            "newsletter"
             "footer";
 
         .containerCarousel {
@@ -413,6 +486,32 @@ header {
 
             img {
                 border: 2px solid white;
+            }
+        }
+
+        .newsletter {
+
+            grid-area: newsletter;
+            justify-self: center;
+            width: 30%;
+
+            form {
+
+                legend {
+                    font-size: 16px;
+                }
+
+                label {
+                    font-size: 16px;
+                }
+
+                input {
+                    font-size: 16px;
+                }
+
+                .btn {
+                    font-size: 16px;
+                }
             }
         }
 
@@ -567,7 +666,6 @@ header {
     }
 
 
-
     // SECCION CONTACTO //
 
     .formulario {
@@ -580,5 +678,4 @@ header {
         grid-area: pie;
         font-size: 16px;
     }
-
 }

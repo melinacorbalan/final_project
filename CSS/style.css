@@ -5,7 +5,7 @@
 
 body {
   background-image: radial-gradient(#949494, #f7f7f7);
-  font-family: 'Zilla Slab', serif; }
+  font-family: "Zilla Slab", serif; }
 
 header {
   display: flex;
@@ -71,6 +71,31 @@ header {
       background: #55ACEE; }
     .gridContainerHome .asideHome .fa-instagram {
       background: #125688; }
+  .gridContainerHome .newsletter {
+    align-self: center;
+    margin-bottom: 20px;
+    width: 70%; }
+    .gridContainerHome .newsletter form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      border: 1px solid #ffffff;
+      padding: 10px;
+      background-color: rgba(241, 241, 241, 0.452); }
+      .gridContainerHome .newsletter form legend {
+        font-size: 14px; }
+      .gridContainerHome .newsletter form label {
+        font-size: 14px; }
+      .gridContainerHome .newsletter form input {
+        font-size: 14px;
+        text-align: center; }
+      .gridContainerHome .newsletter form .btn {
+        background-color: #990100;
+        border: 1px solid transparent;
+        margin-top: 10px;
+        font-size: 14px; }
 
 .gridContainerPages {
   display: flex;
@@ -187,7 +212,15 @@ header {
     font-size: 16px; }
   .navbar #nav-contacto a {
     border-right: none; }
-  .piePaginaHome {
+  .gridContainerHome .newsletter form legend {
+    font-size: 16px; }
+  .gridContainerHome .newsletter form label {
+    font-size: 16px; }
+  .gridContainerHome .newsletter form input {
+    font-size: 16px; }
+  .gridContainerHome .newsletter form .btn {
+    font-size: 16px; }
+  .gridContainerHome .piePaginaHome {
     grid-area: footer;
     line-height: 0.5;
     font-size: 16px; }
@@ -206,6 +239,9 @@ header {
     width: 450px; } }
 
 @media only screen and (min-width: 768px) {
+  .gridContainerHome .newsletter {
+    width: 50%;
+    margin: 50px; }
   .gridContainerPages .container-img a {
     color: #000000;
     text-decoration: none; }
@@ -213,8 +249,7 @@ header {
       width: 350px;
       height: 220px; }
   .volverInicio {
-    grid-area: pie;
-    font-size: 16px; }
+    grid-area: pie; }
   .containerDirectores a {
     color: #000000;
     text-decoration: none; }
@@ -232,13 +267,25 @@ header {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-template-areas: "main" "footer"; }
+    grid-template-areas: "main" "newsletter" "footer"; }
     .gridContainerHome .containerCarousel {
       grid-area: main;
       width: 60%;
       justify-self: center; }
       .gridContainerHome .containerCarousel img {
         border: 2px solid white; }
+    .gridContainerHome .newsletter {
+      grid-area: newsletter;
+      justify-self: center;
+      width: 30%; }
+      .gridContainerHome .newsletter form legend {
+        font-size: 16px; }
+      .gridContainerHome .newsletter form label {
+        font-size: 16px; }
+      .gridContainerHome .newsletter form input {
+        font-size: 16px; }
+      .gridContainerHome .newsletter form .btn {
+        font-size: 16px; }
     .gridContainerHome .asideHome {
       flex-direction: column;
       position: fixed;
