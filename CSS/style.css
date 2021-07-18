@@ -291,7 +291,7 @@ header {
       position: fixed;
       right: 10px;
       padding-top: 20px;
-      animation: translate 3s infinite 1s; }
+      animation: translate 3s infinite 0.2s; }
       .gridContainerHome .asideHome .fa {
         padding: 10px;
         width: 35px;
@@ -350,7 +350,7 @@ header {
       position: fixed;
       right: 10px;
       padding-top: 20px;
-      animation: translate 3s infinite 1s; }
+      animation: translate 3s infinite 0.2s; }
       .gridContainerPages .asidePages .fa {
         padding: 10px;
         width: 35px;
@@ -385,8 +385,17 @@ header {
       .containerDirectores a .hvr-trim-director:focus:before,
       .containerDirectores a .hvr-trim-director:active:before {
         opacity: 1; }
-  .formulario .formContacto fieldset {
-    width: 700px; }
+  .formulario {
+    animation: form 2s forwards; }
+  @keyframes form {
+    0% {
+      transform: translate(-400px, 0); }
+    50% {
+      transform: translate(200px, 0); }
+    100% {
+      transform: translate(0, 0); } }
+    .formulario .formContacto fieldset {
+      width: 500px; }
   .volverInicio {
     grid-area: pie;
     font-size: 16px; } }

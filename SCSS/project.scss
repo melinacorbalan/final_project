@@ -520,7 +520,7 @@ header {
             position: fixed;
             right: 10px;
             padding-top: 20px;
-            animation: translate 3s infinite 1s;
+            animation: translate 3s infinite 0.2s;
 
             .fa {
                 padding: 10px;
@@ -620,7 +620,7 @@ header {
             position: fixed;
             right: 10px;
             padding-top: 20px;
-            animation: translate 3s infinite 1s;
+            animation: translate 3s infinite 0.2s;
 
             .fa {
                 padding: 10px;
@@ -683,10 +683,29 @@ header {
     // SECCION CONTACTO //
 
     .formulario {
+
+        animation: form 2s forwards;
+
+        @keyframes form {
+            0% {
+                transform: translate(-400px,0);
+            }
+            
+            50% {
+              transform: translate(200px, 0);
+            }
+
+            100% {
+                transform: translate(0, 0);
+              }
+          }
+
         .formContacto fieldset {
-            width: 700px;
+            width: 500px;
         }
-    }
+        
+        }
+    
 
     .volverInicio {
         grid-area: pie;
