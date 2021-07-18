@@ -70,14 +70,14 @@
 
         <section class="formulario">
             <div class="formContacto">
-                <form action="" method="">
+                <form action="" method="" autocomplete="on">
                     <fieldset>
                         <legend class="text-center">Información de contacto</legend>
 
                         <!--NOMBRE USUARIO-->
 
                         <label for="nombreUsuario" class="form-label">Nombre:</label>
-                        <input type="text" class="form-control" id="nombreUsuario" placeholder="Ingrese aquí su nombre">
+                        <input type="text" class="form-control" id="nombreUsuario" placeholder="Ingrese aquí su nombre" required>
 
                         <!--APELLIDO USUARIO-->
 
@@ -88,7 +88,7 @@
                         <!--EMAIL USUARIO-->
 
                         <label for="emailUsuario" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="emailUsuario" placeholder="nombre@ejemplo.com">
+                        <input type="email" class="form-control" id="emailUsuario" placeholder="nombre@ejemplo.com" required>
 
                         <!--SELECCIONAR GÉNERO-->
 
@@ -117,7 +117,7 @@
                         <!--CHECKBOX TERMINOS Y CONDICIONES-->
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radioDefault" id="condiciones">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="condiciones" required>
                             <label class="form-check-label" for="condiciones">Aceptar términos y condiciones:</label>
                         </div>
 
