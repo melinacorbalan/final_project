@@ -59,7 +59,7 @@ header {
 
 // MAIN // 
 
-.gridContainerHome {
+.mainContainerHome {
     @include flex (flex, column);
 
     .containerCarousel {
@@ -154,16 +154,27 @@ header {
 
 // PELICULAS Y LOCACIONES //
 
-.gridContainerPages {
+.mainContainerPages {
     @include flex (flex, column);
 
-    .tituloPages h2 {
-        font-weight: bold;
-        text-align: center;
-        font-size: $fontSizeText;
-        color: $textColor;
-        padding-top: 5px;
+    .tituloPages {
+
+        h2 {
+            font-weight: bold;
+            text-align: center;
+            font-size: $fontSizeText;
+            color: $textColor;
+            padding-top: 10px;
+        }
+
+        p {
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 0;
+        }
     }
+
+
 
     .container-img {
         @include flex-center (flex, column, center, center);
@@ -313,6 +324,36 @@ header {
     }
 }
 
+// PAGINA 404
+
+.paginaError {
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 100px 10px 50px 10px;
+    border: 10px solid white;
+
+    h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .tristeza {
+        width: 40%;
+    }
+}
+
+.footer404 {
+    text-align: center;
+    padding-bottom: 30px;
+
+    a {
+        color: $textColor;
+    }
+}
+
 @media only screen and (min-width: 576px) {
 
     // SECCION HOME //
@@ -340,7 +381,7 @@ header {
         }
     }
 
-    .gridContainerHome {
+    .mainContainerHome {
         .newsletter {
 
             form {
@@ -373,10 +414,16 @@ header {
 
     // SECCION PELICULAS - LOCACIONES //
 
-    .gridContainerPages {
-        .tituloPages h2 {
-            font-size: 25px;
-            padding-top: 10px;
+    .mainContainerPages {
+        .tituloPages {
+            h2 {
+                font-size: 25px;
+                padding-top: 20px;
+            }
+
+            p {
+                padding: 20px;
+            }
         }
 
         .container-img {
@@ -407,7 +454,7 @@ header {
 
     // HOME
 
-    .gridContainerHome {
+    .mainContainerHome {
 
         .newsletter {
             width: 50%;
@@ -417,7 +464,7 @@ header {
 
     // SECCION PELICULAS - LOCACIONES //
 
-    .gridContainerPages {
+    .mainContainerPages {
         .container-img {
             a {
                 color: $textColor;
@@ -464,13 +511,25 @@ header {
         border-radius: 20px;
         border: 1px solid black;
     }
+
+    .paginaError {
+        margin: 60px 10px 30px 10px;
+
+        h1 {
+            font-size: 2em;
+        }
+    }
+
+    .footer404 {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (min-width: 992px) {
 
     // SECCION HOME //
 
-    .gridContainerHome {
+    .mainContainerHome {
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto;
@@ -530,24 +589,26 @@ header {
         }
 
         @keyframes translate {
-            0%, 100% {
-              transform: translate(0, 0);
+
+            0%,
+            100% {
+                transform: translate(0, 0);
             }
-            
+
             50% {
-              transform: translate(0, 25px);
+                transform: translate(0, 25px);
             }
-          }
-        
         }
-    
+
+    }
+
 
     // SECCION PELICULAS - LOCACIONES //
 
-    .gridContainerPages {
+    .mainContainerPages {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 100px auto 70px;
+        grid-template-rows: 150px auto 70px;
         grid-template-areas:
             "titulo"
             "mainPages"
@@ -556,6 +617,10 @@ header {
         .tituloPages {
             grid-area: titulo;
             align-self: center;
+
+            p {
+                padding: 20px 100px 20px 100px;
+            }
         }
 
         .container-img {
@@ -688,27 +753,38 @@ header {
 
         @keyframes form {
             0% {
-                transform: translate(-400px,0);
+                transform: translate(-400px, 0);
             }
-            
+
             50% {
-              transform: translate(200px, 0);
+                transform: translate(200px, 0);
             }
 
             100% {
                 transform: translate(0, 0);
-              }
-          }
+            }
+        }
 
         .formContacto fieldset {
             width: 500px;
         }
-        
-        }
-    
+
+    }
+
 
     .volverInicio {
         grid-area: pie;
         font-size: 16px;
+    }
+
+    .paginaError {
+
+        h1 {
+            font-size: 50px;
+        }
+
+        .tristeza {
+            width: 25%;
+        }
     }
 }

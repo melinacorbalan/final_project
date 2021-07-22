@@ -37,45 +37,45 @@ header {
     background-color: #ad6868;
     color: #000000; }
 
-.gridContainerHome {
+.mainContainerHome {
   display: flex;
   flex-direction: column; }
-  .gridContainerHome .containerCarousel {
+  .mainContainerHome .containerCarousel {
     padding: 20px 0; }
-    .gridContainerHome .containerCarousel h4 {
+    .mainContainerHome .containerCarousel h4 {
       background-color: #d3d3d39f;
       color: #000000;
       font-weight: bold; }
-    .gridContainerHome .containerCarousel p {
+    .mainContainerHome .containerCarousel p {
       background-color: #9b3131d0; }
-    .gridContainerHome .containerCarousel img {
+    .mainContainerHome .containerCarousel img {
       padding: 10px; }
-  .gridContainerHome .asideHome {
+  .mainContainerHome .asideHome {
     display: flex;
     flex-direction: row;
     padding-bottom: 5px;
     justify-content: center;
     align-items: center; }
-    .gridContainerHome .asideHome .fa {
+    .mainContainerHome .asideHome .fa {
       padding: 5px;
       width: auto;
       font-size: 10px;
       text-align: center;
       text-decoration: none; }
-    .gridContainerHome .asideHome .fa:hover {
+    .mainContainerHome .asideHome .fa:hover {
       transform: scale(1.1); }
-    .gridContainerHome .asideHome .fa-facebook, .gridContainerHome .asideHome .fa-twitter, .gridContainerHome .asideHome .fa-instagram {
+    .mainContainerHome .asideHome .fa-facebook, .mainContainerHome .asideHome .fa-twitter, .mainContainerHome .asideHome .fa-instagram {
       background: #3B5998;
       color: #ffffff; }
-    .gridContainerHome .asideHome .fa-twitter {
+    .mainContainerHome .asideHome .fa-twitter {
       background: #55ACEE; }
-    .gridContainerHome .asideHome .fa-instagram {
+    .mainContainerHome .asideHome .fa-instagram {
       background: #125688; }
-  .gridContainerHome .newsletter {
+  .mainContainerHome .newsletter {
     align-self: center;
     margin-bottom: 20px;
     width: 70%; }
-    .gridContainerHome .newsletter form {
+    .mainContainerHome .newsletter form {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -84,65 +84,69 @@ header {
       border: 1px solid #ffffff;
       padding: 10px;
       background-color: rgba(241, 241, 241, 0.452); }
-      .gridContainerHome .newsletter form legend {
+      .mainContainerHome .newsletter form legend {
         font-size: 14px; }
-      .gridContainerHome .newsletter form label {
+      .mainContainerHome .newsletter form label {
         font-size: 14px; }
-      .gridContainerHome .newsletter form input {
+      .mainContainerHome .newsletter form input {
         font-size: 14px;
         text-align: center; }
-      .gridContainerHome .newsletter form .btn {
+      .mainContainerHome .newsletter form .btn {
         background-color: #990100;
         border: 1px solid transparent;
         margin-top: 10px;
         font-size: 14px; }
 
-.gridContainerPages {
+.mainContainerPages {
   display: flex;
   flex-direction: column; }
-  .gridContainerPages .tituloPages h2 {
+  .mainContainerPages .tituloPages h2 {
     font-weight: bold;
     text-align: center;
     font-size: 20px;
     color: #000000;
-    padding-top: 5px; }
-  .gridContainerPages .container-img {
+    padding-top: 10px; }
+  .mainContainerPages .tituloPages p {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 0; }
+  .mainContainerPages .container-img {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
-    .gridContainerPages .container-img a {
+    .mainContainerPages .container-img a {
       color: #000000;
       text-decoration: none; }
-      .gridContainerPages .container-img a div {
+      .mainContainerPages .container-img a div {
         padding: 10px; }
-        .gridContainerPages .container-img a div p {
+        .mainContainerPages .container-img a div p {
           text-align: center;
           margin: 0;
           color: #000000;
           text-decoration: none; }
-        .gridContainerPages .container-img a div img {
+        .mainContainerPages .container-img a div img {
           width: 250px;
           height: 160px; }
-  .gridContainerPages .asidePages {
+  .mainContainerPages .asidePages {
     display: flex;
     flex-direction: row;
     padding: 5px 0;
     align-self: center; }
-    .gridContainerPages .asidePages .fa {
+    .mainContainerPages .asidePages .fa {
       padding: 5px;
       width: auto;
       font-size: 10px;
       text-align: center;
       text-decoration: none; }
-    .gridContainerPages .asidePages .fa:hover {
+    .mainContainerPages .asidePages .fa:hover {
       transform: scale(1.1); }
-    .gridContainerPages .asidePages .fa-facebook, .gridContainerPages .asidePages .fa-twitter, .gridContainerPages .asidePages .fa-instagram {
+    .mainContainerPages .asidePages .fa-facebook, .mainContainerPages .asidePages .fa-twitter, .mainContainerPages .asidePages .fa-instagram {
       background: #3B5998;
       color: #ffffff; }
-    .gridContainerPages .asidePages .fa-twitter {
+    .mainContainerPages .asidePages .fa-twitter {
       background: #55ACEE; }
-    .gridContainerPages .asidePages .fa-instagram {
+    .mainContainerPages .asidePages .fa-instagram {
       background: #125688; }
 
 .containerDirectores {
@@ -201,6 +205,25 @@ header {
   .volverInicio p {
     color: #000000; }
 
+.paginaError {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 100px 10px 50px 10px;
+  border: 10px solid white; }
+  .paginaError h1 {
+    font-size: 1.5em;
+    text-align: center; }
+  .paginaError .tristeza {
+    width: 40%; }
+
+.footer404 {
+  text-align: center;
+  padding-bottom: 30px; }
+  .footer404 a {
+    color: #000000; }
+
 @media only screen and (min-width: 576px) {
   header .logo {
     width: 80px;
@@ -212,25 +235,27 @@ header {
     font-size: 16px; }
   .navbar #nav-contacto a {
     border-right: none; }
-  .gridContainerHome .newsletter form legend {
+  .mainContainerHome .newsletter form legend {
     font-size: 16px; }
-  .gridContainerHome .newsletter form label {
+  .mainContainerHome .newsletter form label {
     font-size: 16px; }
-  .gridContainerHome .newsletter form input {
+  .mainContainerHome .newsletter form input {
     font-size: 16px; }
-  .gridContainerHome .newsletter form .btn {
+  .mainContainerHome .newsletter form .btn {
     font-size: 16px; }
-  .gridContainerHome .piePaginaHome {
+  .mainContainerHome .piePaginaHome {
     grid-area: footer;
     line-height: 0.5;
     font-size: 16px; }
-  .gridContainerPages .tituloPages h2 {
+  .mainContainerPages .tituloPages h2 {
     font-size: 25px;
-    padding-top: 10px; }
-  .gridContainerPages .container-img {
+    padding-top: 20px; }
+  .mainContainerPages .tituloPages p {
+    padding: 20px; }
+  .mainContainerPages .container-img {
     flex-direction: row;
     flex-wrap: wrap; }
-  .gridContainerPages .volverInicio {
+  .mainContainerPages .volverInicio {
     font-size: 16px; }
   .containerDirectores {
     flex-direction: row;
@@ -239,13 +264,13 @@ header {
     width: 450px; } }
 
 @media only screen and (min-width: 768px) {
-  .gridContainerHome .newsletter {
+  .mainContainerHome .newsletter {
     width: 50%;
     margin: 50px; }
-  .gridContainerPages .container-img a {
+  .mainContainerPages .container-img a {
     color: #000000;
     text-decoration: none; }
-    .gridContainerPages .container-img a div img {
+    .mainContainerPages .container-img a div img {
       width: 350px;
       height: 220px; }
   .volverInicio {
@@ -260,73 +285,82 @@ header {
         height: 360px; }
   .formContacto {
     border-radius: 20px;
-    border: 1px solid black; } }
+    border: 1px solid black; }
+  .paginaError {
+    margin: 60px 10px 30px 10px; }
+    .paginaError h1 {
+      font-size: 2em; }
+  .footer404 {
+    font-size: 20px; } }
 
 @media only screen and (min-width: 992px) {
-  .gridContainerHome {
+  .mainContainerHome {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: "main" "newsletter" "footer"; }
-    .gridContainerHome .containerCarousel {
+    .mainContainerHome .containerCarousel {
       grid-area: main;
       width: 60%;
       justify-self: center; }
-      .gridContainerHome .containerCarousel img {
+      .mainContainerHome .containerCarousel img {
         border: 2px solid white; }
-    .gridContainerHome .newsletter {
+    .mainContainerHome .newsletter {
       grid-area: newsletter;
       justify-self: center;
       width: 30%; }
-      .gridContainerHome .newsletter form legend {
+      .mainContainerHome .newsletter form legend {
         font-size: 16px; }
-      .gridContainerHome .newsletter form label {
+      .mainContainerHome .newsletter form label {
         font-size: 16px; }
-      .gridContainerHome .newsletter form input {
+      .mainContainerHome .newsletter form input {
         font-size: 16px; }
-      .gridContainerHome .newsletter form .btn {
+      .mainContainerHome .newsletter form .btn {
         font-size: 16px; }
-    .gridContainerHome .asideHome {
+    .mainContainerHome .asideHome {
       flex-direction: column;
       position: fixed;
       right: 10px;
       padding-top: 20px;
       animation: translate 3s infinite 0.2s; }
-      .gridContainerHome .asideHome .fa {
+      .mainContainerHome .asideHome .fa {
         padding: 10px;
         width: 35px;
         font-size: inherit; }
   @keyframes translate {
-    0%, 100% {
+    0%,
+    100% {
       transform: translate(0, 0); }
     50% {
       transform: translate(0, 25px); } }
-  .gridContainerPages {
+  .mainContainerPages {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100px auto 70px;
+    grid-template-rows: 150px auto 70px;
     grid-template-areas: "titulo" "mainPages" "pie"; }
-    .gridContainerPages .tituloPages {
+    .mainContainerPages .tituloPages {
       grid-area: titulo;
       align-self: center; }
-    .gridContainerPages .container-img {
+      .mainContainerPages .tituloPages p {
+        padding: 20px 100px 20px 100px; }
+    .mainContainerPages .container-img {
       grid-area: mainPages;
       margin-bottom: 30px; }
-      .gridContainerPages .container-img a {
+      .mainContainerPages .container-img a {
         color: #000000;
         text-decoration: none; }
-        .gridContainerPages .container-img a div {
+        .mainContainerPages .container-img a div {
           padding: 20px; }
-        .gridContainerPages .container-img a div:hover {
+        .mainContainerPages .container-img a div:hover {
           transform: scale(1.05); }
-        .gridContainerPages .container-img a .hvr-trim, .gridContainerPages .container-img a .hvr-trim-location {
+        .mainContainerPages .container-img a .hvr-trim, .mainContainerPages .container-img a .hvr-trim-location {
           display: inline-block;
           vertical-align: middle;
           -webkit-transform: perspective(1px) translateZ(0);
           transform: perspective(1px) translateZ(0);
           box-shadow: 0 0 1px rgba(0, 0, 0, 0);
           position: relative; }
-        .gridContainerPages .container-img a .hvr-trim:before, .gridContainerPages .container-img a .hvr-trim-location:before {
+        .mainContainerPages .container-img a .hvr-trim:before, .mainContainerPages .container-img a .hvr-trim-location:before {
           content: '';
           position: absolute;
           border: white solid 2px;
@@ -337,21 +371,21 @@ header {
           opacity: 0;
           -webkit-transition-property: opacity;
           transition-property: opacity; }
-        .gridContainerPages .container-img a .hvr-trim:hover:before, .gridContainerPages .container-img a .hvr-trim-location:hover:before,
-        .gridContainerPages .container-img a .hvr-trim:focus:before,
-        .gridContainerPages .container-img a .hvr-trim-location:focus:before,
-        .gridContainerPages .container-img a .hvr-trim:active:before,
-        .gridContainerPages .container-img a .hvr-trim-location:active:before {
+        .mainContainerPages .container-img a .hvr-trim:hover:before, .mainContainerPages .container-img a .hvr-trim-location:hover:before,
+        .mainContainerPages .container-img a .hvr-trim:focus:before,
+        .mainContainerPages .container-img a .hvr-trim-location:focus:before,
+        .mainContainerPages .container-img a .hvr-trim:active:before,
+        .mainContainerPages .container-img a .hvr-trim-location:active:before {
           opacity: 1; }
-        .gridContainerPages .container-img a .hvr-trim-location:before {
+        .mainContainerPages .container-img a .hvr-trim-location:before {
           border: #990100 solid 2px; }
-    .gridContainerPages .asidePages {
+    .mainContainerPages .asidePages {
       flex-direction: column;
       position: fixed;
       right: 10px;
       padding-top: 20px;
       animation: translate 3s infinite 0.2s; }
-      .gridContainerPages .asidePages .fa {
+      .mainContainerPages .asidePages .fa {
         padding: 10px;
         width: 35px;
         font-size: inherit; }
@@ -398,4 +432,8 @@ header {
       width: 500px; }
   .volverInicio {
     grid-area: pie;
-    font-size: 16px; } }
+    font-size: 16px; }
+  .paginaError h1 {
+    font-size: 50px; }
+  .paginaError .tristeza {
+    width: 25%; } }
