@@ -9,10 +9,35 @@
 
 body {
 
-    background-image: $backgroundColor;
+    background-color: $backgroundColor;
     font-family: $font;
 
 }
+
+#home {
+    text-decoration: none;
+
+    #section-home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        width: 200px;
+        height: 200px;
+        margin: 120px auto;
+        border-radius: 50%;
+        box-shadow: 20px 10px 5px gray;
+
+
+        img {
+            width: 50%;
+        }
+    }
+}
+
+
+
 
 header {
     @include flex (flex, row);
@@ -46,6 +71,7 @@ header {
             padding: 2px 15px;
             color: $textColor;
             font-size: 12px;
+            text-shadow: 1px 1px lightgray;
         }
     }
 
@@ -371,7 +397,6 @@ header {
     .navbar {
         .navbar-nav {
             .nav-link {
-                border-right: 1px solid black;
                 font-size: 16px;
             }
         }
@@ -452,7 +477,39 @@ header {
 
 @media only screen and (min-width: 768px) {
 
-    // HOME
+    //HOME
+
+    #home {
+        #section-home {
+            width: 400px;
+            height: 400px;
+            margin: 120px auto;
+            animation-name: animation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+
+            @keyframes animation {
+                25% {
+                    transform: translate(30px, 0);
+                }
+
+                50% {
+                    transform: translate(0, 30px);
+                }
+
+                75% {
+                    transform: translate(-30px, 0px);
+                }
+
+                100% {
+                    transform: translate(0, 0);
+                }
+            }
+        }
+    }
+
+
+    // INDEX
 
     .mainContainerHome {
 
@@ -590,7 +647,7 @@ header {
 
         @keyframes translate {
 
-            0%,
+
             100% {
                 transform: translate(0, 0);
             }
