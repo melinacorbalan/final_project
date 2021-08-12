@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: $textColor;
+    background-color: $backgroundColor;
     font-family: $font;
 }
 
@@ -36,16 +36,15 @@ header {
 
 .navbar {
     justify-content: flex-end;
-    // border-top: $borderNav;
     border-bottom: $borderNav;
 
     .navbar-toggler {
-        background-color: white;
+        background-color: $color;
         opacity: 60%;
     }
 
     .navbar-nav {
-        background-color: white;
+        background-color: $color;
         opacity: 60%;
 
         .nav-link {
@@ -63,9 +62,6 @@ header {
     }
 }
 
-header, .navbar {
-    background-color: black;
-}
 
 // MAIN // 
 
@@ -77,12 +73,16 @@ header, .navbar {
     @include flex (flex, column);
 
     .main-home {
-        height: 50%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         h2 {
             font-size: 1.5em;
             text-align: center;
-            color: $color;
+            color: $textColor;
+            background-color: rgba(255, 255, 255, 0.411);
         }
     }
 
@@ -287,6 +287,7 @@ header, .navbar {
     background-size: cover;
 
     .formulario {
+        color: $color;
     
         @include flex (flex, column);
         align-items: center;
@@ -511,7 +512,7 @@ header, .navbar {
     .formContacto {
 
         border-radius: 20px;
-        border: 1px solid black;
+        border: 1px solid $textColor;
     }
 
     .paginaError {
@@ -535,40 +536,16 @@ header, .navbar {
     .mainContainerHome {
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: auto auto 100px;
+        grid-template-rows: auto 100px;
         grid-template-areas:
             "main"
-            "newsletter"
             "footer";
 
-
-        /*
-        .newsletter {
-
-            grid-area: newsletter;
-            justify-self: center;
-            width: 30%;
-
-            form {
-
-                legend {
-                    font-size: 16px;
-                }
-
-                label {
-                    font-size: 16px;
-                }
-
-                input {
-                    font-size: 16px;
-                }
-
-                .btn {
-                    font-size: 16px;
-                }
-            }
+        .main-home {
+            grid-area: main;
+            align-self: center;
         }
-        */
+
 
         .asideHome {
             flex-direction: column;
@@ -641,7 +618,6 @@ header, .navbar {
                 .hvr-trim {
                     display: inline-block;
                     vertical-align: middle;
-                    -webkit-transform: perspective(1px) translateZ(0);
                     transform: perspective(1px) translateZ(0);
                     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
                     position: relative;
@@ -656,7 +632,6 @@ header, .navbar {
                     right: 2px;
                     bottom: 2px;
                     opacity: 0;
-                    -webkit-transition-property: opacity;
                     transition-property: opacity;
                 }
 
@@ -713,7 +688,6 @@ header, .navbar {
             .hvr-trim-director {
                 display: inline-block;
                 vertical-align: middle;
-                -webkit-transform: perspective(1px) translateZ(0);
                 transform: perspective(1px) translateZ(0);
                 box-shadow: 0 0 1px rgba(0, 0, 0, 0);
                 position: relative;
@@ -728,7 +702,6 @@ header, .navbar {
                 right: 2px;
                 bottom: 2px;
                 opacity: 0;
-                -webkit-transition-property: opacity;
                 transition-property: opacity;
             }
 
