@@ -8,53 +8,27 @@
 }
 
 body {
-
-    background-color: $backgroundColor;
+    background-color: $textColor;
     font-family: $font;
-
 }
-
-#home {
-    text-decoration: none;
-
-    #section-home {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: white;
-        width: 200px;
-        height: 200px;
-        margin: 120px auto;
-        border-radius: 50%;
-        box-shadow: 20px 10px 5px gray;
-
-
-        img {
-            width: 50%;
-        }
-    }
-}
-
-
 
 
 header {
     @include flex (flex, row);
-    padding: 20px 0 20px 10px;
+    padding: 20px 0 0 10px;
     justify-content: flex-start;
     align-items: center;
 
     .logo {
-        border-radius: 20px;
-        width: 60px;
+        width: 40px;
         height: 40px;
     }
 
     .titulo {
         font-size: 25px;
         font-weight: bold;
-        color: $titleColor;
+        color: $colorTextIcon;
+        text-shadow: 2px 2px rgb(85, 84, 84);
         padding-left: 10px;
         margin-bottom: 0;
     }
@@ -62,16 +36,22 @@ header {
 
 .navbar {
     justify-content: flex-end;
-    border-top: $borderNav;
+    // border-top: $borderNav;
     border-bottom: $borderNav;
-    background-color: $backgroundColor;
+
+    .navbar-toggler {
+        background-color: white;
+        opacity: 60%;
+    }
 
     .navbar-nav {
+        background-color: white;
+        opacity: 60%;
+
         .nav-link {
             padding: 2px 15px;
             color: $textColor;
             font-size: 12px;
-            text-shadow: 1px 1px lightgray;
         }
     }
 
@@ -83,26 +63,26 @@ header {
     }
 }
 
+header, .navbar {
+    background-color: black;
+}
+
 // MAIN // 
 
 .mainContainerHome {
+    background-image: url('/Multimedia/hollywood-cover.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
     @include flex (flex, column);
 
-    .containerCarousel {
-        padding: 20px 0;
+    .main-home {
+        height: 50%;
 
-        h4 {
-            background-color: $backgroundCarousel;
-            color: $textColor;
-            font-weight: bold;
-        }
-
-        p {
-            background-color: $BackTextCarousel;
-        }
-
-        img {
-            padding: 10px;
+        h2 {
+            font-size: 1.5em;
+            text-align: center;
+            color: $color;
         }
     }
 
@@ -140,6 +120,7 @@ header {
         }
     }
 
+    /*
     .newsletter {
         align-self: center;
         margin-bottom: 20px;
@@ -173,6 +154,7 @@ header {
             }
         }
     }
+    */
 
 }
 
@@ -181,6 +163,9 @@ header {
 // PELICULAS Y LOCACIONES //
 
 .mainContainerPages {
+    background-image: url('/Multimedia/hollywood-cover.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
     @include flex (flex, column);
 
     .tituloPages {
@@ -189,11 +174,12 @@ header {
             font-weight: bold;
             text-align: center;
             font-size: $fontSizeText;
-            color: $textColor;
+            color: $color;
             padding-top: 10px;
         }
 
         p {
+            color: $color;
             text-align: center;
             padding: 10px;
             margin-bottom: 0;
@@ -203,25 +189,27 @@ header {
 
 
     .container-img {
-        @include flex-center (flex, column, center, center);
+        @include flex-center (flex, row, center, center);
+        flex-wrap: wrap;
 
         a {
-            color: $textColor;
+            color: $color;
             text-decoration: none;
 
             div {
                 padding: 10px;
 
                 p {
+                    background-color: rgba(255, 255, 255, 0.651);
                     text-align: center;
                     margin: 0;
                     color: $textColor;
-                    text-decoration: none;
+                    font-weight: bold;
                 }
 
                 img {
-                    width: 250px;
-                    height: 160px;
+                    width: 150px;
+                    height: 100px;
                 }
             }
         }
@@ -293,28 +281,37 @@ header {
 
 //FORM //
 
-.formulario {
-    @include flex (flex, column);
-    align-items: center;
-    padding: 30px;
+.form {
+    background-image: url('/Multimedia/hollywood-cover.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    .formContacto fieldset {
-        margin: 10px;
-        width: auto;
-
-        .form-label {
-            margin-top: .5rem;
-        }
-
-        .form-select {
-            width: fit-content;
-        }
-
-        textarea {
-            resize: both;
+    .formulario {
+    
+        @include flex (flex, column);
+        align-items: center;
+        padding: 30px;
+    
+        .formContacto fieldset {
+            margin: 10px;
+            width: auto;
+    
+            .form-label {
+                margin-top: .5rem;
+            }
+    
+            .form-select {
+                width: fit-content;
+            }
+    
+            textarea {
+                resize: both;
+            }
         }
     }
+
 }
+
 
 // FOOTER //
 
@@ -326,12 +323,12 @@ header {
     line-height: 0;
 
     a {
-        color: $textColor;
+        color: $color;
         display: block;
     }
 
     p {
-        color: $textColor;
+        color: $color;
     }
 }
 
@@ -342,11 +339,11 @@ header {
     border-top: $borderNav;
 
     a {
-        color: $textColor
+        color: $color
     }
 
     p {
-        color: $textColor;
+        color: $color;
     }
 }
 
@@ -359,7 +356,7 @@ header {
     align-items: center;
     justify-content: space-evenly;
     margin: 100px 10px 50px 10px;
-    border: 10px solid white;
+    border: 10px solid $colorTextIcon;
 
     h1 {
         font-size: 1.5em;
@@ -382,10 +379,12 @@ header {
 
 @media only screen and (min-width: 576px) {
 
+
+
     // SECCION HOME //
     header {
         .logo {
-            width: 80px;
+            width: 55px;
             height: 50px;
         }
 
@@ -395,9 +394,14 @@ header {
     }
 
     .navbar {
+
         .navbar-nav {
+            background-color: transparent;
+            opacity: 100%;
+
             .nav-link {
                 font-size: 16px;
+                color: $color;
             }
         }
 
@@ -407,6 +411,8 @@ header {
     }
 
     .mainContainerHome {
+
+        /*
         .newsletter {
 
             form {
@@ -428,6 +434,7 @@ header {
                 }
             }
         }
+        */
 
         .piePaginaHome {
             grid-area: footer;
@@ -477,60 +484,22 @@ header {
 
 @media only screen and (min-width: 768px) {
 
-    //HOME
 
-    #home {
-        #section-home {
-            width: 400px;
-            height: 400px;
-            margin: 120px auto;
-            animation-name: animation;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
+    // HOME
 
-            @keyframes animation {
-                25% {
-                    transform: translate(30px, 0);
-                }
-
-                50% {
-                    transform: translate(0, 30px);
-                }
-
-                75% {
-                    transform: translate(-30px, 0px);
-                }
-
-                100% {
-                    transform: translate(0, 0);
-                }
-            }
-        }
-    }
-
-
-    // INDEX
-
-    .mainContainerHome {
-
-        .newsletter {
-            width: 50%;
-            margin: 50px;
-        }
-    }
 
     // SECCION PELICULAS - LOCACIONES //
 
     .mainContainerPages {
         .container-img {
             a {
-                color: $textColor;
+                color: $color;
                 text-decoration: none;
 
                 div {
                     img {
-                        width: 350px;
-                        height: 220px;
+                        width: 230px;
+                        height: 150px;
                     }
                 }
             }
@@ -547,7 +516,7 @@ header {
     .containerDirectores {
 
         a {
-            color: $textColor;
+            color: $color;
             text-decoration: none;
 
             div {
@@ -583,28 +552,21 @@ header {
 }
 
 @media only screen and (min-width: 992px) {
+    
 
     // SECCION HOME //
 
     .mainContainerHome {
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: auto;
+        grid-template-rows: auto auto 100px;
         grid-template-areas:
             "main"
             "newsletter"
             "footer";
 
-        .containerCarousel {
-            grid-area: main;
-            width: 60%;
-            justify-self: center;
 
-            img {
-                border: 2px solid white;
-            }
-        }
-
+        /*
         .newsletter {
 
             grid-area: newsletter;
@@ -630,6 +592,7 @@ header {
                 }
             }
         }
+        */
 
         .asideHome {
             flex-direction: column;
@@ -686,7 +649,7 @@ header {
 
             a {
 
-                color: $textColor;
+                color: $color;
                 text-decoration: none;
 
                 div {
@@ -711,7 +674,7 @@ header {
                 .hvr-trim:before {
                     content: '';
                     position: absolute;
-                    border: white solid 2px;
+                    border: $colorTextIcon solid 2px;
                     top: 2px;
                     left: 2px;
                     right: 2px;
@@ -804,29 +767,33 @@ header {
 
     // SECCION CONTACTO //
 
-    .formulario {
+    .form {
+        .formulario {
 
-        animation: form 2s forwards;
-
-        @keyframes form {
-            0% {
-                transform: translate(-400px, 0);
+            animation: form 2s forwards;
+    
+            @keyframes form {
+                0% {
+                    transform: translate(-400px, 0);
+                }
+    
+                50% {
+                    transform: translate(200px, 0);
+                }
+    
+                100% {
+                    transform: translate(0, 0);
+                }
             }
-
-            50% {
-                transform: translate(200px, 0);
+    
+            .formContacto fieldset {
+                width: 500px;
             }
-
-            100% {
-                transform: translate(0, 0);
-            }
-        }
-
-        .formContacto fieldset {
-            width: 500px;
+    
         }
 
     }
+    
 
 
     .volverInicio {

@@ -4,69 +4,94 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #d6d6d6;
+  background-color: #000000;
   font-family: "Zilla Slab", serif; }
-
-#home {
-  text-decoration: none; }
-  #home #section-home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    width: 200px;
-    height: 200px;
-    margin: 120px auto;
-    border-radius: 50%;
-    box-shadow: 20px 10px 5px gray; }
-    #home #section-home img {
-      width: 50%; }
 
 header {
   display: flex;
   flex-direction: row;
-  padding: 20px 0 20px 10px;
+  padding: 20px 0 0 10px;
   justify-content: flex-start;
   align-items: center; }
   header .logo {
-    border-radius: 20px;
-    width: 60px;
+    width: 40px;
     height: 40px; }
   header .titulo {
     font-size: 25px;
     font-weight: bold;
-    color: #990100;
+    color: #ffffff;
+    text-shadow: 2px 2px #555454;
     padding-left: 10px;
     margin-bottom: 0; }
 
 .navbar {
   justify-content: flex-end;
-  border-top: 1px solid #808080;
-  border-bottom: 1px solid #808080;
-  background-color: #d6d6d6; }
-  .navbar .navbar-nav .nav-link {
-    padding: 2px 15px;
-    color: #000000;
-    font-size: 12px;
-    text-shadow: 1px 1px lightgray; }
+  border-bottom: 1px solid #808080; }
+  .navbar .navbar-toggler {
+    background-color: white;
+    opacity: 60%; }
+  .navbar .navbar-nav {
+    background-color: white;
+    opacity: 60%; }
+    .navbar .navbar-nav .nav-link {
+      padding: 2px 15px;
+      color: #000000;
+      font-size: 12px; }
   .navbar li a:hover {
     background-color: #ad6868;
     color: #000000; }
 
+header, .navbar {
+  background-color: black; }
+
 .mainContainerHome {
+  background-image: url("/Multimedia/hollywood-cover.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
   display: flex;
-  flex-direction: column; }
-  .mainContainerHome .containerCarousel {
-    padding: 20px 0; }
-    .mainContainerHome .containerCarousel h4 {
-      background-color: #d3d3d39f;
-      color: #000000;
-      font-weight: bold; }
-    .mainContainerHome .containerCarousel p {
-      background-color: #9b3131d0; }
-    .mainContainerHome .containerCarousel img {
-      padding: 10px; }
+  flex-direction: column;
+  /*
+    .newsletter {
+        align-self: center;
+        margin-bottom: 20px;
+        width: 70%;
+
+        form {
+            @include flex-center (flex, column, center, center);
+            border-radius: 5px;
+            border: 1px solid $colorTextIcon;
+            padding: 10px;
+            background-color: rgba(241, 241, 241, 0.452);
+
+            legend {
+                font-size: $fontSizeNews;
+            }
+
+            label {
+                font-size: $fontSizeNews;
+            }
+
+            input {
+                font-size: $fontSizeNews;
+                text-align: center;
+            }
+
+            .btn {
+                background-color: $titleColor;
+                border: 1px solid transparent;
+                margin-top: 10px;
+                font-size: $fontSizeNews;
+            }
+        }
+    }
+    */ }
+  .mainContainerHome .main-home {
+    height: 50%; }
+    .mainContainerHome .main-home h2 {
+      font-size: 1.5em;
+      text-align: center;
+      color: white; }
   .mainContainerHome .asideHome {
     display: flex;
     flex-direction: row;
@@ -88,63 +113,44 @@ header {
       background: #55ACEE; }
     .mainContainerHome .asideHome .fa-instagram {
       background: #125688; }
-  .mainContainerHome .newsletter {
-    align-self: center;
-    margin-bottom: 20px;
-    width: 70%; }
-    .mainContainerHome .newsletter form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border-radius: 5px;
-      border: 1px solid #ffffff;
-      padding: 10px;
-      background-color: rgba(241, 241, 241, 0.452); }
-      .mainContainerHome .newsletter form legend {
-        font-size: 14px; }
-      .mainContainerHome .newsletter form label {
-        font-size: 14px; }
-      .mainContainerHome .newsletter form input {
-        font-size: 14px;
-        text-align: center; }
-      .mainContainerHome .newsletter form .btn {
-        background-color: #990100;
-        border: 1px solid transparent;
-        margin-top: 10px;
-        font-size: 14px; }
 
 .mainContainerPages {
+  background-image: url("/Multimedia/hollywood-cover.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column; }
   .mainContainerPages .tituloPages h2 {
     font-weight: bold;
     text-align: center;
     font-size: 20px;
-    color: #000000;
+    color: white;
     padding-top: 10px; }
   .mainContainerPages .tituloPages p {
+    color: white;
     text-align: center;
     padding: 10px;
     margin-bottom: 0; }
   .mainContainerPages .container-img {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    flex-wrap: wrap; }
     .mainContainerPages .container-img a {
-      color: #000000;
+      color: white;
       text-decoration: none; }
       .mainContainerPages .container-img a div {
         padding: 10px; }
         .mainContainerPages .container-img a div p {
+          background-color: rgba(255, 255, 255, 0.651);
           text-align: center;
           margin: 0;
           color: #000000;
-          text-decoration: none; }
+          font-weight: bold; }
         .mainContainerPages .container-img a div img {
-          width: 250px;
-          height: 160px; }
+          width: 150px;
+          height: 100px; }
   .mainContainerPages .asidePages {
     display: flex;
     flex-direction: row;
@@ -185,20 +191,24 @@ header {
         width: 180px;
         height: 240px; }
 
-.formulario {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px; }
-  .formulario .formContacto fieldset {
-    margin: 10px;
-    width: auto; }
-    .formulario .formContacto fieldset .form-label {
-      margin-top: .5rem; }
-    .formulario .formContacto fieldset .form-select {
-      width: fit-content; }
-    .formulario .formContacto fieldset textarea {
-      resize: both; }
+.form {
+  background-image: url("/Multimedia/hollywood-cover.webp");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .form .formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px; }
+    .form .formulario .formContacto fieldset {
+      margin: 10px;
+      width: auto; }
+      .form .formulario .formContacto fieldset .form-label {
+        margin-top: .5rem; }
+      .form .formulario .formContacto fieldset .form-select {
+        width: fit-content; }
+      .form .formulario .formContacto fieldset textarea {
+        resize: both; }
 
 .piePaginaHome {
   font-size: 12px;
@@ -207,10 +217,10 @@ header {
   padding: 10px 0;
   line-height: 0; }
   .piePaginaHome a {
-    color: #000000;
+    color: white;
     display: block; }
   .piePaginaHome p {
-    color: #000000; }
+    color: white; }
 
 .volverInicio {
   font-size: 12px;
@@ -218,9 +228,9 @@ header {
   padding: 10px 0;
   border-top: 1px solid #808080; }
   .volverInicio a {
-    color: #000000; }
+    color: white; }
   .volverInicio p {
-    color: #000000; }
+    color: white; }
 
 .paginaError {
   display: flex;
@@ -228,7 +238,7 @@ header {
   align-items: center;
   justify-content: space-evenly;
   margin: 100px 10px 50px 10px;
-  border: 10px solid white; }
+  border: 10px solid #ffffff; }
   .paginaError h1 {
     font-size: 1.5em;
     text-align: center; }
@@ -243,26 +253,46 @@ header {
 
 @media only screen and (min-width: 576px) {
   header .logo {
-    width: 80px;
+    width: 55px;
     height: 50px; }
   header .titulo {
     font-size: 30px; }
-  .navbar .navbar-nav .nav-link {
-    font-size: 16px; }
+  .navbar .navbar-nav {
+    background-color: transparent;
+    opacity: 100%; }
+    .navbar .navbar-nav .nav-link {
+      font-size: 16px;
+      color: white; }
   .navbar #nav-contacto a {
     border-right: none; }
-  .mainContainerHome .newsletter form legend {
-    font-size: 16px; }
-  .mainContainerHome .newsletter form label {
-    font-size: 16px; }
-  .mainContainerHome .newsletter form input {
-    font-size: 16px; }
-  .mainContainerHome .newsletter form .btn {
-    font-size: 16px; }
-  .mainContainerHome .piePaginaHome {
-    grid-area: footer;
-    line-height: 0.5;
-    font-size: 16px; }
+  .mainContainerHome {
+    /*
+        .newsletter {
+
+            form {
+
+                legend {
+                    font-size: 16px;
+                }
+
+                label {
+                    font-size: 16px;
+                }
+
+                input {
+                    font-size: 16px;
+                }
+
+                .btn {
+                    font-size: 16px;
+                }
+            }
+        }
+        */ }
+    .mainContainerHome .piePaginaHome {
+      grid-area: footer;
+      line-height: 0.5;
+      font-size: 16px; }
   .mainContainerPages .tituloPages h2 {
     font-size: 25px;
     padding-top: 20px; }
@@ -280,35 +310,16 @@ header {
     width: 450px; } }
 
 @media only screen and (min-width: 768px) {
-  #home #section-home {
-    width: 400px;
-    height: 400px;
-    margin: 120px auto;
-    animation-name: animation;
-    animation-duration: 3s;
-    animation-iteration-count: infinite; }
-  @keyframes animation {
-    25% {
-      transform: translate(30px, 0); }
-    50% {
-      transform: translate(0, 30px); }
-    75% {
-      transform: translate(-30px, 0px); }
-    100% {
-      transform: translate(0, 0); } }
-  .mainContainerHome .newsletter {
-    width: 50%;
-    margin: 50px; }
   .mainContainerPages .container-img a {
-    color: #000000;
+    color: white;
     text-decoration: none; }
     .mainContainerPages .container-img a div img {
-      width: 350px;
-      height: 220px; }
+      width: 230px;
+      height: 150px; }
   .volverInicio {
     grid-area: pie; }
   .containerDirectores a {
-    color: #000000;
+    color: white;
     text-decoration: none; }
     .containerDirectores a div {
       padding: 20px; }
@@ -329,26 +340,35 @@ header {
   .mainContainerHome {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: "main" "newsletter" "footer"; }
-    .mainContainerHome .containerCarousel {
-      grid-area: main;
-      width: 60%;
-      justify-self: center; }
-      .mainContainerHome .containerCarousel img {
-        border: 2px solid white; }
-    .mainContainerHome .newsletter {
-      grid-area: newsletter;
-      justify-self: center;
-      width: 30%; }
-      .mainContainerHome .newsletter form legend {
-        font-size: 16px; }
-      .mainContainerHome .newsletter form label {
-        font-size: 16px; }
-      .mainContainerHome .newsletter form input {
-        font-size: 16px; }
-      .mainContainerHome .newsletter form .btn {
-        font-size: 16px; }
+    grid-template-rows: auto auto 100px;
+    grid-template-areas: "main" "newsletter" "footer";
+    /*
+        .newsletter {
+
+            grid-area: newsletter;
+            justify-self: center;
+            width: 30%;
+
+            form {
+
+                legend {
+                    font-size: 16px;
+                }
+
+                label {
+                    font-size: 16px;
+                }
+
+                input {
+                    font-size: 16px;
+                }
+
+                .btn {
+                    font-size: 16px;
+                }
+            }
+        }
+        */ }
     .mainContainerHome .asideHome {
       flex-direction: column;
       position: fixed;
@@ -378,7 +398,7 @@ header {
       grid-area: mainPages;
       margin-bottom: 30px; }
       .mainContainerPages .container-img a {
-        color: #000000;
+        color: white;
         text-decoration: none; }
         .mainContainerPages .container-img a div {
           padding: 20px; }
@@ -394,7 +414,7 @@ header {
         .mainContainerPages .container-img a .hvr-trim:before, .mainContainerPages .container-img a .hvr-trim-location:before {
           content: '';
           position: absolute;
-          border: white solid 2px;
+          border: #ffffff solid 2px;
           top: 2px;
           left: 2px;
           right: 2px;
@@ -450,7 +470,7 @@ header {
       .containerDirectores a .hvr-trim-director:focus:before,
       .containerDirectores a .hvr-trim-director:active:before {
         opacity: 1; }
-  .formulario {
+  .form .formulario {
     animation: form 2s forwards; }
   @keyframes form {
     0% {
@@ -459,7 +479,7 @@ header {
       transform: translate(200px, 0); }
     100% {
       transform: translate(0, 0); } }
-    .formulario .formContacto fieldset {
+    .form .formulario .formContacto fieldset {
       width: 500px; }
   .volverInicio {
     grid-area: pie;

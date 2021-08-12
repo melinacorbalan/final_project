@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Zilla Slab', serif;
+}
+
+#main-home {
+    background-color: #d6d6d6;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 8% 92%;
+    grid-template-areas:
+        ". right"
+        "left home";
+}
+
+#main-home #home {
+    grid-area: home;
+    justify-self: center;
+    align-self: center;
+}
+
+#main-home #home #section-home {
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+}
+
+
+#aside-left {
+    grid-area: left;
+    transform: rotate(-90deg);
+    align-self: flex-start;
+    padding: 40px 0;
+}
+
+#aside-left a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#aside-left a h1 {
+    font-size: 2em;
+    width: 200px;
+    border-bottom: 2px solid #ffffff;
+    text-shadow: 2px 2px #ffffff;
+}
+
+
+#aside-right {
+    grid-area: right;
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+
+#aside-right a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#aside-right a h1 {
+    font-size: 2em;
+    border-bottom: 2px solid #ffffff;
+    text-shadow: 2px 2px #ffffff;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    #main-home #home #section-home {
+        width: 400px;
+        height: 400px;
+        animation-name: animation;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes animation {
+        25% {
+            transform: translate(30px, 0);
+        }
+
+        50% {
+            transform: translate(0, 20px);
+        }
+
+        75% {
+            transform: translate(-30px, 0px);
+        }
+    }
+
+    #aside-left {
+        padding: 75px 0;
+    }
+
+    #aside-left a h1 {
+        font-size: 3em;
+    }
+
+    #aside-right a h1 {
+        font-size: 3em;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    #main-home {
+        
+        grid-template-columns: 5% 95%;
+    }
+}
