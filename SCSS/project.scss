@@ -70,7 +70,7 @@ header, .navbar {
 // MAIN // 
 
 .mainContainerHome {
-    background-image: url('/Multimedia/hollywood-cover.webp');
+    background-image: url('../Multimedia/hollywood-cover.webp');
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
@@ -163,7 +163,7 @@ header, .navbar {
 // PELICULAS Y LOCACIONES //
 
 .mainContainerPages {
-    background-image: url('/Multimedia/hollywood-cover.webp');
+    background-image: url('../Multimedia/hollywood-cover.webp');
     background-repeat: no-repeat;
     background-size: cover;
     @include flex (flex, column);
@@ -282,7 +282,7 @@ header, .navbar {
 //FORM //
 
 .form {
-    background-image: url('/Multimedia/hollywood-cover.webp');
+    background-image: url('../Multimedia/hollywood-cover.webp');
     background-repeat: no-repeat;
     background-size: cover;
 

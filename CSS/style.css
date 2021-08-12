@@ -45,7 +45,7 @@ header, .navbar {
   background-color: black; }
 
 .mainContainerHome {
-  background-image: url("/Multimedia/hollywood-cover.webp");
+  background-image: url("../Multimedia/hollywood-cover.webp");
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
@@ -115,7 +115,7 @@ header, .navbar {
       background: #125688; }
 
 .mainContainerPages {
-  background-image: url("/Multimedia/hollywood-cover.webp");
+  background-image: url("../Multimedia/hollywood-cover.webp");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -192,7 +192,7 @@ header, .navbar {
         height: 240px; }
 
 .form {
-  background-image: url("/Multimedia/hollywood-cover.webp");
+  background-image: url("../Multimedia/hollywood-cover.webp");
   background-repeat: no-repeat;
   background-size: cover; }
   .form .formulario {
