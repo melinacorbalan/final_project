@@ -265,34 +265,10 @@ header, .navbar {
       color: white; }
   .navbar #nav-contacto a {
     border-right: none; }
-  .mainContainerHome {
-    /*
-        .newsletter {
-
-            form {
-
-                legend {
-                    font-size: 16px;
-                }
-
-                label {
-                    font-size: 16px;
-                }
-
-                input {
-                    font-size: 16px;
-                }
-
-                .btn {
-                    font-size: 16px;
-                }
-            }
-        }
-        */ }
-    .mainContainerHome .piePaginaHome {
-      grid-area: footer;
-      line-height: 0.5;
-      font-size: 16px; }
+  .mainContainerHome .piePaginaHome {
+    grid-area: footer;
+    line-height: 0.5;
+    font-size: 16px; }
   .mainContainerPages .tituloPages h2 {
     font-size: 25px;
     padding-top: 20px; }
