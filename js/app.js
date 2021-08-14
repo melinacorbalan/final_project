@@ -12,7 +12,7 @@ const tour1 = new Tour("Harry Potter", "Londres", 50, "10:30 hs");
 const tour2 = new Tour("El señor de los anillos", "Nueva Zelanda", 150, "10 hs");
 const tour3 = new Tour("Home Alone", "Nueva York", 30, "14 hs");
 const tour4 = new Tour("Game of Thrones", "Dubrovnik", 100, "9 hs");
-const tour5 = new Tour("Comer Rezar Amar", "Roma", 0, "9:30 hs");
+const tour5 = new Tour("Comer Rezar Amar", "Roma", 15, "9:30 hs");
 const tour6 = new Tour("Amelie", "Paris", 50, "10 hs");
 
 
