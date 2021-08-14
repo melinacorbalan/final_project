@@ -5,10 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <title>Un lugar de pelicula: descubre donde se filmaron tus películas favoritas</title>
     <meta name="Description"
         content="Locaciones de películas alrededor del mundo: descubre donde se filmaron las películas más famosas">
@@ -21,28 +26,77 @@
     <meta property="og:url" content="https://unlugardepelicula.000webhostapp.com/">
     <meta property="og:locale" content="es_ES">
 
-    <link rel="shortcut icon" href="Multimedia/newlogo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Multimedia/pin.png" type="image/x-icon">
 </head>
 
 <body>
 
-    <main id="main-home">
-        <a id="home" href="home.html">
-            <section>
-                <img id="section-home" src="Multimedia/pin.png" alt="">
-            </section>
-        </a>
-        <aside id="aside-left">
-            <a href="home.html">
-                <h1>Un lugar</h1>
-            </a>
+    <!-- HEADER -->
+    <header>
+        <div class="title">
+            <img class="logo" src="Multimedia/newlogo.png" alt="Logo">
+            <h1 class="titulo">Un lugar de película</h1>
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <div class="justify-content-md-end pe-1">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="seccion/peliculas.html">Películas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="seccion/locaciones.html">Locaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="seccion/tours.html">Tours</a>
+                        </li>
+                        <li class="nav-item" id="nav-contacto">
+                            <a class="nav-link" href="seccion/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="mainContainerHome">
+
+        <article class="main-home">
+            <h2>Descubre donde se filmaron tus peliculas favoritas!</h2>
+        </article>
+
+
+        <!-- ASIDE -->
+        <aside class="asideHome">
+            <a href="http://www.facebook.com" class="fa fa-facebook"></a>
+            <a href="http://www.instagram.com" class="fa fa-instagram"></a>
+            <a href="http://www.twitter.com" class="fa fa-twitter"></a>
         </aside>
-        <aside id="aside-right">
-            <a href="home.html">
-                <h1>de pelicula.</h1>
-            </a>
-        </aside>
+
+        <!-- FOOTER -->
+        <footer class="piePaginaHome">
+            <p>© 2021 Un lugar de pelicula, todos los derechos reservados.</p>
+            <a href="seccion/contacto.html">Contacto</a>
+        </footer>
     </main>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <script src="js/app.js"></script>
+
 
 </body>
 

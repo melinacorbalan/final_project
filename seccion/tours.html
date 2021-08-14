@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <title>Un lugar de pelicula: directores</title>
@@ -24,135 +27,56 @@
 
     <link rel="shortcut icon" href="../Multimedia/pin.png" type="image/x-icon">
 
+</head>
+
 <body>
 
     <!-- HEADER -->
 
     <header>
-        <img class="logo" src="../Multimedia/newlogo.png" alt="Logo">
-        <h1 class="titulo">Un lugar de película</h1>
+        <div class="title">
+            <img class="logo" src="../Multimedia/newlogo.png" alt="Logo">
+            <h1 class="titulo">Un lugar de película</h1>
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <div class="justify-content-md-end pe-1">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="peliculas.html">Películas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="locaciones.html">Locaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tours.html">Tours</a>
+                        </li>
+                        <li class="nav-item" id="nav-contacto">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <!-- BARRA DE NAVEGACIÓN -->
-
-    <nav class="navbar navbar-expand-sm navbar-light">
-        <div class="justify-content-md-end pe-1">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <ul class="navbar-nav me-auto mb-0 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../home.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="peliculas.html">Películas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="locaciones.html">Locaciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="directores.html">Directores</a>
-                    </li>
-                    <li class="nav-item" id="nav-contacto">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
     <!-- MAIN -->
 
     <main class="mainContainerPages">
         <section class="tituloPages">
             <h2>Tours</h2>
-            <p></p>
+            <p>Te gustaría conocer algunas de las locaciones? Sumate a nuestros tours!</p>
         </section>
 
-        <!-- FLEXBOX -->
-
-        <!-- <article class="containerDirectores">
-
-            <a href="https://www.imdb.com/name/nm0946734/" target="_blank">
-                <div class="hvr-trim-director">
-                    <p>David Yates</p>
-                    <img src="../Multimedia/david-yates.jpeg" alt="david-yates">
-                </div>
-            </a>
-
-            <a href="https://www.imdb.com/name/nm0190859/" target="_blank">
-                <div class="hvr-trim-director">
-                    <p>Alfonso Cuarón</p>
-                    <img src="../Multimedia/alfonso-cuaron.jpeg" alt="alfonso-cuaron">
-                </div>
-            </a>
-
-            <a href="https://www.imdb.com/name/nm0001565/" target="_blank">
-                <div class="hvr-trim-director">
-                    <p>Mike Newell</p>
-                    <img src="../Multimedia/mike-newell.jpg" alt="mike-newell">
-                </div>
-            </a>
-
-            <a href="https://www.imdb.com/name/nm0001060/" target="_blank">
-                <div class="hvr-trim-director">
-                    <p>Chris Columbus</p>
-                    <img src="../Multimedia/chris-columbus.jpeg" alt="chris-columbus">
-                </div>
-            </a>
-
-            <a href="https://www.imdb.com/name/nm0001392/" target="_blank">
-                <div class="hvr-trim-director">
-                    <p>Peter Jackson</p>
-                    <img src="../Multimedia/peter-jackson.jpg" alt="peter-jackson">
-                </div>
-            </a>
-
-            <a href="https://www.imdb.com/name/nm0000184/" target="_blank">
-                <div class="hvr-trim-director">
-                    <p>George Lucas</p>
-                    <img src="../Multimedia/george-lucas.jpeg" alt="george-lucas">
-                </div>
-            </a>
-
-            <a href="https://www.imdb.com/name/nm3227090/" target="_blank">
-                <div class="hvr-trim-director">
-                    <p>Damien Chazelle</p>
-                    <img src="../Multimedia/damien-chazelle.jpeg" alt="damien-chazelle">
-                </div>
-            </a>
-
-            <a href="https://www.imdb.com/name/nm0000466/" target="_blank">
-                <div class="hvr-trim-director">
-                    <p>Jean-Pierre Jeunet</p>
-                    <img src="../Multimedia/jean-pierre.jpeg" alt="jean pierre jeunet">
-                </div>
-            </a>
-
-            <a href="https://www.imdb.com/name/nm0614682/" target="_blank">
-                <div class="hvr-trim-director">
-                    <p>Ryan Murphy</p>
-                    <img src="../Multimedia/ryan-murphy.jpeg" alt="ryan-murphy">
-                </div>
-            </a>
-
-            <a href="https://www.imdb.com/name/nm0291205/" target="_blank">
-                <div class="hvr-trim-director">
-                    <p>David Frankel</p>
-                    <img src="../Multimedia/david-frankel.jpeg" alt="david-frankel">
-                </div>
-            </a>
-
-            <a href="https://www.imdb.com/name/nm0000965/" target="_blank">
-                <div class="hvr-trim-director">
-                    <p>Danny Boyle</p>
-                    <img src="../Multimedia/danny-boyle.jpeg" alt="danny-boyle">
-                </div>
-            </a>
-
-        </article> -->
 
         <!-- ASIDE -->
 
@@ -165,7 +89,7 @@
         <!-- FOOTER -->
 
         <footer class="volverInicio">
-            <a href="../home.html">Página Principal</a>
+            <a href="../index.html">Página Principal</a>
             <p>© 2021 Un lugar de pelicula, todos los derechos reservados.</p>
         </footer>
     </main>
