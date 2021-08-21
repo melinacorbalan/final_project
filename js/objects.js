@@ -4,8 +4,8 @@ class Tour {
         this.nombre;
         this.horario;
         this.idioma;
-        this.precio;
         this.cantidad;
+        this.precio;
     }
 
     elegirLocacion(locacion) {
@@ -24,12 +24,21 @@ class Tour {
         this.idioma = idioma;
     }
 
-    mostrarPrecio (precio) {
-        this.precio = precio;
-    }
-
     elegirCantidad (cantidad) {
         this.cantidad = cantidad;
     }
+
+    mostrarPrecio (precio) {
+        this.precio = precio;
+    }
 }
 
+class Pagos {
+    constructor() {
+        this.pago;
+    }
+
+    metodoPago(pago) {
+        this.pago = pago;
+    }
+}

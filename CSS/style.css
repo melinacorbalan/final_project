@@ -7,47 +7,51 @@ body {
   background-color: gray;
   font-family: "Josefin Sans", sans-serif; }
 
-header .title {
-  display: flex;
-  flex-direction: row;
-  padding: 10px 0 0 10px;
-  justify-content: flex-start;
-  align-items: center; }
-  header .title .logo {
-    width: 40px;
-    height: 40px; }
-  header .title .titulo {
-    font-size: 25px;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 2px 2px #555454;
-    padding-left: 10px;
-    margin-bottom: 0; }
-
-header .navbar {
-  justify-content: flex-end;
-  padding-top: 0;
-  border-bottom: 1px solid #808080; }
-  header .navbar .navbar-toggler {
-    background-color: white;
-    opacity: 60%; }
-  header .navbar .navbar-nav {
-    background-color: white;
-    opacity: 60%; }
-    header .navbar .navbar-nav .nav-link {
-      padding: 2px 15px;
-      color: #000000;
-      font-size: 12x; }
-  header .navbar li a:hover {
-    background-color: #ad6868;
-    color: #000000; }
+header {
+  background-color: #a12e2e; }
+  header .title {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 0 10px;
+    justify-content: flex-start;
+    align-items: center; }
+    header .title .logo {
+      width: 40px;
+      height: 40px; }
+    header .title .titulo {
+      font-size: 25px;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 2px 2px #555454;
+      padding-left: 10px;
+      margin-bottom: 0; }
+  header .navbar {
+    justify-content: flex-end;
+    padding-top: 0; }
+    header .navbar .navbar-toggler {
+      background-color: white;
+      opacity: 60%; }
+    header .navbar .navbar-nav {
+      background-color: white;
+      opacity: 60%; }
+      header .navbar .navbar-nav .nav-link {
+        padding: 2px 15px;
+        color: #000000;
+        font-size: 12x; }
+      header .navbar .navbar-nav #nav-carrito {
+        background-color: black; }
+        header .navbar .navbar-nav #nav-carrito img {
+          width: 22px; }
+    header .navbar li a:hover {
+      background-color: #ad6868;
+      color: #000000; }
 
 .mainContainerHome {
   background-image: url("../Multimedia/hollywood-cover.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: 100vh;
   display: flex;
   flex-direction: column; }
   .mainContainerHome .main-home {
@@ -59,7 +63,7 @@ header .navbar {
       font-size: 1.5em;
       text-align: center;
       color: #000000;
-      background-color: rgba(255, 255, 255, 0.651); }
+      background-color: rgba(255, 255, 255, 0.822); }
   .mainContainerHome .asideHome {
     display: flex;
     flex-direction: row;
@@ -81,6 +85,9 @@ header .navbar {
       background: #55ACEE; }
     .mainContainerHome .asideHome .fa-instagram {
       background: #125688; }
+
+.arrow {
+  display: none; }
 
 .mainContainerPages {
   background-image: url("../Multimedia/hollywood-cover.webp");
@@ -139,6 +146,17 @@ header .navbar {
       background: #55ACEE; }
     .mainContainerPages .asidePages .fa-instagram {
       background: #125688; }
+
+.tours-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem; }
+  .tours-mobile .carousel .carousel-inner .carousel-item .card {
+    width: 18rem; }
+
+.tours-desktop {
+  display: none; }
 
 .form {
   background-image: url("../Multimedia/hollywood-cover.webp");
@@ -201,6 +219,16 @@ header .navbar {
   .footer404 a {
     color: #000000; }
 
+.carrito {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 300px;
+  justify-items: center;
+  align-items: center; }
+  .carrito h2 {
+    color: white;
+    font-size: 20px; }
+
 @media only screen and (min-width: 576px) {
   header {
     display: flex;
@@ -221,6 +249,10 @@ header .navbar {
           padding: 0 5px;
           font-size: 12px;
           color: white; }
+        header .navbar .navbar-nav #nav-carrito {
+          background-color: transparent; }
+          header .navbar .navbar-nav #nav-carrito img {
+            width: 18px; }
   .mainContainerHome .piePaginaHome {
     grid-area: footer;
     line-height: 0.5;
@@ -235,8 +267,16 @@ header .navbar {
     flex-wrap: wrap; }
   .mainContainerPages .volverInicio {
     font-size: 16px; }
+  .tours-mobile .carousel .carousel-inner .carousel-item .card {
+    width: 25rem; }
   .formContacto fieldset {
-    width: 450px; } }
+    width: 450px; }
+  .carrito {
+    grid-template-rows: 50px 400px; }
+    .carrito h2 {
+      color: white;
+      font-size: 25px;
+      padding-top: 20px; } }
 
 @media only screen and (min-width: 768px) {
   .mainContainerHome {
@@ -249,6 +289,13 @@ header .navbar {
       height: 150px; }
   .volverInicio {
     grid-area: pie; }
+  .tours-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem; }
+    .tours-mobile .carousel .carousel-inner .carousel-item .card {
+      width: 22rem; }
   .formContacto {
     border-radius: 20px;
     border: 1px solid #000000; }
@@ -273,7 +320,9 @@ header .navbar {
       padding: 0; }
       header .navbar .navbar-nav .nav-link {
         padding: 0 12px;
-        font-size: 16px; }
+        font-size: 18px; }
+      header .navbar .navbar-nav #nav-carrito img {
+        width: 28px; }
   .mainContainerHome {
     height: auto;
     display: grid;
@@ -287,8 +336,7 @@ header .navbar {
       flex-direction: column;
       position: fixed;
       right: 10px;
-      padding-top: 20px;
-      animation: translate 3s infinite 0.2s; }
+      padding-top: 30vh; }
       .mainContainerHome .asideHome .fa {
         padding: 10px;
         width: 35px;
@@ -298,6 +346,19 @@ header .navbar {
       transform: translate(0, 0); }
     50% {
       transform: translate(0, 25px); } }
+  .arrow {
+    display: initial; }
+    .arrow img {
+      width: 3rem;
+      position: fixed;
+      top: 80px;
+      right: 5px;
+      animation: translate 2s infinite 0.2s; }
+  @keyframes translate {
+    100% {
+      transform: translate(0, 0); }
+    50% {
+      transform: translate(0, 20px); } }
   .mainContainerPages {
     display: grid;
     grid-template-columns: 100%;
@@ -354,6 +415,21 @@ header .navbar {
         padding: 10px;
         width: 35px;
         font-size: inherit; }
+  .tours-mobile {
+    display: none; }
+  .tours-desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .tours-desktop .card {
+      width: 20rem;
+      margin: 1rem; }
+      .tours-desktop .card .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between; }
   .form .formulario {
     animation: form 2s forwards; }
   @keyframes form {
@@ -371,4 +447,37 @@ header .navbar {
   .paginaError h1 {
     font-size: 50px; }
   .paginaError .tristeza {
-    width: 25%; } }
+    width: 25%; }
+  .carrito {
+    grid-template-rows: 50px 500px; }
+    .carrito section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px; }
+      .carrito section #compra {
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 5px 5px black;
+        background-color: rgba(255, 255, 255, 0.774);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%; }
+        .carrito section #compra p {
+          margin: 0;
+          font-size: 18px;
+          padding: 10px 0; }
+      .carrito section #pago {
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 5px 5px black;
+        background-color: rgba(255, 255, 255, 0.774);
+        height: 4rem;
+        display: flex;
+        align-items: center; }
+        .carrito section #pago p {
+          text-align: center;
+          margin: 0;
+          padding: 0 5px; } }

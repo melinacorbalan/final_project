@@ -1,6 +1,7 @@
 const nuevoTour = new Tour();
 
-const carrito = [];
+const nuevoPago = new Pagos();
+
 
 //ELEGIR LOCACION
 
@@ -63,39 +64,38 @@ if (tourID === locacionID) {
 
     //DETERMINAR PRECIO
 
-    let precio = TOURS.find((precio) => precio.ID === tourID);
-    nuevoTour.mostrarPrecio(precio.precio);
+    let precioID = TOURS.find((precio) => precio.ID === tourID);
 
-    console.log(nuevoTour);
+    let precioTour = precioID.precio;
+
+    let precioFinal = precioTour*cantidad;
+
+    nuevoTour.mostrarPrecio(precioFinal);
+
     alert(`Has elegido el tour ${nuevoTour.nombre} en ${nuevoTour.locacion} a las ${nuevoTour.horario} en ${nuevoTour.idioma} para ${cantidad} personas`);
 
     //CARRITO 
-
-    carrito.push(nuevoTour);
-
-    function totalCompra() {
-
-        let precioTotal = 0;
-        for (const tour of carrito) {
-            precioTotal = tour.precio * cantidad;
-        }
-        return alert(`El total de tu compra es de ${precioTotal} euros`);
-    }
     
-    totalCompra()
+    alert (`El total de tu compra es de ${precioFinal} euros`);
 
-    let pagoID = Number(prompt(`Selecciona el método de pago: ${PAGOS.map((pago) => `${pago.ID}) ${pago.nombre}`).join(' ')}`));
-    let metodoPago = PAGOS.find((pago) => pago.ID === pagoID);
 
     //INGRESAR CORREO
 
     const usuario = prompt(`Por favor ingresa tu correo electrónico:`);
 
-    alert(`Has elegido el método de pago ${metodoPago.nombre}. Pronto recibirás un correo electrónico con la confirmación. Gracias!`)
+    let pagoID = Number(prompt(`Selecciona el método de pago: ${PAGOS.map((pago) => `${pago.ID}) ${pago.nombre}`).join(' ')}`));
+    let pago = PAGOS.find((pago) => pago.ID === pagoID);
+
+    nuevoPago.metodoPago(pago.nombre);
+
+    console.log(nuevoTour);
+
+    mostrarCompra();
+    formaPago();
 
 
 } else {
-    alert(`Por favor ingresa el numero correcto`);
+    alert(`Por favor intenta de nuevo`);
 }
 
 

@@ -12,7 +12,10 @@ body {
     font-family: $font;
 }
 
+
 header {
+    background-color: #a12e2e;
+
     .title {
         @include flex (flex, row);
         padding: 10px 0 0 10px;
@@ -37,7 +40,6 @@ header {
     .navbar {
         justify-content: flex-end;
         padding-top: 0;
-        border-bottom: $borderNav;
 
         .navbar-toggler {
             background-color: $color;
@@ -52,6 +54,14 @@ header {
                 padding: 2px 15px;
                 color: $textColor;
                 font-size: 12x;
+            }
+
+            #nav-carrito {
+                background-color: black;
+
+                img {
+                    width: 22px;
+                }
             }
         }
 
@@ -72,7 +82,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 500px;
+    height: 100vh;
     @include flex (flex, column);
 
     .main-home {
@@ -85,7 +95,7 @@ header {
             font-size: 1.5em;
             text-align: center;
             color: $textColor;
-            background-color: rgba(255, 255, 255, 0.651);
+            background-color: rgba(255, 255, 255, 0.822);
         }
     }
 
@@ -126,6 +136,9 @@ header {
 
 }
 
+.arrow {
+    display: none;
+}
 
 
 // PELICULAS Y LOCACIONES //
@@ -222,7 +235,28 @@ header {
 
 // TOURS //
 
+.tours-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
 
+    .carousel {
+        .carousel-inner {
+            .carousel-item {
+                .card {
+                    width: 18rem;
+                }
+            }
+        }
+    }
+
+
+}
+
+.tours-desktop {
+    display: none;
+}
 
 //FORM //
 
@@ -323,6 +357,21 @@ header {
     }
 }
 
+// CARRITO
+
+.carrito {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 300px;
+    justify-items: center;
+    align-items: center;
+
+    h2 {
+        color: $color;
+        font-size: $fontSizeText;
+    }
+}
+
 @media only screen and (min-width: 576px) {
 
 
@@ -358,6 +407,16 @@ header {
                     font-size: 12px;
                     color: $color;
                 }
+
+                #nav-carrito {
+                    background-color: transparent;
+
+                    img {
+                        width: 18px;
+                    }
+                }
+
+
             }
         }
 
@@ -400,12 +459,37 @@ header {
 
     // SECCION TOURS //
 
-    
+    .tours-mobile {
+
+        .carousel {
+            .carousel-inner {
+                .carousel-item {
+                    .card {
+                        width: 25rem;
+                    }
+                }
+            }
+        }
+
+
+    }
 
     // SECCION CONTACTO //
 
     .formContacto fieldset {
         width: 450px;
+    }
+
+    // CARRITO
+
+    .carrito {
+        grid-template-rows: 50px 400px;
+
+        h2 {
+            color: $color;
+            font-size: 25px;
+            padding-top: 20px;
+        }
     }
 }
 
@@ -443,7 +527,25 @@ header {
 
     // SECCION TOURS //
 
-    
+    .tours-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        .carousel {
+            .carousel-inner {
+                .carousel-item {
+                    .card {
+                        width: 22rem;
+                    }
+                }
+            }
+        }
+
+
+    }
+
 
     // SECCION CONTACTO //
 
@@ -494,9 +596,14 @@ header {
             .navbar-nav {
                 .nav-link {
                     padding: 0 12px;
-                    font-size: 16px;
+                    font-size: 18px;
                 }
 
+                #nav-carrito {
+                    img {
+                        width: 28px;
+                    }
+                }
             }
         }
 
@@ -521,8 +628,9 @@ header {
             flex-direction: column;
             position: fixed;
             right: 10px;
-            padding-top: 20px;
-            animation: translate 3s infinite 0.2s;
+            padding-top: 30vh;
+            //padding-top: 20px;
+            // animation: translate 3s infinite 0.2s;
 
             .fa {
                 padding: 10px;
@@ -540,6 +648,33 @@ header {
 
             50% {
                 transform: translate(0, 25px);
+            }
+        }
+
+    }
+
+    .arrow {
+        display: initial;
+
+        img {
+            width: 3rem;
+            position: fixed;
+            top: 80px;
+            right: 5px;
+            animation: translate 2s infinite 0.2s;
+
+
+        }
+
+        @keyframes translate {
+
+
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(0, 20px);
             }
         }
 
@@ -644,7 +779,29 @@ header {
 
     // SECCION TOURS //
 
-    
+    .tours-mobile {
+        display: none;
+    }
+
+    .tours-desktop {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .card {
+            width: 20rem;
+            margin: 1rem;
+
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+        }
+
+    }
 
 
     // SECCION CONTACTO //
@@ -693,4 +850,55 @@ header {
             width: 25%;
         }
     }
+
+    .carrito {
+        grid-template-rows: 50px 500px;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+
+            #compra {
+                border: 1px solid black;
+                border-radius: 10px;
+                box-shadow: 5px 5px black;
+                background-color: rgba(255, 255, 255, 0.774);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 40%;
+
+
+                p {
+                    margin: 0;
+                    font-size: 18px;
+                    padding: 10px 0;
+                }
+
+            }
+
+            #pago {
+                border: 1px solid black;
+                border-radius: 10px;
+                box-shadow: 5px 5px black;
+                background-color: rgba(255, 255, 255, 0.774);
+                height: 4rem;
+                display: flex;
+                align-items: center;
+
+                p {
+                    text-align: center;
+                    margin: 0;
+                    padding: 0 5px;
+                }
+            }
+
+
+
+        }
+    }
+
 }
