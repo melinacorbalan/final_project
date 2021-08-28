@@ -106,7 +106,7 @@ header {
 // PELICULAS Y LOCACIONES //
 
 .mainContainerPages {
-    background-image: url('../Multimedia/hollywood-cover.jpg');
+    background-image: url('../Multimedia/hollywood-cover-fade.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     @include flex (flex, column);
@@ -326,6 +326,10 @@ header {
     }
 
     .detalle-carrito {
+
+        p {
+            margin: 0 200px;
+        }
 
         .valor-total {
             margin: 0 200px;
