@@ -11,9 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="../CSS/style.css">
-    <title>Un lugar de pelicula: títulos</title>
+    <title>Un lugar de pelicula: películas</title>
     <meta name="Description"
         content="Locaciones de películas alrededor del mundo: descubre donde se filmaron las películas más famosas">
     <meta name="keywords" content="películas, hollywood, harry potter, lord of the rings, star wars">
@@ -21,25 +21,26 @@
 
     <meta property="og:title" content="Un lugar de película">
     <meta property="og:description" content="Descubre donde se filmaron tus películas favoritas">
-    <meta property="og:image" content="../Multimedia/favicon.png">
+    <meta property="og:image" content="../Multimedia/icons/pin.png">
     <meta property="og:url" content="https://unlugardepelicula.000webhostapp.com/">
     <meta property="og:locale" content="es_ES">
 
-    <link rel="shortcut icon" href="../Multimedia/pin.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../Multimedia/icons/pin.png" type="image/x-icon">
 </head>
 
 <body>
     <!-- HEADER -->
 
-    <header>
+    <header id="backTop">
         <div class="title">
-            <img class="logo" src="../Multimedia/newlogo.png" alt="Logo">
+            <img class="logo" src="../Multimedia/icons/newlogo.png" alt="Logo">
             <h1 class="titulo">Un lugar de película</h1>
         </div>
         <nav class="navbar navbar-expand-sm navbar-light">
             <div class="justify-content-md-end pe-1">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
@@ -61,16 +62,16 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="nav-carrito" href="carrito.html">
-                                <img src="../Multimedia/shopping-cart.png" alt="shopping-cart">
+                                <img src="../Multimedia/icons/shopping-cart.png" alt="shopping-cart">
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        
+
     </header>
-    
+
 
     <!-- MAIN -->
 
@@ -78,8 +79,10 @@
         <section class="tituloPages">
             <h2>Películas</h2>
             <p>
-                Sabías que a J.K. Rowling se le ocurrió la historia de Harry Potter en 1990, mientras esperaba la llegada de un tren en la estación de
-                King’s Cross en Inglaterra? Lugar que luego tomaron en las películas para crear la estación en la que los magos tomaban el tren mágico de camino a Hogwarts!
+                Sabías que a J.K. Rowling se le ocurrió la historia de Harry Potter en 1990, mientras esperaba la
+                llegada de un tren en la estación de
+                King’s Cross en Inglaterra? Lugar que luego tomaron en las películas para crear la estación en la que
+                los magos tomaban el tren mágico de camino a Hogwarts!
             </p>
         </section>
 
@@ -87,24 +90,24 @@
 
         <article class="container-img">
 
-            <a href="https://www.imdb.com/title/tt0295297/" target="_blank">
+            <a href="../seccion/tours/harry-potter.html">
                 <div class="hvr-trim">
                     <p>Harry Potter</p>
                     <img src="../Multimedia/HarryPotter.jpeg" alt="HarryPotter">
                 </div>
             </a>
 
-            <a href="https://www.imdb.com/title/tt0120737/" target="_blank">
+            <a href="../seccion/tours/lord-of-the-rings.html">
                 <div class="hvr-trim">
                     <p>The lord of the Rings</p>
                     <img src="../Multimedia/Lordoftherings.jpeg" alt="lordoftherings">
                 </div>
             </a>
 
-            <a href="https://www.imdb.com/star-wars/" target="_blank">
+            <a href="../seccion/tours/game-of-thrones.html">
                 <div class="hvr-trim">
-                    <p>Star Wars</p>
-                    <img src="../Multimedia/star-wars.jpeg" alt="starwars">
+                    <p>Game of Thrones</p>
+                    <img src="../Multimedia/got.jpeg" alt="starwars">
                 </div>
             </a>
 
@@ -115,14 +118,14 @@
                 </div>
             </a>
 
-            <a href="https://www.imdb.com/title/tt0211915/" target="_blank">
+            <a href="../seccion/tours/amelie.html">
                 <div class="hvr-trim">
                     <p>Amelie</p>
                     <img src="../Multimedia/amelie.jpeg" alt="amelie">
                 </div>
             </a>
 
-            <a href="https://www.imdb.com/title/tt0879870/" target="_blank">
+            <a href="../seccion/tours/eat-pray-love.html">
                 <div class="hvr-trim">
                     <p>Eat Pray Love</p>
                     <img src="../Multimedia/eat-pray-love.jpeg" alt="EatPrayLove">
@@ -143,7 +146,7 @@
                 </div>
             </a>
 
-            <a href="https://www.imdb.com/title/tt0099785/" target="_blank">
+            <a href="../seccion/tours/home-alone.html" target="_blank">
                 <div class="hvr-trim">
                     <p>Home alone</p>
                     <img src="../Multimedia/homealone.jpeg" alt="homealone">
@@ -151,22 +154,32 @@
             </a>
 
         </article>
-
-        <!-- ASIDE -->
-
-        <aside class="asidePages">
-            <a href="http://www.facebook.com" class="fa fa-facebook"></a>
-            <a href="http://www.instagram.com" class="fa fa-instagram"></a>
-            <a href="http://www.twitter.com" class="fa fa-twitter"></a>
-        </aside>
-
-        <!-- FOOTER -->
-
-        <footer class="volverInicio">
-            <a href="../index.html">Página Principal</a>
-            <p>© 2021 Un lugar de pelicula, todos los derechos reservados.</p>
-        </footer>
     </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div id="soMeIcons">
+            <a href="http://www.facebook.com">
+                <img src="/Multimedia/icons/facebook.png" alt="facebook">
+            </a>
+            <a href="http://www.instagram.com">
+                <img src="/Multimedia/icons/instagram.png" alt="instagram">
+            </a>
+            <a href="http://www.twitter.com">
+                <img src="/Multimedia/icons/twitter.png" alt="twitter">
+            </a>
+
+        </div>
+        <p>© 2021 Un lugar de pelicula, todos los derechos reservados.</p>
+        <p>Realizado por <a href="https://www.linkedin.com/in/melinacorbalan">Melina Corbalan</a>
+        </p>
+    </footer>
+
+    <!-- ARROW UP -->
+    
+    <a href="#backTop" id="arrowUp">
+        <img src="../Multimedia/icons/up-arrow.png" alt="arrow-up">
+    </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

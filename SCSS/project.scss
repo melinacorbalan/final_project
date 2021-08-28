@@ -12,9 +12,8 @@ body {
     font-family: $font;
 }
 
-
 header {
-    background-color: #a12e2e;
+    background-color: $backNav;
 
     .title {
         @include flex (flex, row);
@@ -30,8 +29,8 @@ header {
         .titulo {
             font-size: 25px;
             font-weight: bold;
-            color: $colorTextIcon;
-            text-shadow: 2px 2px rgb(85, 84, 84);
+            color: $color;
+            text-shadow: 2px 2px rgb(0, 0, 0);
             padding-left: 10px;
             margin-bottom: 0;
         }
@@ -56,8 +55,12 @@ header {
                 font-size: 12x;
             }
 
+            .nav-link:hover {
+                color: $color;
+            }
+
             #nav-carrito {
-                background-color: black;
+                background-color: $textColor;
 
                 img {
                     width: 22px;
@@ -74,11 +77,10 @@ header {
     }
 }
 
-
 // MAIN // 
 
 .mainContainerHome {
-    background-image: url('../Multimedia/hollywood-cover.webp');
+    background-image: url('../Multimedia/hollywood-cover-home.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -99,52 +101,12 @@ header {
         }
     }
 
-    .asideHome {
-        @include flex (flex, row);
-        padding-bottom: 5px;
-        justify-content: center;
-        align-items: center;
-
-        .fa {
-            padding: 5px;
-            width: auto;
-            font-size: 10px;
-            text-align: center;
-            text-decoration: none;
-        }
-
-        .fa:hover {
-            transform: scale(1.1);
-        }
-
-        .fa-facebook {
-            background: $iconFacebook;
-            color: $colorTextIcon;
-        }
-
-        .fa-twitter {
-            @extend .fa-facebook;
-            background: $iconTwitter;
-        }
-
-        .fa-instagram {
-            @extend .fa-facebook;
-            background: $iconInstagram;
-        }
-    }
-
-
 }
-
-.arrow {
-    display: none;
-}
-
 
 // PELICULAS Y LOCACIONES //
 
 .mainContainerPages {
-    background-image: url('../Multimedia/hollywood-cover.webp');
+    background-image: url('../Multimedia/hollywood-cover.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     @include flex (flex, column);
@@ -197,41 +159,7 @@ header {
 
     }
 
-
-    .asidePages {
-        @include flex (flex, row);
-        padding: 5px 0;
-        align-self: center;
-
-        .fa {
-            padding: 5px;
-            width: auto;
-            font-size: 10px;
-            text-align: center;
-            text-decoration: none;
-        }
-
-        .fa:hover {
-            transform: scale(1.1);
-        }
-
-        .fa-facebook {
-            background: $iconFacebook;
-            color: $colorTextIcon;
-        }
-
-        .fa-twitter {
-            @extend .fa-facebook;
-            background: $iconTwitter;
-        }
-
-        .fa-instagram {
-            @extend .fa-facebook;
-            background: $iconInstagram;
-        }
-    }
 }
-
 
 // TOURS //
 
@@ -261,7 +189,7 @@ header {
 //FORM //
 
 .form {
-    background-image: url('../Multimedia/hollywood-cover.webp');
+    background-image: url('../Multimedia/hollywood-cover-home.webp');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -272,20 +200,25 @@ header {
         align-items: center;
         padding: 30px;
 
-        .formContacto fieldset {
-            margin: 10px;
-            width: auto;
+        .formContacto {
 
-            .form-label {
-                margin-top: .5rem;
-            }
+            background-color: #b9afaf69;
 
-            .form-select {
-                width: fit-content;
-            }
+            fieldset {
+                margin: 10px;
+                width: auto;
 
-            textarea {
-                resize: both;
+                .form-label {
+                    margin-top: .5rem;
+                }
+
+                .form-select {
+                    width: fit-content;
+                }
+
+                textarea {
+                    resize: both;
+                }
             }
         }
     }
@@ -295,36 +228,49 @@ header {
 
 // FOOTER //
 
-.piePaginaHome {
-    font-size: $fontSizeFooter;
-    text-align: center;
-    border-top: $borderNav;
-    padding: 10px 0;
-    line-height: 0;
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $textColor;
+    height: 100px;
 
-    a {
-        color: $color;
-        display: block;
+    #soMeIcons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 10px;
+
+        a {
+            margin: 0 5px;
+            text-decoration: none;
+
+            img {
+                width: 1.5rem;
+            }
+        }
+
+
     }
 
     p {
+        font-size: 12px;
         color: $color;
+        margin: 0;
+
+        a {
+            color: lightsalmon;
+        }
     }
+
+
 }
 
-.volverInicio {
-    font-size: $fontSizeFooter;
-    text-align: center;
-    padding: 10px 0;
-    border-top: $borderNav;
+// ARROW UP FOOTER
 
-    a {
-        color: $color
-    }
-
-    p {
-        color: $color;
-    }
+#arrowUp {
+    display: none;
 }
 
 // PAGINA 404
@@ -336,7 +282,7 @@ header {
     align-items: center;
     justify-content: space-evenly;
     margin: 100px 10px 50px 10px;
-    border: 10px solid $colorTextIcon;
+    border: 10px solid $color;
 
     h1 {
         font-size: 1.5em;
@@ -360,15 +306,352 @@ header {
 // CARRITO
 
 .carrito {
+    background-color: $color;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 300px;
-    justify-items: center;
-    align-items: center;
-
+    grid-template-rows: 20% 80%;
+    grid-template-areas: 
+    "nombre-tour"
+    "detalle";
+    
+    
     h2 {
-        color: $color;
-        font-size: $fontSizeText;
+        grid-area: nombre-tour;
+        color: $textColor;
+        font-size: 2rem;;
+        margin: 0 200px;
+        align-self: center;
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .detalle-carrito {
+
+        height: fit-content;
+        p {
+            margin: 0 200px;
+        }
+
+        .carrito-tour {
+            display: grid;
+            grid-template-columns: 80% 20%;
+            grid-template-rows: auto;
+            grid-template-areas: 
+            " detalles opciones";
+            align-items: center;
+            margin: 0 200px 50px 200px;
+
+            .detalles-tour {
+
+                grid-area: detalles;
+
+                p {
+                    font-size: 1.3rem;
+                    margin: 0;
+                }
+
+                .detail {
+                    font-size: 1rem;
+                    color: #808080;
+                }
+
+                .total-tour {
+                    font-size: 1.2rem;
+                    margin-top: 10px;
+                    padding-top: 10px;
+                    border-top: 1px solid lightgray;
+                    color: $backNav;
+                }
+
+            }
+
+            .opciones {
+
+                grid-area: opciones;
+                justify-self: center;
+            }
+
+        }
+    }
+}
+
+// TOUR
+
+.container-tour-LOTR {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header-tour"
+        "main-tour";
+
+    .header-tour {
+        background-image: url('../Multimedia/tours/hobbiton.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        grid-area: header-tour;
+
+        h2 {
+            font-size: 4rem;
+            color: $color;
+            font-weight: bold;
+            padding-left: 8rem;
+            text-shadow: 5px 5px 8px black;
+        }
+
+        p {
+            font-size: 2rem;
+            color: $color;
+            font-weight: bold;
+            padding-left: 8rem;
+            text-shadow: 5px 5px 8px black;
+
+        }
+
+
+    }
+
+    .main-tour {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "description booking"
+            "back-tours back-tours";
+        background-color: $color;
+
+        .description {
+            grid-area: description;
+            justify-self: flex-start;
+            padding: 2rem 2rem;
+
+            h3 {
+                color: gray;
+                margin-bottom: 3rem;
+            }
+        }
+
+        .booking {
+            grid-area: booking;
+            justify-self: flex-end;
+            align-self: center;
+            margin-right: 1rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 30% 30% 20% 20%;
+            grid-template-areas:
+                "button"
+                "tour-details"
+                "sub-text"
+                "button-dispo";
+            align-items: center;
+            justify-items: center;
+            width: 300px;
+            height: 300px;
+            box-shadow: 1px 1px 10px 3px lightgray;
+
+
+            .button-reserva {
+                grid-area: button;
+                background-color: $backButton;
+                color: $color;
+                font-size: 1.8rem;
+                width: 90%;
+                height: 4rem;
+                border: transparent;
+                border-radius: 5px;
+            }
+
+            .tour-details {
+                grid-area: tour-details;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                width: 100%;
+                border-top: 1px solid #adadad;
+                border-bottom: 1px solid #adadad;
+                line-height: 1rem;
+
+
+
+                .idiomas {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 10px 20px;
+                    border-right: 1px solid #adadad;
+                    line-height: 1.5rem;
+
+                    p {
+                        margin: 0;
+                        font-weight: bold;
+                    }
+
+                    .sub-text {
+                        font-size: 14px;
+                        color: gray;
+                    }
+                }
+
+                .horarios {
+                    @extend .idiomas;
+                }
+
+                .precio {
+                    @extend .idiomas;
+                    border-right: none;
+
+                }
+            }
+
+            .locacion {
+                grid-area: sub-text;
+                margin: 0;
+
+                p {
+                    display: inline;
+                }
+            }
+
+            .button-dispo {
+                @extend .button-reserva;
+                grid-area: button-dispo;
+                font-size: 1rem;
+                width: 50%;
+                height: 2.5rem;
+            }
+
+
+        }
+
+        a {
+            grid-area: back-tours;
+            justify-self: center;
+            font-size: 2rem;
+            color: $backButton;
+            font-weight: bold;
+            margin: 3rem 0;
+            text-decoration: none;
+        }
+
+    }
+
+    #exampleModal {
+        .modal-content {
+            .modal-header {
+                .name-tour {
+                    margin: 0;
+                    font-size: 1.8rem;
+                }
+            }
+
+            .modal-body {
+                form {
+
+                    div {
+                        margin: 10px 0;
+                    }
+
+                    label,
+                    input {
+                        margin: 5px 0;
+                    }
+
+                    #date,
+                    #horario,
+                    #idioma,
+                    #cantidad {
+                        height: 2rem;
+                    }
+
+                    #cantidad {
+                        width: 2.5rem;
+                        text-align: center;
+                    }
+
+
+                }
+            }
+
+            .modal-footer {
+
+                justify-content: space-between;
+
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    #modal-carrito {
+
+        .modal-body {
+
+            p {
+                margin: 0;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        .modal-footer {
+            justify-content: space-between;
+
+            button {
+                a {
+                    color: $color;
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+}
+
+.container-tour-HA {
+    @extend .container-tour-LOTR;
+
+    .header-tour {
+        background-image: url('../Multimedia/tours/central-park.jpeg')
+    }
+}
+
+.container-tour-HP {
+    @extend .container-tour-LOTR;
+
+    .header-tour {
+        background-image: url('../Multimedia/tours/millenium-bridge.jpeg')
+    }
+}
+
+.container-tour-GOT {
+    @extend .container-tour-LOTR;
+
+    .header-tour {
+        background-image: url('../Multimedia/tours/dubrovnik.jpeg')
+    }
+}
+
+.container-tour-EPL {
+    @extend .container-tour-LOTR;
+
+    .header-tour {
+        background-image: url('../Multimedia/tours/rome.jpeg')
+    }
+}
+
+.container-tour-AM {
+    @extend .container-tour-LOTR;
+
+    .header-tour {
+        background-image: url('../Multimedia/tours/montmartre.jpeg')
     }
 }
 
@@ -423,15 +706,6 @@ header {
     }
 
 
-    .mainContainerHome {
-
-        .piePaginaHome {
-            grid-area: footer;
-            line-height: 0.5;
-            font-size: 16px;
-        }
-    }
-
 
     // SECCION PELICULAS - LOCACIONES //
 
@@ -450,10 +724,6 @@ header {
         .container-img {
             flex-direction: row;
             flex-wrap: wrap;
-        }
-
-        .volverInicio {
-            font-size: 16px;
         }
     }
 
@@ -476,24 +746,29 @@ header {
 
     // SECCION CONTACTO //
 
-    .formContacto fieldset {
-        width: 450px;
+    .formContacto {
+        fieldset {
+            width: 450px;
+        }
     }
 
     // CARRITO
 
-    .carrito {
-        grid-template-rows: 50px 400px;
-
-        h2 {
-            color: $color;
-            font-size: 25px;
-            padding-top: 20px;
-        }
-    }
+    
 }
 
 @media only screen and (min-width: 768px) {
+
+    // HOVER NAV
+
+    .navbar {
+        .navbar-nav {
+            .nav-link:hover {
+                background-color: transparent;
+                transform: scale(1.2);
+            }
+        }
+    }
 
 
     // HOME
@@ -521,9 +796,6 @@ header {
 
     }
 
-    .volverInicio {
-        grid-area: pie;
-    }
 
     // SECCION TOURS //
 
@@ -552,8 +824,10 @@ header {
     .formContacto {
 
         border-radius: 20px;
-        border: 1px solid $textColor;
+        border: 1px solid #aaa2a2;
     }
+
+    // ERROR 404 PAGE
 
     .paginaError {
         margin: 60px 10px 30px 10px;
@@ -565,6 +839,30 @@ header {
 
     .footer404 {
         font-size: 20px;
+    }
+
+    //FOOTER HOVER
+
+    .footer {
+        #soMeIcons {
+            img:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+
+    // ARROW UP FOOTER
+
+    #arrowUp {
+        display: block;
+
+        img {
+            width: 3rem;
+            position: fixed;
+            bottom: 30px;
+            right: 12px;
+        }
     }
 }
 
@@ -595,6 +893,7 @@ header {
 
             .navbar-nav {
                 .nav-link {
+                    color: white;
                     padding: 0 12px;
                     font-size: 18px;
                 }
@@ -604,79 +903,15 @@ header {
                         width: 28px;
                     }
                 }
+
             }
+
         }
 
     }
 
     .mainContainerHome {
-        height: auto;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 565px 50px;
-        grid-template-areas:
-            "main"
-            "footer";
-
-        .main-home {
-            grid-area: main;
-            align-self: center;
-        }
-
-
-        .asideHome {
-            flex-direction: column;
-            position: fixed;
-            right: 10px;
-            padding-top: 30vh;
-            //padding-top: 20px;
-            // animation: translate 3s infinite 0.2s;
-
-            .fa {
-                padding: 10px;
-                width: 35px;
-                font-size: inherit;
-            }
-        }
-
-        @keyframes translate {
-
-
-            100% {
-                transform: translate(0, 0);
-            }
-
-            50% {
-                transform: translate(0, 25px);
-            }
-        }
-
-    }
-
-    .arrow {
-        display: initial;
-
-        img {
-            width: 3rem;
-            position: fixed;
-            top: 80px;
-            right: 5px;
-            animation: translate 2s infinite 0.2s;
-
-
-        }
-
-        @keyframes translate {
-
-
-            100% {
-                transform: translate(0, 0);
-            }
-
-            50% {
-                transform: translate(0, 20px);
-            }
-        }
+        height: 100vh;
 
     }
 
@@ -735,7 +970,7 @@ header {
                 .hvr-trim:before {
                     content: '';
                     position: absolute;
-                    border: $colorTextIcon solid 2px;
+                    border: $color solid 2px;
                     top: 2px;
                     left: 2px;
                     right: 2px;
@@ -803,7 +1038,6 @@ header {
 
     }
 
-
     // SECCION CONTACTO //
 
     .form {
@@ -833,11 +1067,24 @@ header {
 
     }
 
+    // FOOTER //
 
+    .footer {
+        height: 120px;
 
-    .volverInicio {
-        grid-area: pie;
-        font-size: 16px;
+        #soMeIcons {
+
+            a {
+                img {
+                    width: 2rem;
+                }
+            }
+        }
+
+        p {
+            font-size: 15px;
+
+        }
     }
 
     .paginaError {
@@ -851,54 +1098,6 @@ header {
         }
     }
 
-    .carrito {
-        grid-template-rows: 50px 500px;
-
-        section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-
-            #compra {
-                border: 1px solid black;
-                border-radius: 10px;
-                box-shadow: 5px 5px black;
-                background-color: rgba(255, 255, 255, 0.774);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 40%;
-
-
-                p {
-                    margin: 0;
-                    font-size: 18px;
-                    padding: 10px 0;
-                }
-
-            }
-
-            #pago {
-                border: 1px solid black;
-                border-radius: 10px;
-                box-shadow: 5px 5px black;
-                background-color: rgba(255, 255, 255, 0.774);
-                height: 4rem;
-                display: flex;
-                align-items: center;
-
-                p {
-                    text-align: center;
-                    margin: 0;
-                    padding: 0 5px;
-                }
-            }
-
-
-
-        }
-    }
+    
 
 }

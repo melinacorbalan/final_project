@@ -1,24 +1,12 @@
-$backgroundColor: rgb(128, 128, 128);
+$backgroundColor: rgb(0, 0, 0);
 $backgroundHover: #ad6868;
-$color: white;
+$backNav: #a12e2e;
+$color: #ffffff;
 $textColor: #000000;
 $titleColor: #990100;
 $font: 'Josefin Sans', sans-serif;
 $fontSizeText: 20px;
-$fontSizeFooter: 12px;
-$fontSizeNews: 14px;
-
-
-$backgroundCarousel: #d3d3d39f;
-$BackTextCarousel: #9b3131d0;
-
-$iconFacebook: #3B5998;
-$iconTwitter: #55ACEE;
-$iconInstagram: #125688;
-$colorTextIcon: #ffffff;
-
-$borderNav: 1px solid #808080;
-
+$backButton: #c41f1f;
 
 @mixin flex ($display, $direction) {
     display: $display;

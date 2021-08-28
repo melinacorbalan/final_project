@@ -4,7 +4,7 @@
   box-sizing: border-box; }
 
 body {
-  background-color: gray;
+  background-color: black;
   font-family: "Josefin Sans", sans-serif; }
 
 header {
@@ -22,24 +22,26 @@ header {
       font-size: 25px;
       font-weight: bold;
       color: #ffffff;
-      text-shadow: 2px 2px #555454;
+      text-shadow: 2px 2px black;
       padding-left: 10px;
       margin-bottom: 0; }
   header .navbar {
     justify-content: flex-end;
     padding-top: 0; }
     header .navbar .navbar-toggler {
-      background-color: white;
+      background-color: #ffffff;
       opacity: 60%; }
     header .navbar .navbar-nav {
-      background-color: white;
+      background-color: #ffffff;
       opacity: 60%; }
       header .navbar .navbar-nav .nav-link {
         padding: 2px 15px;
         color: #000000;
         font-size: 12x; }
+      header .navbar .navbar-nav .nav-link:hover {
+        color: #ffffff; }
       header .navbar .navbar-nav #nav-carrito {
-        background-color: black; }
+        background-color: #000000; }
         header .navbar .navbar-nav #nav-carrito img {
           width: 22px; }
     header .navbar li a:hover {
@@ -47,7 +49,7 @@ header {
       color: #000000; }
 
 .mainContainerHome {
-  background-image: url("../Multimedia/hollywood-cover.webp");
+  background-image: url("../Multimedia/hollywood-cover-home.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -64,33 +66,9 @@ header {
       text-align: center;
       color: #000000;
       background-color: rgba(255, 255, 255, 0.822); }
-  .mainContainerHome .asideHome {
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 5px;
-    justify-content: center;
-    align-items: center; }
-    .mainContainerHome .asideHome .fa {
-      padding: 5px;
-      width: auto;
-      font-size: 10px;
-      text-align: center;
-      text-decoration: none; }
-    .mainContainerHome .asideHome .fa:hover {
-      transform: scale(1.1); }
-    .mainContainerHome .asideHome .fa-facebook, .mainContainerHome .asideHome .fa-twitter, .mainContainerHome .asideHome .fa-instagram {
-      background: #3B5998;
-      color: #ffffff; }
-    .mainContainerHome .asideHome .fa-twitter {
-      background: #55ACEE; }
-    .mainContainerHome .asideHome .fa-instagram {
-      background: #125688; }
-
-.arrow {
-  display: none; }
 
 .mainContainerPages {
-  background-image: url("../Multimedia/hollywood-cover.webp");
+  background-image: url("../Multimedia/hollywood-cover.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -99,10 +77,10 @@ header {
     font-weight: bold;
     text-align: center;
     font-size: 20px;
-    color: white;
+    color: #ffffff;
     padding-top: 10px; }
   .mainContainerPages .tituloPages p {
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 10px;
     margin-bottom: 0; }
@@ -113,7 +91,7 @@ header {
     justify-content: center;
     flex-wrap: wrap; }
     .mainContainerPages .container-img a {
-      color: white;
+      color: #ffffff;
       text-decoration: none; }
       .mainContainerPages .container-img a div {
         padding: 10px; }
@@ -126,26 +104,6 @@ header {
         .mainContainerPages .container-img a div img {
           width: 150px;
           height: 100px; }
-  .mainContainerPages .asidePages {
-    display: flex;
-    flex-direction: row;
-    padding: 5px 0;
-    align-self: center; }
-    .mainContainerPages .asidePages .fa {
-      padding: 5px;
-      width: auto;
-      font-size: 10px;
-      text-align: center;
-      text-decoration: none; }
-    .mainContainerPages .asidePages .fa:hover {
-      transform: scale(1.1); }
-    .mainContainerPages .asidePages .fa-facebook, .mainContainerPages .asidePages .fa-twitter, .mainContainerPages .asidePages .fa-instagram {
-      background: #3B5998;
-      color: #ffffff; }
-    .mainContainerPages .asidePages .fa-twitter {
-      background: #55ACEE; }
-    .mainContainerPages .asidePages .fa-instagram {
-      background: #125688; }
 
 .tours-mobile {
   display: flex;
@@ -159,46 +117,53 @@ header {
   display: none; }
 
 .form {
-  background-image: url("../Multimedia/hollywood-cover.webp");
+  background-image: url("../Multimedia/hollywood-cover-home.webp");
   background-repeat: no-repeat;
   background-size: cover; }
   .form .formulario {
-    color: white;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px; }
-    .form .formulario .formContacto fieldset {
-      margin: 10px;
-      width: auto; }
-      .form .formulario .formContacto fieldset .form-label {
-        margin-top: .5rem; }
-      .form .formulario .formContacto fieldset .form-select {
-        width: fit-content; }
-      .form .formulario .formContacto fieldset textarea {
-        resize: both; }
+    .form .formulario .formContacto {
+      background-color: #b9afaf69; }
+      .form .formulario .formContacto fieldset {
+        margin: 10px;
+        width: auto; }
+        .form .formulario .formContacto fieldset .form-label {
+          margin-top: .5rem; }
+        .form .formulario .formContacto fieldset .form-select {
+          width: fit-content; }
+        .form .formulario .formContacto fieldset textarea {
+          resize: both; }
 
-.piePaginaHome {
-  font-size: 12px;
-  text-align: center;
-  border-top: 1px solid #808080;
-  padding: 10px 0;
-  line-height: 0; }
-  .piePaginaHome a {
-    color: white;
-    display: block; }
-  .piePaginaHome p {
-    color: white; }
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  height: 100px; }
+  .footer #soMeIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .footer #soMeIcons a {
+      margin: 0 5px;
+      text-decoration: none; }
+      .footer #soMeIcons a img {
+        width: 1.5rem; }
+  .footer p {
+    font-size: 12px;
+    color: #ffffff;
+    margin: 0; }
+    .footer p a {
+      color: lightsalmon; }
 
-.volverInicio {
-  font-size: 12px;
-  text-align: center;
-  padding: 10px 0;
-  border-top: 1px solid #808080; }
-  .volverInicio a {
-    color: white; }
-  .volverInicio p {
-    color: white; }
+#arrowUp {
+  display: none; }
 
 .paginaError {
   display: flex;
@@ -220,14 +185,224 @@ header {
     color: #000000; }
 
 .carrito {
+  background-color: #ffffff;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 50px 300px;
-  justify-items: center;
-  align-items: center; }
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "nombre-tour" "detalle"; }
   .carrito h2 {
-    color: white;
-    font-size: 20px; }
+    grid-area: nombre-tour;
+    color: #000000;
+    font-size: 2rem;
+    margin: 0 200px;
+    align-self: center;
+    border-bottom: 1px solid lightgrey; }
+  .carrito .detalle-carrito {
+    height: fit-content; }
+    .carrito .detalle-carrito p {
+      margin: 0 200px; }
+    .carrito .detalle-carrito .carrito-tour {
+      display: grid;
+      grid-template-columns: 80% 20%;
+      grid-template-rows: auto;
+      grid-template-areas: " detalles opciones";
+      align-items: center;
+      margin: 0 200px 50px 200px; }
+      .carrito .detalle-carrito .carrito-tour .detalles-tour {
+        grid-area: detalles; }
+        .carrito .detalle-carrito .carrito-tour .detalles-tour p {
+          font-size: 1.3rem;
+          margin: 0; }
+        .carrito .detalle-carrito .carrito-tour .detalles-tour .detail {
+          font-size: 1rem;
+          color: #808080; }
+        .carrito .detalle-carrito .carrito-tour .detalles-tour .total-tour {
+          font-size: 1.2rem;
+          margin-top: 10px;
+          padding-top: 10px;
+          border-top: 1px solid lightgray;
+          color: #a12e2e; }
+      .carrito .detalle-carrito .carrito-tour .opciones {
+        grid-area: opciones;
+        justify-self: center; }
+
+.container-tour-LOTR, .container-tour-HA, .container-tour-HP, .container-tour-GOT, .container-tour-EPL, .container-tour-AM {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header-tour" "main-tour"; }
+  .container-tour-LOTR .header-tour, .container-tour-HA .header-tour, .container-tour-HP .header-tour, .container-tour-GOT .header-tour, .container-tour-EPL .header-tour, .container-tour-AM .header-tour {
+    background-image: url("../Multimedia/tours/hobbiton.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    grid-area: header-tour; }
+    .container-tour-LOTR .header-tour h2, .container-tour-HA .header-tour h2, .container-tour-HP .header-tour h2, .container-tour-GOT .header-tour h2, .container-tour-EPL .header-tour h2, .container-tour-AM .header-tour h2 {
+      font-size: 4rem;
+      color: #ffffff;
+      font-weight: bold;
+      padding-left: 8rem;
+      text-shadow: 5px 5px 8px black; }
+    .container-tour-LOTR .header-tour p, .container-tour-HA .header-tour p, .container-tour-HP .header-tour p, .container-tour-GOT .header-tour p, .container-tour-EPL .header-tour p, .container-tour-AM .header-tour p {
+      font-size: 2rem;
+      color: #ffffff;
+      font-weight: bold;
+      padding-left: 8rem;
+      text-shadow: 5px 5px 8px black; }
+  .container-tour-LOTR .main-tour, .container-tour-HA .main-tour, .container-tour-HP .main-tour, .container-tour-GOT .main-tour, .container-tour-EPL .main-tour, .container-tour-AM .main-tour {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto;
+    grid-template-areas: "description booking" "back-tours back-tours";
+    background-color: #ffffff; }
+    .container-tour-LOTR .main-tour .description, .container-tour-HA .main-tour .description, .container-tour-HP .main-tour .description, .container-tour-GOT .main-tour .description, .container-tour-EPL .main-tour .description, .container-tour-AM .main-tour .description {
+      grid-area: description;
+      justify-self: flex-start;
+      padding: 2rem 2rem; }
+      .container-tour-LOTR .main-tour .description h3, .container-tour-HA .main-tour .description h3, .container-tour-HP .main-tour .description h3, .container-tour-GOT .main-tour .description h3, .container-tour-EPL .main-tour .description h3, .container-tour-AM .main-tour .description h3 {
+        color: gray;
+        margin-bottom: 3rem; }
+    .container-tour-LOTR .main-tour .booking, .container-tour-HA .main-tour .booking, .container-tour-HP .main-tour .booking, .container-tour-GOT .main-tour .booking, .container-tour-EPL .main-tour .booking, .container-tour-AM .main-tour .booking {
+      grid-area: booking;
+      justify-self: flex-end;
+      align-self: center;
+      margin-right: 1rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 30% 30% 20% 20%;
+      grid-template-areas: "button" "tour-details" "sub-text" "button-dispo";
+      align-items: center;
+      justify-items: center;
+      width: 300px;
+      height: 300px;
+      box-shadow: 1px 1px 10px 3px lightgray; }
+      .container-tour-LOTR .main-tour .booking .button-reserva, .container-tour-HA .main-tour .booking .button-reserva, .container-tour-HP .main-tour .booking .button-reserva, .container-tour-GOT .main-tour .booking .button-reserva, .container-tour-EPL .main-tour .booking .button-reserva, .container-tour-AM .main-tour .booking .button-reserva, .container-tour-LOTR .main-tour .booking .button-dispo, .container-tour-HA .main-tour .booking .button-dispo, .container-tour-HP .main-tour .booking .button-dispo, .container-tour-GOT .main-tour .booking .button-dispo, .container-tour-EPL .main-tour .booking .button-dispo, .container-tour-AM .main-tour .booking .button-dispo {
+        grid-area: button;
+        background-color: #c41f1f;
+        color: #ffffff;
+        font-size: 1.8rem;
+        width: 90%;
+        height: 4rem;
+        border: transparent;
+        border-radius: 5px; }
+      .container-tour-LOTR .main-tour .booking .tour-details, .container-tour-HA .main-tour .booking .tour-details, .container-tour-HP .main-tour .booking .tour-details, .container-tour-GOT .main-tour .booking .tour-details, .container-tour-EPL .main-tour .booking .tour-details, .container-tour-AM .main-tour .booking .tour-details {
+        grid-area: tour-details;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        border-top: 1px solid #adadad;
+        border-bottom: 1px solid #adadad;
+        line-height: 1rem; }
+        .container-tour-LOTR .main-tour .booking .tour-details .idiomas, .container-tour-HA .main-tour .booking .tour-details .idiomas, .container-tour-HP .main-tour .booking .tour-details .idiomas, .container-tour-GOT .main-tour .booking .tour-details .idiomas, .container-tour-EPL .main-tour .booking .tour-details .idiomas, .container-tour-AM .main-tour .booking .tour-details .idiomas, .container-tour-LOTR .main-tour .booking .tour-details .horarios, .container-tour-HA .main-tour .booking .tour-details .horarios, .container-tour-HP .main-tour .booking .tour-details .horarios, .container-tour-GOT .main-tour .booking .tour-details .horarios, .container-tour-EPL .main-tour .booking .tour-details .horarios, .container-tour-AM .main-tour .booking .tour-details .horarios, .container-tour-LOTR .main-tour .booking .tour-details .precio, .container-tour-HA .main-tour .booking .tour-details .precio, .container-tour-HP .main-tour .booking .tour-details .precio, .container-tour-GOT .main-tour .booking .tour-details .precio, .container-tour-EPL .main-tour .booking .tour-details .precio, .container-tour-AM .main-tour .booking .tour-details .precio {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 10px 20px;
+          border-right: 1px solid #adadad;
+          line-height: 1.5rem; }
+          .container-tour-LOTR .main-tour .booking .tour-details .idiomas p, .container-tour-HA .main-tour .booking .tour-details .idiomas p, .container-tour-HP .main-tour .booking .tour-details .idiomas p, .container-tour-GOT .main-tour .booking .tour-details .idiomas p, .container-tour-EPL .main-tour .booking .tour-details .idiomas p, .container-tour-AM .main-tour .booking .tour-details .idiomas p, .container-tour-LOTR .main-tour .booking .tour-details .horarios p, .container-tour-HA .main-tour .booking .tour-details .horarios p, .container-tour-HP .main-tour .booking .tour-details .horarios p, .container-tour-GOT .main-tour .booking .tour-details .horarios p, .container-tour-EPL .main-tour .booking .tour-details .horarios p, .container-tour-AM .main-tour .booking .tour-details .horarios p, .container-tour-LOTR .main-tour .booking .tour-details .precio p, .container-tour-HA .main-tour .booking .tour-details .precio p, .container-tour-HP .main-tour .booking .tour-details .precio p, .container-tour-GOT .main-tour .booking .tour-details .precio p, .container-tour-EPL .main-tour .booking .tour-details .precio p, .container-tour-AM .main-tour .booking .tour-details .precio p {
+            margin: 0;
+            font-weight: bold; }
+          .container-tour-LOTR .main-tour .booking .tour-details .idiomas .sub-text, .container-tour-HA .main-tour .booking .tour-details .idiomas .sub-text, .container-tour-HP .main-tour .booking .tour-details .idiomas .sub-text, .container-tour-GOT .main-tour .booking .tour-details .idiomas .sub-text, .container-tour-EPL .main-tour .booking .tour-details .idiomas .sub-text, .container-tour-AM .main-tour .booking .tour-details .idiomas .sub-text, .container-tour-LOTR .main-tour .booking .tour-details .horarios .sub-text, .container-tour-HA .main-tour .booking .tour-details .horarios .sub-text, .container-tour-HP .main-tour .booking .tour-details .horarios .sub-text, .container-tour-GOT .main-tour .booking .tour-details .horarios .sub-text, .container-tour-EPL .main-tour .booking .tour-details .horarios .sub-text, .container-tour-AM .main-tour .booking .tour-details .horarios .sub-text, .container-tour-LOTR .main-tour .booking .tour-details .precio .sub-text, .container-tour-HA .main-tour .booking .tour-details .precio .sub-text, .container-tour-HP .main-tour .booking .tour-details .precio .sub-text, .container-tour-GOT .main-tour .booking .tour-details .precio .sub-text, .container-tour-EPL .main-tour .booking .tour-details .precio .sub-text, .container-tour-AM .main-tour .booking .tour-details .precio .sub-text {
+            font-size: 14px;
+            color: gray; }
+        .container-tour-LOTR .main-tour .booking .tour-details .precio, .container-tour-HA .main-tour .booking .tour-details .precio, .container-tour-HP .main-tour .booking .tour-details .precio, .container-tour-GOT .main-tour .booking .tour-details .precio, .container-tour-EPL .main-tour .booking .tour-details .precio, .container-tour-AM .main-tour .booking .tour-details .precio {
+          border-right: none; }
+      .container-tour-LOTR .main-tour .booking .locacion, .container-tour-HA .main-tour .booking .locacion, .container-tour-HP .main-tour .booking .locacion, .container-tour-GOT .main-tour .booking .locacion, .container-tour-EPL .main-tour .booking .locacion, .container-tour-AM .main-tour .booking .locacion {
+        grid-area: sub-text;
+        margin: 0; }
+        .container-tour-LOTR .main-tour .booking .locacion p, .container-tour-HA .main-tour .booking .locacion p, .container-tour-HP .main-tour .booking .locacion p, .container-tour-GOT .main-tour .booking .locacion p, .container-tour-EPL .main-tour .booking .locacion p, .container-tour-AM .main-tour .booking .locacion p {
+          display: inline; }
+      .container-tour-LOTR .main-tour .booking .button-dispo, .container-tour-HA .main-tour .booking .button-dispo, .container-tour-HP .main-tour .booking .button-dispo, .container-tour-GOT .main-tour .booking .button-dispo, .container-tour-EPL .main-tour .booking .button-dispo, .container-tour-AM .main-tour .booking .button-dispo {
+        grid-area: button-dispo;
+        font-size: 1rem;
+        width: 50%;
+        height: 2.5rem; }
+    .container-tour-LOTR .main-tour a, .container-tour-HA .main-tour a, .container-tour-HP .main-tour a, .container-tour-GOT .main-tour a, .container-tour-EPL .main-tour a, .container-tour-AM .main-tour a {
+      grid-area: back-tours;
+      justify-self: center;
+      font-size: 2rem;
+      color: #c41f1f;
+      font-weight: bold;
+      margin: 3rem 0;
+      text-decoration: none; }
+  .container-tour-LOTR #exampleModal .modal-content .modal-header .name-tour, .container-tour-HA #exampleModal .modal-content .modal-header .name-tour, .container-tour-HP #exampleModal .modal-content .modal-header .name-tour, .container-tour-GOT #exampleModal .modal-content .modal-header .name-tour, .container-tour-EPL #exampleModal .modal-content .modal-header .name-tour, .container-tour-AM #exampleModal .modal-content .modal-header .name-tour {
+    margin: 0;
+    font-size: 1.8rem; }
+  .container-tour-LOTR #exampleModal .modal-content .modal-body form div, .container-tour-HA #exampleModal .modal-content .modal-body form div, .container-tour-HP #exampleModal .modal-content .modal-body form div, .container-tour-GOT #exampleModal .modal-content .modal-body form div, .container-tour-EPL #exampleModal .modal-content .modal-body form div, .container-tour-AM #exampleModal .modal-content .modal-body form div {
+    margin: 10px 0; }
+  .container-tour-LOTR #exampleModal .modal-content .modal-body form label, .container-tour-HA #exampleModal .modal-content .modal-body form label, .container-tour-HP #exampleModal .modal-content .modal-body form label, .container-tour-GOT #exampleModal .modal-content .modal-body form label, .container-tour-EPL #exampleModal .modal-content .modal-body form label, .container-tour-AM #exampleModal .modal-content .modal-body form label,
+  .container-tour-LOTR #exampleModal .modal-content .modal-body form input,
+  .container-tour-HA #exampleModal .modal-content .modal-body form input,
+  .container-tour-HP #exampleModal .modal-content .modal-body form input,
+  .container-tour-GOT #exampleModal .modal-content .modal-body form input,
+  .container-tour-EPL #exampleModal .modal-content .modal-body form input,
+  .container-tour-AM #exampleModal .modal-content .modal-body form input {
+    margin: 5px 0; }
+  .container-tour-LOTR #exampleModal .modal-content .modal-body form #date, .container-tour-HA #exampleModal .modal-content .modal-body form #date, .container-tour-HP #exampleModal .modal-content .modal-body form #date, .container-tour-GOT #exampleModal .modal-content .modal-body form #date, .container-tour-EPL #exampleModal .modal-content .modal-body form #date, .container-tour-AM #exampleModal .modal-content .modal-body form #date,
+  .container-tour-LOTR #exampleModal .modal-content .modal-body form #horario,
+  .container-tour-HA #exampleModal .modal-content .modal-body form #horario,
+  .container-tour-HP #exampleModal .modal-content .modal-body form #horario,
+  .container-tour-GOT #exampleModal .modal-content .modal-body form #horario,
+  .container-tour-EPL #exampleModal .modal-content .modal-body form #horario,
+  .container-tour-AM #exampleModal .modal-content .modal-body form #horario,
+  .container-tour-LOTR #exampleModal .modal-content .modal-body form #idioma,
+  .container-tour-HA #exampleModal .modal-content .modal-body form #idioma,
+  .container-tour-HP #exampleModal .modal-content .modal-body form #idioma,
+  .container-tour-GOT #exampleModal .modal-content .modal-body form #idioma,
+  .container-tour-EPL #exampleModal .modal-content .modal-body form #idioma,
+  .container-tour-AM #exampleModal .modal-content .modal-body form #idioma,
+  .container-tour-LOTR #exampleModal .modal-content .modal-body form #cantidad,
+  .container-tour-HA #exampleModal .modal-content .modal-body form #cantidad,
+  .container-tour-HP #exampleModal .modal-content .modal-body form #cantidad,
+  .container-tour-GOT #exampleModal .modal-content .modal-body form #cantidad,
+  .container-tour-EPL #exampleModal .modal-content .modal-body form #cantidad,
+  .container-tour-AM #exampleModal .modal-content .modal-body form #cantidad {
+    height: 2rem; }
+  
+  .container-tour-LOTR #exampleModal .modal-content .modal-body form #cantidad,
+  .container-tour-HA #exampleModal .modal-content .modal-body form #cantidad,
+  .container-tour-HP #exampleModal .modal-content .modal-body form #cantidad,
+  .container-tour-GOT #exampleModal .modal-content .modal-body form #cantidad,
+  .container-tour-EPL #exampleModal .modal-content .modal-body form #cantidad,
+  .container-tour-AM #exampleModal .modal-content .modal-body form #cantidad {
+    width: 2.5rem;
+    text-align: center; }
+  .container-tour-LOTR #exampleModal .modal-content .modal-footer, .container-tour-HA #exampleModal .modal-content .modal-footer, .container-tour-HP #exampleModal .modal-content .modal-footer, .container-tour-GOT #exampleModal .modal-content .modal-footer, .container-tour-EPL #exampleModal .modal-content .modal-footer, .container-tour-AM #exampleModal .modal-content .modal-footer {
+    justify-content: space-between; }
+    .container-tour-LOTR #exampleModal .modal-content .modal-footer p, .container-tour-HA #exampleModal .modal-content .modal-footer p, .container-tour-HP #exampleModal .modal-content .modal-footer p, .container-tour-GOT #exampleModal .modal-content .modal-footer p, .container-tour-EPL #exampleModal .modal-content .modal-footer p, .container-tour-AM #exampleModal .modal-content .modal-footer p {
+      font-size: 1.5rem; }
+  .container-tour-LOTR #modal-carrito .modal-body p, .container-tour-HA #modal-carrito .modal-body p, .container-tour-HP #modal-carrito .modal-body p, .container-tour-GOT #modal-carrito .modal-body p, .container-tour-EPL #modal-carrito .modal-body p, .container-tour-AM #modal-carrito .modal-body p {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center; }
+  .container-tour-LOTR #modal-carrito .modal-footer, .container-tour-HA #modal-carrito .modal-footer, .container-tour-HP #modal-carrito .modal-footer, .container-tour-GOT #modal-carrito .modal-footer, .container-tour-EPL #modal-carrito .modal-footer, .container-tour-AM #modal-carrito .modal-footer {
+    justify-content: space-between; }
+    .container-tour-LOTR #modal-carrito .modal-footer button a, .container-tour-HA #modal-carrito .modal-footer button a, .container-tour-HP #modal-carrito .modal-footer button a, .container-tour-GOT #modal-carrito .modal-footer button a, .container-tour-EPL #modal-carrito .modal-footer button a, .container-tour-AM #modal-carrito .modal-footer button a {
+      color: #ffffff;
+      text-decoration: none; }
+
+.container-tour-HA .header-tour {
+  background-image: url("../Multimedia/tours/central-park.jpeg"); }
+
+.container-tour-HP .header-tour {
+  background-image: url("../Multimedia/tours/millenium-bridge.jpeg"); }
+
+.container-tour-GOT .header-tour {
+  background-image: url("../Multimedia/tours/dubrovnik.jpeg"); }
+
+.container-tour-EPL .header-tour {
+  background-image: url("../Multimedia/tours/rome.jpeg"); }
+
+.container-tour-AM .header-tour {
+  background-image: url("../Multimedia/tours/montmartre.jpeg"); }
 
 @media only screen and (min-width: 576px) {
   header {
@@ -248,15 +423,11 @@ header {
         header .navbar .navbar-nav .nav-link {
           padding: 0 5px;
           font-size: 12px;
-          color: white; }
+          color: #ffffff; }
         header .navbar .navbar-nav #nav-carrito {
           background-color: transparent; }
           header .navbar .navbar-nav #nav-carrito img {
             width: 18px; }
-  .mainContainerHome .piePaginaHome {
-    grid-area: footer;
-    line-height: 0.5;
-    font-size: 16px; }
   .mainContainerPages .tituloPages h2 {
     font-size: 25px;
     padding-top: 20px; }
@@ -265,30 +436,23 @@ header {
   .mainContainerPages .container-img {
     flex-direction: row;
     flex-wrap: wrap; }
-  .mainContainerPages .volverInicio {
-    font-size: 16px; }
   .tours-mobile .carousel .carousel-inner .carousel-item .card {
     width: 25rem; }
   .formContacto fieldset {
-    width: 450px; }
-  .carrito {
-    grid-template-rows: 50px 400px; }
-    .carrito h2 {
-      color: white;
-      font-size: 25px;
-      padding-top: 20px; } }
+    width: 450px; } }
 
 @media only screen and (min-width: 768px) {
+  .navbar .navbar-nav .nav-link:hover {
+    background-color: transparent;
+    transform: scale(1.2); }
   .mainContainerHome {
     height: 550px; }
   .mainContainerPages .container-img a {
-    color: white;
+    color: #ffffff;
     text-decoration: none; }
     .mainContainerPages .container-img a div img {
       width: 230px;
       height: 150px; }
-  .volverInicio {
-    grid-area: pie; }
   .tours-mobile {
     display: flex;
     flex-direction: column;
@@ -298,13 +462,22 @@ header {
       width: 22rem; }
   .formContacto {
     border-radius: 20px;
-    border: 1px solid #000000; }
+    border: 1px solid #aaa2a2; }
   .paginaError {
     margin: 60px 10px 30px 10px; }
     .paginaError h1 {
       font-size: 2em; }
   .footer404 {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .footer #soMeIcons img:hover {
+    transform: scale(1.2); }
+  #arrowUp {
+    display: block; }
+    #arrowUp img {
+      width: 3rem;
+      position: fixed;
+      bottom: 30px;
+      right: 12px; } }
 
 @media only screen and (min-width: 992px) {
   header {
@@ -319,46 +492,13 @@ header {
     header .navbar {
       padding: 0; }
       header .navbar .navbar-nav .nav-link {
+        color: white;
         padding: 0 12px;
         font-size: 18px; }
       header .navbar .navbar-nav #nav-carrito img {
         width: 28px; }
   .mainContainerHome {
-    height: auto;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 565px 50px;
-    grid-template-areas: "main" "footer"; }
-    .mainContainerHome .main-home {
-      grid-area: main;
-      align-self: center; }
-    .mainContainerHome .asideHome {
-      flex-direction: column;
-      position: fixed;
-      right: 10px;
-      padding-top: 30vh; }
-      .mainContainerHome .asideHome .fa {
-        padding: 10px;
-        width: 35px;
-        font-size: inherit; }
-  @keyframes translate {
-    100% {
-      transform: translate(0, 0); }
-    50% {
-      transform: translate(0, 25px); } }
-  .arrow {
-    display: initial; }
-    .arrow img {
-      width: 3rem;
-      position: fixed;
-      top: 80px;
-      right: 5px;
-      animation: translate 2s infinite 0.2s; }
-  @keyframes translate {
-    100% {
-      transform: translate(0, 0); }
-    50% {
-      transform: translate(0, 20px); } }
+    height: 100vh; }
   .mainContainerPages {
     display: grid;
     grid-template-columns: 100%;
@@ -373,7 +513,7 @@ header {
       grid-area: mainPages;
       margin-bottom: 30px; }
       .mainContainerPages .container-img a {
-        color: white;
+        color: #ffffff;
         text-decoration: none; }
         .mainContainerPages .container-img a div {
           padding: 20px; }
@@ -441,43 +581,13 @@ header {
       transform: translate(0, 0); } }
     .form .formulario .formContacto fieldset {
       width: 500px; }
-  .volverInicio {
-    grid-area: pie;
-    font-size: 16px; }
+  .footer {
+    height: 120px; }
+    .footer #soMeIcons a img {
+      width: 2rem; }
+    .footer p {
+      font-size: 15px; }
   .paginaError h1 {
     font-size: 50px; }
   .paginaError .tristeza {
-    width: 25%; }
-  .carrito {
-    grid-template-rows: 50px 500px; }
-    .carrito section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 30px; }
-      .carrito section #compra {
-        border: 1px solid black;
-        border-radius: 10px;
-        box-shadow: 5px 5px black;
-        background-color: rgba(255, 255, 255, 0.774);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 40%; }
-        .carrito section #compra p {
-          margin: 0;
-          font-size: 18px;
-          padding: 10px 0; }
-      .carrito section #pago {
-        border: 1px solid black;
-        border-radius: 10px;
-        box-shadow: 5px 5px black;
-        background-color: rgba(255, 255, 255, 0.774);
-        height: 4rem;
-        display: flex;
-        align-items: center; }
-        .carrito section #pago p {
-          text-align: center;
-          margin: 0;
-          padding: 0 5px; } }
+    width: 25%; } }
