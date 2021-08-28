@@ -37,7 +37,7 @@ const printDetalles = () => {
             carrito_tour.appendChild(opciones);
 
 
-            //BOTON BORRAR TOUR - SIN FUNCIONAR
+            //BOTON BORRAR TOUR - AUN SIN FUNCIONAR
 
             let button = document.createElement("button");
             button.setAttribute("id", "btn-eliminar");
