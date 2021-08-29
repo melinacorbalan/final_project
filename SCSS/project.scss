@@ -310,17 +310,17 @@ header {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 20% 80%;
-    grid-template-areas: 
-    "nombre-tour"
-    "detalle";
-    
-    
+    grid-template-rows: 10% 90%;
+    grid-template-areas:
+        "nombre-tour"
+        "detalle";
+
+
     h2 {
         grid-area: nombre-tour;
+        justify-self: center;
         color: $textColor;
-        font-size: 2rem;;
-        margin: 0 200px;
+        font-size: 1.5rem;
         align-self: center;
         border-bottom: 1px solid lightgrey;
     }
@@ -328,13 +328,14 @@ header {
     .detalle-carrito {
 
         p {
-            margin: 0 200px;
+            margin: 0;
         }
 
         .valor-total {
-            margin: 0 200px;
-            font-size: 1.5rem;
+            margin: 0;
+            font-size: 1.2rem;
             padding-top: 20px;
+            margin-left: 5px;
             border-top: 1px solid lightgray;
         }
 
@@ -345,27 +346,27 @@ header {
             display: grid;
             grid-template-columns: 80% 20%;
             grid-template-rows: auto;
-            grid-template-areas: 
-            " detalles opciones";
+            grid-template-areas:
+                " detalles opciones";
             align-items: center;
-            margin: 0 200px 50px 200px;
+            margin: 0 10px 50px 10px;
 
             .detalles-tour {
 
                 grid-area: detalles;
 
                 p {
-                    font-size: 1.3rem;
+                    font-size: 1rem;
                     margin: 0;
                 }
 
                 .detail {
-                    font-size: 1rem;
+                    font-size: 0.8rem;
                     color: #808080;
                 }
 
                 .total-tour {
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     margin-top: 10px;
                     padding-top: 10px;
                     color: $backNav;
@@ -377,6 +378,10 @@ header {
 
                 grid-area: opciones;
                 justify-self: center;
+
+                button {
+                    font-size: 0.8rem;
+                }
             }
 
         }
@@ -398,7 +403,7 @@ header {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        height: 500px;
+        height: 300px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -406,18 +411,18 @@ header {
         grid-area: header-tour;
 
         h2 {
-            font-size: 4rem;
+            font-size: 2rem;
             color: $color;
             font-weight: bold;
-            padding-left: 8rem;
+            padding-left: 3rem;
             text-shadow: 5px 5px 8px black;
         }
 
         p {
-            font-size: 2rem;
+            font-size: 1rem;
             color: $color;
             font-weight: bold;
-            padding-left: 8rem;
+            padding-left: 3rem;
             text-shadow: 5px 5px 8px black;
 
         }
@@ -427,11 +432,12 @@ header {
 
     .main-tour {
         display: grid;
-        grid-template-columns: 70% 30%;
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas:
-            "description booking"
-            "back-tours back-tours";
+            "description"
+            "booking"
+            "back-tours";
         background-color: $color;
 
         .description {
@@ -447,9 +453,8 @@ header {
 
         .booking {
             grid-area: booking;
-            justify-self: flex-end;
+            justify-self: center;
             align-self: center;
-            margin-right: 1rem;
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 30% 30% 20% 20%;
@@ -551,6 +556,11 @@ header {
     }
 
     #exampleModal {
+
+        width: 80%;
+        height: 80%;
+        left: 50px;
+
         .modal-content {
             .modal-header {
                 .name-tour {
@@ -762,7 +772,17 @@ header {
 
     // CARRITO
 
-    
+    .carrito {
+        grid-template-rows: 20% 80%;
+
+        h2 {
+            justify-self: stretch;
+            text-align: center;
+        }
+
+    }
+
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -872,6 +892,38 @@ header {
             right: 12px;
         }
     }
+
+    // CARRITO
+
+.carrito {
+    
+    h2 {
+        text-align: left;
+        margin: 0 100px;
+    }
+
+    .detalle-carrito {
+
+        .valor-total {
+            margin: 0 100px;
+            
+        }
+
+
+        .carrito-tour {
+            
+            margin: 0 100px 50px 100px;
+
+            .opciones {
+
+                button {
+                    font-size: 1rem;
+                }
+            }
+
+        }
+    }
+}
 }
 
 @media only screen and (min-width: 992px) {
@@ -1106,6 +1158,131 @@ header {
         }
     }
 
-    
+
+    // TOURS
+
+
+    .container-tour-LOTR {
+
+        .header-tour {
+
+            height: 500px;
+
+
+            h2 {
+                font-size: 4rem;
+                padding-left: 8rem;
+            }
+
+            p {
+                font-size: 2rem;
+                padding-left: 8rem;
+            }
+
+
+        }
+
+        .main-tour {
+            grid-template-columns: 70% 30%;
+            grid-template-areas:
+                "description booking"
+                "back-tours back-tours";
+
+            .booking {
+                justify-self: flex-end;
+                margin-right: 1rem;
+            }
+
+        }
+
+        #exampleModal {
+
+            width: 100%;
+            height: 100%;
+            left: 0;
+
+        }
+    }
+
+    .container-tour-HA {
+
+        .header-tour {
+            background-image: url('../Multimedia/tours/central-park.jpeg')
+        }
+    }
+
+    .container-tour-HP {
+
+        .header-tour {
+            background-image: url('../Multimedia/tours/millenium-bridge.jpeg')
+        }
+    }
+
+    .container-tour-GOT {
+        .header-tour {
+            background-image: url('../Multimedia/tours/dubrovnik.jpeg')
+        }
+    }
+
+    .container-tour-EPL {
+
+        .header-tour {
+            background-image: url('../Multimedia/tours/rome.jpeg')
+        }
+    }
+
+    .container-tour-AM {
+
+        .header-tour {
+            background-image: url('../Multimedia/tours/montmartre.jpeg')
+        }
+    }
+
+    // CARRITO
+
+    .carrito {
+        
+        grid-template-rows: 15% 75%;
+
+        h2 {
+            
+            font-size: 2rem;
+            margin: 0 200px;
+        }
+
+        .detalle-carrito {
+
+            p {
+                margin: 0 200px;
+            }
+
+            .valor-total {
+                margin: 0 200px;
+                font-size: 1.5rem;
+            }
+
+            .carrito-tour {
+                margin: 0 200px 50px 200px;
+
+                .detalles-tour {
+
+                    p {
+                        font-size: 1.3rem;
+                    }
+
+                    .detail {
+                        font-size: 1rem;
+                    }
+
+                    .total-tour {
+                        font-size: 1.2rem;
+                    }
+
+                }
+
+            }
+        }
+    }
+
 
 }

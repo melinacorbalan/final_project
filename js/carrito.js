@@ -62,17 +62,13 @@ const printDetalles = () => {
         detalleCompra.appendChild(valorTotal);
 
         if (sum == 0) {
-            valorTotal.textContent = "No tienes tours en tu carrito"
+            valorTotal.textContent = "No tienes tours en tu carrito";
+            
         }
 
 
 
-    } else {
-        let noTour = document.createElement("p");
-        noTour.textContent = "No tienes tours en tu carrito"
-        detalleCompra.appendChild(noTour);
-    }
-    
+    } 
 }
 
 

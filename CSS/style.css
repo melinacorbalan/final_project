@@ -189,23 +189,24 @@ header {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 20% 80%;
+  grid-template-rows: 10% 90%;
   grid-template-areas: "nombre-tour" "detalle"; }
   .carrito h2 {
     grid-area: nombre-tour;
+    justify-self: center;
     color: #000000;
-    font-size: 2rem;
-    margin: 0 200px;
+    font-size: 1.5rem;
     align-self: center;
     border-bottom: 1px solid lightgrey; }
   .carrito .detalle-carrito {
     height: fit-content; }
     .carrito .detalle-carrito p {
-      margin: 0 200px; }
+      margin: 0; }
     .carrito .detalle-carrito .valor-total {
-      margin: 0 200px;
-      font-size: 1.5rem;
+      margin: 0;
+      font-size: 1.2rem;
       padding-top: 20px;
+      margin-left: 5px;
       border-top: 1px solid lightgray; }
     .carrito .detalle-carrito .carrito-tour {
       display: grid;
@@ -213,23 +214,25 @@ header {
       grid-template-rows: auto;
       grid-template-areas: " detalles opciones";
       align-items: center;
-      margin: 0 200px 50px 200px; }
+      margin: 0 10px 50px 10px; }
       .carrito .detalle-carrito .carrito-tour .detalles-tour {
         grid-area: detalles; }
         .carrito .detalle-carrito .carrito-tour .detalles-tour p {
-          font-size: 1.3rem;
+          font-size: 1rem;
           margin: 0; }
         .carrito .detalle-carrito .carrito-tour .detalles-tour .detail {
-          font-size: 1rem;
+          font-size: 0.8rem;
           color: #808080; }
         .carrito .detalle-carrito .carrito-tour .detalles-tour .total-tour {
-          font-size: 1.2rem;
+          font-size: 1rem;
           margin-top: 10px;
           padding-top: 10px;
           color: #a12e2e; }
       .carrito .detalle-carrito .carrito-tour .opciones {
         grid-area: opciones;
         justify-self: center; }
+        .carrito .detalle-carrito .carrito-tour .opciones button {
+          font-size: 0.8rem; }
 
 .container-tour-LOTR, .container-tour-HA, .container-tour-HP, .container-tour-GOT, .container-tour-EPL, .container-tour-AM {
   display: grid;
@@ -241,29 +244,29 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 500px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     grid-area: header-tour; }
     .container-tour-LOTR .header-tour h2, .container-tour-HA .header-tour h2, .container-tour-HP .header-tour h2, .container-tour-GOT .header-tour h2, .container-tour-EPL .header-tour h2, .container-tour-AM .header-tour h2 {
-      font-size: 4rem;
-      color: #ffffff;
-      font-weight: bold;
-      padding-left: 8rem;
-      text-shadow: 5px 5px 8px black; }
-    .container-tour-LOTR .header-tour p, .container-tour-HA .header-tour p, .container-tour-HP .header-tour p, .container-tour-GOT .header-tour p, .container-tour-EPL .header-tour p, .container-tour-AM .header-tour p {
       font-size: 2rem;
       color: #ffffff;
       font-weight: bold;
-      padding-left: 8rem;
+      padding-left: 3rem;
+      text-shadow: 5px 5px 8px black; }
+    .container-tour-LOTR .header-tour p, .container-tour-HA .header-tour p, .container-tour-HP .header-tour p, .container-tour-GOT .header-tour p, .container-tour-EPL .header-tour p, .container-tour-AM .header-tour p {
+      font-size: 1rem;
+      color: #ffffff;
+      font-weight: bold;
+      padding-left: 3rem;
       text-shadow: 5px 5px 8px black; }
   .container-tour-LOTR .main-tour, .container-tour-HA .main-tour, .container-tour-HP .main-tour, .container-tour-GOT .main-tour, .container-tour-EPL .main-tour, .container-tour-AM .main-tour {
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "description booking" "back-tours back-tours";
+    grid-template-areas: "description" "booking" "back-tours";
     background-color: #ffffff; }
     .container-tour-LOTR .main-tour .description, .container-tour-HA .main-tour .description, .container-tour-HP .main-tour .description, .container-tour-GOT .main-tour .description, .container-tour-EPL .main-tour .description, .container-tour-AM .main-tour .description {
       grid-area: description;
@@ -274,9 +277,8 @@ header {
         margin-bottom: 3rem; }
     .container-tour-LOTR .main-tour .booking, .container-tour-HA .main-tour .booking, .container-tour-HP .main-tour .booking, .container-tour-GOT .main-tour .booking, .container-tour-EPL .main-tour .booking, .container-tour-AM .main-tour .booking {
       grid-area: booking;
-      justify-self: flex-end;
+      justify-self: center;
       align-self: center;
-      margin-right: 1rem;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 30% 30% 20% 20%;
@@ -337,52 +339,56 @@ header {
       font-weight: bold;
       margin: 3rem 0;
       text-decoration: none; }
-  .container-tour-LOTR #exampleModal .modal-content .modal-header .name-tour, .container-tour-HA #exampleModal .modal-content .modal-header .name-tour, .container-tour-HP #exampleModal .modal-content .modal-header .name-tour, .container-tour-GOT #exampleModal .modal-content .modal-header .name-tour, .container-tour-EPL #exampleModal .modal-content .modal-header .name-tour, .container-tour-AM #exampleModal .modal-content .modal-header .name-tour {
-    margin: 0;
-    font-size: 1.8rem; }
-  .container-tour-LOTR #exampleModal .modal-content .modal-body form div, .container-tour-HA #exampleModal .modal-content .modal-body form div, .container-tour-HP #exampleModal .modal-content .modal-body form div, .container-tour-GOT #exampleModal .modal-content .modal-body form div, .container-tour-EPL #exampleModal .modal-content .modal-body form div, .container-tour-AM #exampleModal .modal-content .modal-body form div {
-    margin: 10px 0; }
-  .container-tour-LOTR #exampleModal .modal-content .modal-body form label, .container-tour-HA #exampleModal .modal-content .modal-body form label, .container-tour-HP #exampleModal .modal-content .modal-body form label, .container-tour-GOT #exampleModal .modal-content .modal-body form label, .container-tour-EPL #exampleModal .modal-content .modal-body form label, .container-tour-AM #exampleModal .modal-content .modal-body form label,
-  .container-tour-LOTR #exampleModal .modal-content .modal-body form input,
-  .container-tour-HA #exampleModal .modal-content .modal-body form input,
-  .container-tour-HP #exampleModal .modal-content .modal-body form input,
-  .container-tour-GOT #exampleModal .modal-content .modal-body form input,
-  .container-tour-EPL #exampleModal .modal-content .modal-body form input,
-  .container-tour-AM #exampleModal .modal-content .modal-body form input {
-    margin: 5px 0; }
-  .container-tour-LOTR #exampleModal .modal-content .modal-body form #date, .container-tour-HA #exampleModal .modal-content .modal-body form #date, .container-tour-HP #exampleModal .modal-content .modal-body form #date, .container-tour-GOT #exampleModal .modal-content .modal-body form #date, .container-tour-EPL #exampleModal .modal-content .modal-body form #date, .container-tour-AM #exampleModal .modal-content .modal-body form #date,
-  .container-tour-LOTR #exampleModal .modal-content .modal-body form #horario,
-  .container-tour-HA #exampleModal .modal-content .modal-body form #horario,
-  .container-tour-HP #exampleModal .modal-content .modal-body form #horario,
-  .container-tour-GOT #exampleModal .modal-content .modal-body form #horario,
-  .container-tour-EPL #exampleModal .modal-content .modal-body form #horario,
-  .container-tour-AM #exampleModal .modal-content .modal-body form #horario,
-  .container-tour-LOTR #exampleModal .modal-content .modal-body form #idioma,
-  .container-tour-HA #exampleModal .modal-content .modal-body form #idioma,
-  .container-tour-HP #exampleModal .modal-content .modal-body form #idioma,
-  .container-tour-GOT #exampleModal .modal-content .modal-body form #idioma,
-  .container-tour-EPL #exampleModal .modal-content .modal-body form #idioma,
-  .container-tour-AM #exampleModal .modal-content .modal-body form #idioma,
-  .container-tour-LOTR #exampleModal .modal-content .modal-body form #cantidad,
-  .container-tour-HA #exampleModal .modal-content .modal-body form #cantidad,
-  .container-tour-HP #exampleModal .modal-content .modal-body form #cantidad,
-  .container-tour-GOT #exampleModal .modal-content .modal-body form #cantidad,
-  .container-tour-EPL #exampleModal .modal-content .modal-body form #cantidad,
-  .container-tour-AM #exampleModal .modal-content .modal-body form #cantidad {
-    height: 2rem; }
-  
-  .container-tour-LOTR #exampleModal .modal-content .modal-body form #cantidad,
-  .container-tour-HA #exampleModal .modal-content .modal-body form #cantidad,
-  .container-tour-HP #exampleModal .modal-content .modal-body form #cantidad,
-  .container-tour-GOT #exampleModal .modal-content .modal-body form #cantidad,
-  .container-tour-EPL #exampleModal .modal-content .modal-body form #cantidad,
-  .container-tour-AM #exampleModal .modal-content .modal-body form #cantidad {
-    width: 2.5rem;
-    text-align: center; }
-  .container-tour-LOTR #exampleModal .modal-content .modal-footer, .container-tour-HA #exampleModal .modal-content .modal-footer, .container-tour-HP #exampleModal .modal-content .modal-footer, .container-tour-GOT #exampleModal .modal-content .modal-footer, .container-tour-EPL #exampleModal .modal-content .modal-footer, .container-tour-AM #exampleModal .modal-content .modal-footer {
-    justify-content: space-between; }
-    .container-tour-LOTR #exampleModal .modal-content .modal-footer p, .container-tour-HA #exampleModal .modal-content .modal-footer p, .container-tour-HP #exampleModal .modal-content .modal-footer p, .container-tour-GOT #exampleModal .modal-content .modal-footer p, .container-tour-EPL #exampleModal .modal-content .modal-footer p, .container-tour-AM #exampleModal .modal-content .modal-footer p {
-      font-size: 1.5rem; }
+  .container-tour-LOTR #exampleModal, .container-tour-HA #exampleModal, .container-tour-HP #exampleModal, .container-tour-GOT #exampleModal, .container-tour-EPL #exampleModal, .container-tour-AM #exampleModal {
+    width: 80%;
+    height: 80%;
+    left: 50px; }
+    .container-tour-LOTR #exampleModal .modal-content .modal-header .name-tour, .container-tour-HA #exampleModal .modal-content .modal-header .name-tour, .container-tour-HP #exampleModal .modal-content .modal-header .name-tour, .container-tour-GOT #exampleModal .modal-content .modal-header .name-tour, .container-tour-EPL #exampleModal .modal-content .modal-header .name-tour, .container-tour-AM #exampleModal .modal-content .modal-header .name-tour {
+      margin: 0;
+      font-size: 1.8rem; }
+    .container-tour-LOTR #exampleModal .modal-content .modal-body form div, .container-tour-HA #exampleModal .modal-content .modal-body form div, .container-tour-HP #exampleModal .modal-content .modal-body form div, .container-tour-GOT #exampleModal .modal-content .modal-body form div, .container-tour-EPL #exampleModal .modal-content .modal-body form div, .container-tour-AM #exampleModal .modal-content .modal-body form div {
+      margin: 10px 0; }
+    .container-tour-LOTR #exampleModal .modal-content .modal-body form label, .container-tour-HA #exampleModal .modal-content .modal-body form label, .container-tour-HP #exampleModal .modal-content .modal-body form label, .container-tour-GOT #exampleModal .modal-content .modal-body form label, .container-tour-EPL #exampleModal .modal-content .modal-body form label, .container-tour-AM #exampleModal .modal-content .modal-body form label,
+    .container-tour-LOTR #exampleModal .modal-content .modal-body form input,
+    .container-tour-HA #exampleModal .modal-content .modal-body form input,
+    .container-tour-HP #exampleModal .modal-content .modal-body form input,
+    .container-tour-GOT #exampleModal .modal-content .modal-body form input,
+    .container-tour-EPL #exampleModal .modal-content .modal-body form input,
+    .container-tour-AM #exampleModal .modal-content .modal-body form input {
+      margin: 5px 0; }
+    .container-tour-LOTR #exampleModal .modal-content .modal-body form #date, .container-tour-HA #exampleModal .modal-content .modal-body form #date, .container-tour-HP #exampleModal .modal-content .modal-body form #date, .container-tour-GOT #exampleModal .modal-content .modal-body form #date, .container-tour-EPL #exampleModal .modal-content .modal-body form #date, .container-tour-AM #exampleModal .modal-content .modal-body form #date,
+    .container-tour-LOTR #exampleModal .modal-content .modal-body form #horario,
+    .container-tour-HA #exampleModal .modal-content .modal-body form #horario,
+    .container-tour-HP #exampleModal .modal-content .modal-body form #horario,
+    .container-tour-GOT #exampleModal .modal-content .modal-body form #horario,
+    .container-tour-EPL #exampleModal .modal-content .modal-body form #horario,
+    .container-tour-AM #exampleModal .modal-content .modal-body form #horario,
+    .container-tour-LOTR #exampleModal .modal-content .modal-body form #idioma,
+    .container-tour-HA #exampleModal .modal-content .modal-body form #idioma,
+    .container-tour-HP #exampleModal .modal-content .modal-body form #idioma,
+    .container-tour-GOT #exampleModal .modal-content .modal-body form #idioma,
+    .container-tour-EPL #exampleModal .modal-content .modal-body form #idioma,
+    .container-tour-AM #exampleModal .modal-content .modal-body form #idioma,
+    .container-tour-LOTR #exampleModal .modal-content .modal-body form #cantidad,
+    .container-tour-HA #exampleModal .modal-content .modal-body form #cantidad,
+    .container-tour-HP #exampleModal .modal-content .modal-body form #cantidad,
+    .container-tour-GOT #exampleModal .modal-content .modal-body form #cantidad,
+    .container-tour-EPL #exampleModal .modal-content .modal-body form #cantidad,
+    .container-tour-AM #exampleModal .modal-content .modal-body form #cantidad {
+      height: 2rem; }
+    
+    .container-tour-LOTR #exampleModal .modal-content .modal-body form #cantidad,
+    .container-tour-HA #exampleModal .modal-content .modal-body form #cantidad,
+    .container-tour-HP #exampleModal .modal-content .modal-body form #cantidad,
+    .container-tour-GOT #exampleModal .modal-content .modal-body form #cantidad,
+    .container-tour-EPL #exampleModal .modal-content .modal-body form #cantidad,
+    .container-tour-AM #exampleModal .modal-content .modal-body form #cantidad {
+      width: 2.5rem;
+      text-align: center; }
+    .container-tour-LOTR #exampleModal .modal-content .modal-footer, .container-tour-HA #exampleModal .modal-content .modal-footer, .container-tour-HP #exampleModal .modal-content .modal-footer, .container-tour-GOT #exampleModal .modal-content .modal-footer, .container-tour-EPL #exampleModal .modal-content .modal-footer, .container-tour-AM #exampleModal .modal-content .modal-footer {
+      justify-content: space-between; }
+      .container-tour-LOTR #exampleModal .modal-content .modal-footer p, .container-tour-HA #exampleModal .modal-content .modal-footer p, .container-tour-HP #exampleModal .modal-content .modal-footer p, .container-tour-GOT #exampleModal .modal-content .modal-footer p, .container-tour-EPL #exampleModal .modal-content .modal-footer p, .container-tour-AM #exampleModal .modal-content .modal-footer p {
+        font-size: 1.5rem; }
   .container-tour-LOTR #modal-carrito .modal-body p, .container-tour-HA #modal-carrito .modal-body p, .container-tour-HP #modal-carrito .modal-body p, .container-tour-GOT #modal-carrito .modal-body p, .container-tour-EPL #modal-carrito .modal-body p, .container-tour-AM #modal-carrito .modal-body p {
     margin: 0;
     font-size: 1.5rem;
@@ -443,7 +449,12 @@ header {
   .tours-mobile .carousel .carousel-inner .carousel-item .card {
     width: 25rem; }
   .formContacto fieldset {
-    width: 450px; } }
+    width: 450px; }
+  .carrito {
+    grid-template-rows: 20% 80%; }
+    .carrito h2 {
+      justify-self: stretch;
+      text-align: center; } }
 
 @media only screen and (min-width: 768px) {
   .navbar .navbar-nav .nav-link:hover {
@@ -481,7 +492,16 @@ header {
       width: 3rem;
       position: fixed;
       bottom: 30px;
-      right: 12px; } }
+      right: 12px; }
+  .carrito h2 {
+    text-align: left;
+    margin: 0 100px; }
+  .carrito .detalle-carrito .valor-total {
+    margin: 0 100px; }
+  .carrito .detalle-carrito .carrito-tour {
+    margin: 0 100px 50px 100px; }
+    .carrito .detalle-carrito .carrito-tour .opciones button {
+      font-size: 1rem; } }
 
 @media only screen and (min-width: 992px) {
   header {
@@ -594,4 +614,50 @@ header {
   .paginaError h1 {
     font-size: 50px; }
   .paginaError .tristeza {
-    width: 25%; } }
+    width: 25%; }
+  .container-tour-LOTR .header-tour, .container-tour-HA .header-tour, .container-tour-HP .header-tour, .container-tour-GOT .header-tour, .container-tour-EPL .header-tour, .container-tour-AM .header-tour {
+    height: 500px; }
+    .container-tour-LOTR .header-tour h2, .container-tour-HA .header-tour h2, .container-tour-HP .header-tour h2, .container-tour-GOT .header-tour h2, .container-tour-EPL .header-tour h2, .container-tour-AM .header-tour h2 {
+      font-size: 4rem;
+      padding-left: 8rem; }
+    .container-tour-LOTR .header-tour p, .container-tour-HA .header-tour p, .container-tour-HP .header-tour p, .container-tour-GOT .header-tour p, .container-tour-EPL .header-tour p, .container-tour-AM .header-tour p {
+      font-size: 2rem;
+      padding-left: 8rem; }
+  .container-tour-LOTR .main-tour, .container-tour-HA .main-tour, .container-tour-HP .main-tour, .container-tour-GOT .main-tour, .container-tour-EPL .main-tour, .container-tour-AM .main-tour {
+    grid-template-columns: 70% 30%;
+    grid-template-areas: "description booking" "back-tours back-tours"; }
+    .container-tour-LOTR .main-tour .booking, .container-tour-HA .main-tour .booking, .container-tour-HP .main-tour .booking, .container-tour-GOT .main-tour .booking, .container-tour-EPL .main-tour .booking, .container-tour-AM .main-tour .booking {
+      justify-self: flex-end;
+      margin-right: 1rem; }
+  .container-tour-LOTR #exampleModal, .container-tour-HA #exampleModal, .container-tour-HP #exampleModal, .container-tour-GOT #exampleModal, .container-tour-EPL #exampleModal, .container-tour-AM #exampleModal {
+    width: 100%;
+    height: 100%;
+    left: 0; }
+  .container-tour-HA .header-tour {
+    background-image: url("../Multimedia/tours/central-park.jpeg"); }
+  .container-tour-HP .header-tour {
+    background-image: url("../Multimedia/tours/millenium-bridge.jpeg"); }
+  .container-tour-GOT .header-tour {
+    background-image: url("../Multimedia/tours/dubrovnik.jpeg"); }
+  .container-tour-EPL .header-tour {
+    background-image: url("../Multimedia/tours/rome.jpeg"); }
+  .container-tour-AM .header-tour {
+    background-image: url("../Multimedia/tours/montmartre.jpeg"); }
+  .carrito {
+    grid-template-rows: 15% 75%; }
+    .carrito h2 {
+      font-size: 2rem;
+      margin: 0 200px; }
+    .carrito .detalle-carrito p {
+      margin: 0 200px; }
+    .carrito .detalle-carrito .valor-total {
+      margin: 0 200px;
+      font-size: 1.5rem; }
+    .carrito .detalle-carrito .carrito-tour {
+      margin: 0 200px 50px 200px; }
+      .carrito .detalle-carrito .carrito-tour .detalles-tour p {
+        font-size: 1.3rem; }
+      .carrito .detalle-carrito .carrito-tour .detalles-tour .detail {
+        font-size: 1rem; }
+      .carrito .detalle-carrito .carrito-tour .detalles-tour .total-tour {
+        font-size: 1.2rem; } }
