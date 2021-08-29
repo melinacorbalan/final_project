@@ -40,9 +40,10 @@ const printDetalles = () => {
             //BOTON BORRAR TOUR - AUN SIN FUNCIONAR
 
             let button = document.createElement("button");
-            button.setAttribute("id", "btn-eliminar");
+            button.setAttribute("id", `${e.id}`);
             button.setAttribute("type", "button");
             button.setAttribute("class", "btn btn-danger");
+            button.setAttribute("onclick", `deleteTour(${e.id})`)
             button.textContent = "Eliminar";
             opciones.appendChild(button);
         })
@@ -60,8 +61,6 @@ const printDetalles = () => {
         valorTotal.textContent = `Precio total: ${sum} EUR`
         detalleCompra.appendChild(valorTotal);
 
-        console.log(sum);
-
 
 
     } else {
@@ -69,8 +68,32 @@ const printDetalles = () => {
         noTour.textContent = "No tienes tours en tu carrito"
         detalleCompra.appendChild(noTour);
     }
-
+    
 }
 
+
 window.addEventListener("load", printDetalles)
+
+
+const deleteTour = () => {
+
+    let allTours = JSON.parse(localStorage.getItem("compra"))
+
+    allTours.forEach (e => {
+        id = e.id;    
+    })
+
+    let allToursUpdate = allTours.filter(e => e.id != id);
+
+    localStorage.setItem("compra", JSON.stringify(allToursUpdate));
+
+
+    if (JSON.parse(localStorage.getItem("compra")).value == null) {
+
+        localStorage.clear();
+    }
+
+    location.reload()
+
+}
 
