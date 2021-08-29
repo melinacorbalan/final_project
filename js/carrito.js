@@ -61,6 +61,10 @@ const printDetalles = () => {
         valorTotal.textContent = `Precio total: ${sum} EUR`
         detalleCompra.appendChild(valorTotal);
 
+        if (sum == 0) {
+            valorTotal.textContent = "No tienes tours en tu carrito"
+        }
+
 
 
     } else {
@@ -80,19 +84,13 @@ const deleteTour = () => {
     let allTours = JSON.parse(localStorage.getItem("compra"))
 
     allTours.forEach (e => {
-        id = e.id;    
+        id = e.id;
     })
 
     let allToursUpdate = allTours.filter(e => e.id != id);
 
     localStorage.setItem("compra", JSON.stringify(allToursUpdate));
-
-
-    if (JSON.parse(localStorage.getItem("compra")).value == null) {
-
-        localStorage.clear();
-    }
-
+    
     location.reload()
 
 }
