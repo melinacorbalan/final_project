@@ -307,16 +307,18 @@ header {
 
 .carrito {
     background-color: $color;
-    height: 100vh;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: auto;
     grid-template-areas:
         "nombre-tour"
-        "detalle";
+        "detalle"
+        "confirmar";
 
 
     h2 {
+        margin: 10px 0;
         grid-area: nombre-tour;
         justify-self: center;
         color: $textColor;
@@ -335,7 +337,7 @@ header {
             margin: 0;
             font-size: 1.2rem;
             padding-top: 20px;
-            margin-left: 5px;
+            margin-left: 10px;
             border-top: 1px solid lightgray;
         }
 
@@ -385,6 +387,103 @@ header {
             }
 
         }
+    }
+
+    .confirm-user {
+        grid-area: confirmar;
+        margin: 30px 10px;
+
+        form {
+            .ingreso-email {
+                background-color: #cedbee;
+                padding: 10px;
+
+                label {
+                    font-size: 0.7rem;
+
+                    span {
+                        color: red;
+                    }
+                }
+
+                input {
+                    font-size: 0.7rem;
+                    display: inline-block;
+                    width: 100%;
+                }
+
+                .suscripcion {
+                    margin-top: 5px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
+
+                    label {
+                        font-size: 0.5rem;
+                        padding-left: 5px;
+                    }
+
+                    input {
+                        display: block;
+                        width: auto;
+                    }
+
+                }
+
+            }
+
+            .aceptar {
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid #d3d3d3;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                .checkboxes {
+
+                    label {
+                        font-size: 0.7rem;
+
+                        span {
+                            color: #ff0000;
+                        }
+                    }
+
+                    .checkboxTerms {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-start;
+
+                        input {
+                            margin-left: 5px;
+                        }
+                    }
+
+                    .checkboxPrivacy {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-start;
+                        margin-top: 5px;
+
+                        input {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+
+                .btn-continuar {
+                    button {
+                        font-size: 0.8rem;
+                        width: 10rem;
+                    }
+                }
+
+
+            }
+        }
+
     }
 }
 
@@ -773,13 +872,11 @@ header {
     // CARRITO
 
     .carrito {
-        grid-template-rows: 20% 80%;
 
         h2 {
             justify-self: stretch;
             text-align: center;
         }
-
     }
 
 
@@ -895,35 +992,85 @@ header {
 
     // CARRITO
 
-.carrito {
-    
-    h2 {
-        text-align: left;
-        margin: 0 100px;
-    }
+    .carrito {
 
-    .detalle-carrito {
-
-        .valor-total {
-            margin: 0 100px;
-            
+        h2 {
+            text-align: left;
+            margin: 50px 100px;
         }
 
+        .detalle-carrito {
 
-        .carrito-tour {
-            
-            margin: 0 100px 50px 100px;
+            .valor-total {
+                margin: 0 100px;
 
-            .opciones {
-
-                button {
-                    font-size: 1rem;
-                }
             }
 
+
+            .carrito-tour {
+
+                margin: 0 100px 50px 100px;
+
+                .opciones {
+
+                    button {
+                        font-size: 1rem;
+                    }
+                }
+
+            }
+        }
+
+        .confirm-user {
+            margin: 50px 100px;
+
+            form {
+                .ingreso-email {
+
+                    label {
+                        font-size: 1rem;
+                    }
+
+                    input {
+                        font-size: 1rem;
+                    }
+
+                    .suscripcion {
+                        align-items: flex-start;
+                        margin-top: 10px;
+
+                        label {
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+
+                .aceptar {
+                    .checkboxes {
+
+                        label {
+                            font-size: 0.8rem;
+                        }
+
+                        .checkboxTerms {
+                            align-items: center;
+                        }
+
+                        .checkboxPrivacy {
+                            align-items: center;
+                        }
+                    }
+
+                    .btn-continuar {
+                        button {
+                            font-size: 1rem;
+                            width: 10rem;
+                        }
+                    }
+                }
+            }
         }
     }
-}
 }
 
 @media only screen and (min-width: 992px) {
@@ -1241,13 +1388,10 @@ header {
     // CARRITO
 
     .carrito {
-        
-        grid-template-rows: 15% 75%;
 
         h2 {
-            
             font-size: 2rem;
-            margin: 0 200px;
+            margin: 50px 200px;
         }
 
         .detalle-carrito {
@@ -1282,6 +1426,65 @@ header {
 
             }
         }
+
+        .confirm-user {
+            grid-area: confirmar;
+            margin: 50px 200px;
+    
+            form {
+                .ingreso-email {
+    
+                    label {
+                        font-size: 1.3rem;
+                    }
+    
+                    input {
+                        font-size: 1.3rem;
+                    }
+    
+                    .suscripcion {
+                        margin-top: 10px;
+    
+                        label {
+                            font-size: 0.9rem;
+                        }
+                    }
+    
+                }
+    
+                .aceptar {
+                    margin-top: 15px;
+                    padding-top: 15px;
+    
+                    .checkboxes {
+    
+                        label {
+                            font-size: 0.9em;
+                        }
+    
+                        .checkboxTerms {  
+                            align-items: center;
+                        }
+    
+                        .checkboxPrivacy {
+                            align-items: center;    
+                        }
+                    }
+    
+                    .btn-continuar {
+                        button {
+                            font-size: 1rem;
+                            width: 12rem;
+                        }
+                    }
+    
+    
+                }
+            }
+    
+        }
+
+
     }
 
 

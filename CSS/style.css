@@ -186,12 +186,13 @@ header {
 
 .carrito {
   background-color: #ffffff;
-  height: 100vh;
+  height: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 10% 90%;
-  grid-template-areas: "nombre-tour" "detalle"; }
+  grid-template-rows: auto;
+  grid-template-areas: "nombre-tour" "detalle" "confirmar"; }
   .carrito h2 {
+    margin: 10px 0;
     grid-area: nombre-tour;
     justify-self: center;
     color: #000000;
@@ -206,7 +207,7 @@ header {
       margin: 0;
       font-size: 1.2rem;
       padding-top: 20px;
-      margin-left: 5px;
+      margin-left: 10px;
       border-top: 1px solid lightgray; }
     .carrito .detalle-carrito .carrito-tour {
       display: grid;
@@ -233,6 +234,59 @@ header {
         justify-self: center; }
         .carrito .detalle-carrito .carrito-tour .opciones button {
           font-size: 0.8rem; }
+  .carrito .confirm-user {
+    grid-area: confirmar;
+    margin: 30px 10px; }
+    .carrito .confirm-user form .ingreso-email {
+      background-color: #cedbee;
+      padding: 10px; }
+      .carrito .confirm-user form .ingreso-email label {
+        font-size: 0.7rem; }
+        .carrito .confirm-user form .ingreso-email label span {
+          color: red; }
+      .carrito .confirm-user form .ingreso-email input {
+        font-size: 0.7rem;
+        display: inline-block;
+        width: 100%; }
+      .carrito .confirm-user form .ingreso-email .suscripcion {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end; }
+        .carrito .confirm-user form .ingreso-email .suscripcion label {
+          font-size: 0.5rem;
+          padding-left: 5px; }
+        .carrito .confirm-user form .ingreso-email .suscripcion input {
+          display: block;
+          width: auto; }
+    .carrito .confirm-user form .aceptar {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #d3d3d3;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; }
+      .carrito .confirm-user form .aceptar .checkboxes label {
+        font-size: 0.7rem; }
+        .carrito .confirm-user form .aceptar .checkboxes label span {
+          color: #ff0000; }
+      .carrito .confirm-user form .aceptar .checkboxes .checkboxTerms {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start; }
+        .carrito .confirm-user form .aceptar .checkboxes .checkboxTerms input {
+          margin-left: 5px; }
+      .carrito .confirm-user form .aceptar .checkboxes .checkboxPrivacy {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-top: 5px; }
+        .carrito .confirm-user form .aceptar .checkboxes .checkboxPrivacy input {
+          margin-left: 5px; }
+      .carrito .confirm-user form .aceptar .btn-continuar button {
+        font-size: 0.8rem;
+        width: 10rem; }
 
 .container-tour-LOTR, .container-tour-HA, .container-tour-HP, .container-tour-GOT, .container-tour-EPL, .container-tour-AM {
   display: grid;
@@ -450,11 +504,9 @@ header {
     width: 25rem; }
   .formContacto fieldset {
     width: 450px; }
-  .carrito {
-    grid-template-rows: 20% 80%; }
-    .carrito h2 {
-      justify-self: stretch;
-      text-align: center; } }
+  .carrito h2 {
+    justify-self: stretch;
+    text-align: center; } }
 
 @media only screen and (min-width: 768px) {
   .navbar .navbar-nav .nav-link:hover {
@@ -495,13 +547,33 @@ header {
       right: 12px; }
   .carrito h2 {
     text-align: left;
-    margin: 0 100px; }
+    margin: 50px 100px; }
   .carrito .detalle-carrito .valor-total {
     margin: 0 100px; }
   .carrito .detalle-carrito .carrito-tour {
     margin: 0 100px 50px 100px; }
     .carrito .detalle-carrito .carrito-tour .opciones button {
-      font-size: 1rem; } }
+      font-size: 1rem; }
+  .carrito .confirm-user {
+    margin: 50px 100px; }
+    .carrito .confirm-user form .ingreso-email label {
+      font-size: 1rem; }
+    .carrito .confirm-user form .ingreso-email input {
+      font-size: 1rem; }
+    .carrito .confirm-user form .ingreso-email .suscripcion {
+      align-items: flex-start;
+      margin-top: 10px; }
+      .carrito .confirm-user form .ingreso-email .suscripcion label {
+        font-size: 0.7rem; }
+    .carrito .confirm-user form .aceptar .checkboxes label {
+      font-size: 0.8rem; }
+    .carrito .confirm-user form .aceptar .checkboxes .checkboxTerms {
+      align-items: center; }
+    .carrito .confirm-user form .aceptar .checkboxes .checkboxPrivacy {
+      align-items: center; }
+    .carrito .confirm-user form .aceptar .btn-continuar button {
+      font-size: 1rem;
+      width: 10rem; } }
 
 @media only screen and (min-width: 992px) {
   header {
@@ -643,21 +715,42 @@ header {
     background-image: url("../Multimedia/tours/rome.jpeg"); }
   .container-tour-AM .header-tour {
     background-image: url("../Multimedia/tours/montmartre.jpeg"); }
-  .carrito {
-    grid-template-rows: 15% 75%; }
-    .carrito h2 {
-      font-size: 2rem;
-      margin: 0 200px; }
-    .carrito .detalle-carrito p {
-      margin: 0 200px; }
-    .carrito .detalle-carrito .valor-total {
-      margin: 0 200px;
-      font-size: 1.5rem; }
-    .carrito .detalle-carrito .carrito-tour {
-      margin: 0 200px 50px 200px; }
-      .carrito .detalle-carrito .carrito-tour .detalles-tour p {
-        font-size: 1.3rem; }
-      .carrito .detalle-carrito .carrito-tour .detalles-tour .detail {
-        font-size: 1rem; }
-      .carrito .detalle-carrito .carrito-tour .detalles-tour .total-tour {
-        font-size: 1.2rem; } }
+  .carrito h2 {
+    font-size: 2rem;
+    margin: 50px 200px; }
+  .carrito .detalle-carrito p {
+    margin: 0 200px; }
+  .carrito .detalle-carrito .valor-total {
+    margin: 0 200px;
+    font-size: 1.5rem; }
+  .carrito .detalle-carrito .carrito-tour {
+    margin: 0 200px 50px 200px; }
+    .carrito .detalle-carrito .carrito-tour .detalles-tour p {
+      font-size: 1.3rem; }
+    .carrito .detalle-carrito .carrito-tour .detalles-tour .detail {
+      font-size: 1rem; }
+    .carrito .detalle-carrito .carrito-tour .detalles-tour .total-tour {
+      font-size: 1.2rem; }
+  .carrito .confirm-user {
+    grid-area: confirmar;
+    margin: 50px 200px; }
+    .carrito .confirm-user form .ingreso-email label {
+      font-size: 1.3rem; }
+    .carrito .confirm-user form .ingreso-email input {
+      font-size: 1.3rem; }
+    .carrito .confirm-user form .ingreso-email .suscripcion {
+      margin-top: 10px; }
+      .carrito .confirm-user form .ingreso-email .suscripcion label {
+        font-size: 0.9rem; }
+    .carrito .confirm-user form .aceptar {
+      margin-top: 15px;
+      padding-top: 15px; }
+      .carrito .confirm-user form .aceptar .checkboxes label {
+        font-size: 0.9em; }
+      .carrito .confirm-user form .aceptar .checkboxes .checkboxTerms {
+        align-items: center; }
+      .carrito .confirm-user form .aceptar .checkboxes .checkboxPrivacy {
+        align-items: center; }
+      .carrito .confirm-user form .aceptar .btn-continuar button {
+        font-size: 1rem;
+        width: 12rem; } }

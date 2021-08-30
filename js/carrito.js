@@ -1,6 +1,7 @@
 const printDetalles = () => {
 
-    let detalleCompra = document.querySelector('.detalle-carrito');
+    let confirm = $(".confirm-user");
+    let detalleCompra = $(".detalle-carrito");
 
     let printCompra = JSON.parse(localStorage.getItem("compra"));
 
@@ -9,43 +10,19 @@ const printDetalles = () => {
 
             //CARRITO
 
-            let carrito_tour = document.createElement("div");
-            carrito_tour.setAttribute("class", "carrito-tour");
-            detalleCompra.appendChild(carrito_tour);
+            let carrito_tour = detalleCompra.append(`
+            <div class="carrito-tour">
+                <div class="detalles-tour">
+                <p>${e.nombreTour} en ${e.locacion}</p>
+                <p class="detail">${e.date} ${e.horario} (${e.idioma})</p>
+                <p class="total-tour">${e.cantidad} x tickets = ${e.precio} EUR</p>
+                </div>
+                <div class="opciones">
+                <button id="${e.id}" type="button" class="btn btn-danger" onclick=deleteTour(${e.id})>Eliminar</button>
+                </div>
+            </div>
+            `);
 
-            let detalles_tour = document.createElement("div");
-            detalles_tour.setAttribute("class", "detalles-tour");
-            carrito_tour.appendChild(detalles_tour);
-
-            let tour_name = document.createElement("p");
-            tour_name.textContent = `${e.nombreTour} en ${e.locacion}`;
-            detalles_tour.appendChild(tour_name);
-
-            let tour_details = document.createElement("p");
-            tour_details.setAttribute("class", "detail");
-            tour_details.textContent = `${e.date} ${e.horario} (${e.idioma})`;
-            detalles_tour.appendChild(tour_details);
-
-            let total_tour = document.createElement("p");
-            total_tour.setAttribute("class", "total-tour");
-            total_tour.textContent = `${e.cantidad} x tickets = ${e.precio} EUR`;
-            detalles_tour.appendChild(total_tour);
-
-
-            let opciones = document.createElement("div");
-            opciones.setAttribute("class", "opciones");
-            carrito_tour.appendChild(opciones);
-
-
-            //BOTON BORRAR TOUR - AUN SIN FUNCIONAR
-
-            let button = document.createElement("button");
-            button.setAttribute("id", `${e.id}`);
-            button.setAttribute("type", "button");
-            button.setAttribute("class", "btn btn-danger");
-            button.setAttribute("onclick", `deleteTour(${e.id})`)
-            button.textContent = "Eliminar";
-            opciones.appendChild(button);
         })
 
         // PRECIO FINAL 
@@ -56,21 +33,47 @@ const printDetalles = () => {
             sum += precios[i];
         }
 
-        let valorTotal = document.createElement("p");
-        valorTotal.setAttribute("class", "valor-total");
-        valorTotal.textContent = `Precio total: ${sum} EUR`
-        detalleCompra.appendChild(valorTotal);
-
         if (sum == 0) {
-            valorTotal.textContent = "No tienes tours en tu carrito";
-            
+            let valorTotal = detalleCompra.append(`<p>No tienes tours en tu carrito</p>`);
+        } else {
+            valorTotal = detalleCompra.append(`<p class="valor-total">Precio total: ${sum} EUR</p>`);
+
+            let confirm_user = confirm.append(`
+
+            <form>
+                <div class="ingreso-email">
+                    <label for="email">Ingresa tu email para recibir tickets y confirmación de compra<span>*</span></label>
+                    <input type="email" required>
+                    <div class="suscripcion">
+                        <input type="checkbox" name="checkbox" id="checkboxSubscribe">
+                        <label for="checkbox">Quiero suscribirme a los emails promociones y recibir ofertas y descuentos exclusivos.</label>
+                    </div>
+                </div>
+                
+                <div class="aceptar">
+                    <div class="checkboxes">
+                        <div class="checkboxTerms">
+                            <label for="checkboxTerms">Acepto los Términos y Condiciones<span>*</span></label>
+                            <input type="checkbox" name="checkboxTerms" required>
+                        </div>
+                        <div class="checkboxPrivacy">
+                        <label for="checkboxPrivacy">Acepto la Política de Privacidad<span>*</span></label>
+                        <input type="checkbox" name="checkboxPrivacy" required>
+                        </div>
+                    </div>
+                    <div class="btn-continuar">
+                        <button class="btn btn-danger">Continuar</button>
+                    </div>
+                </div>
+            </form>
+
+            `)
         }
 
-
-
-    } 
+    } else {
+        let carritoVacio = detalleCompra.append(`<p>No tienes tours en tu carrito</p>`);
+    }
 }
-
 
 window.addEventListener("load", printDetalles)
 
@@ -79,15 +82,14 @@ const deleteTour = () => {
 
     let allTours = JSON.parse(localStorage.getItem("compra"))
 
-    allTours.forEach (e => {
+    allTours.forEach(e => {
         id = e.id;
     })
 
     let allToursUpdate = allTours.filter(e => e.id != id);
 
     localStorage.setItem("compra", JSON.stringify(allToursUpdate));
-    
+
     location.reload()
 
 }
-
