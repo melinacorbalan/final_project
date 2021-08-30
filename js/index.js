@@ -119,14 +119,6 @@ printEN_form.setAttribute("value", idiomas[1]);
 printEN_form.textContent = idiomas[1];
 classIdiomas[1].appendChild(printEN_form);
 
-// RELOAD AL CERRAR MODAL 
-
-
-document.querySelector('#close-modal').addEventListener("click", () => {
-    location.reload();
-})
-
-
 
 
 //DATOS DEL INPUT
@@ -144,8 +136,8 @@ let precioFinal = 0;
 
 let mostrarCantidad = () => {
 
-    let aca = document.querySelector('.valorTotal');
-    aca.textContent = `Valor total: ${cantidad.value*precioTour} EUR`;
+    let mostrarPrecio = document.querySelector('.valorTotal');
+    mostrarPrecio.textContent = `Valor total: ${cantidad.value*precioTour} EUR`;
 }
 
 document.querySelector('#cantidad').addEventListener("change", mostrarCantidad);
@@ -193,6 +185,7 @@ const data = () => {
 
 }
 
+// CERRAR 1° MODAL SI CANTIDAD > 0
 
 const closeModal = () => {
 
@@ -203,6 +196,8 @@ const closeModal = () => {
 
     }
 }
+
+// NOTIFICACION EN CARRITO 
 
 const addNotification = () => {
 
@@ -229,3 +224,15 @@ let printTourModal = document.createElement("p");
 printTourModal.textContent = `Has agregado el tour ${name_tour} a tu carrito!`;
 modalCarrito.appendChild(printTourModal);
 
+// RELOAD AL CERRAR MODAL 
+
+
+document.querySelector('#close-modal').addEventListener("click", () => {
+    location.reload();
+    addNotification();
+})
+
+document.querySelector('#back-tours').addEventListener("click", () => {
+    location.reload();
+    addNotification();
+})
