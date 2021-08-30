@@ -33,6 +33,8 @@ const printDetalles = () => {
             sum += precios[i];
         }
 
+        //IMPRIMIR FORM SI HAY COMPRAS EN EL CARRITO
+
         if (sum == 0) {
             let valorTotal = detalleCompra.append(`<p>No tienes tours en tu carrito</p>`);
         } else {
@@ -62,7 +64,7 @@ const printDetalles = () => {
                         </div>
                     </div>
                     <div class="btn-continuar">
-                        <button class="btn btn-danger">Continuar</button>
+                        <button id="btn-continue" class="btn btn-danger" data-bs-target="#exampleModal">Continuar</button>
                     </div>
                 </div>
             </form>
@@ -75,7 +77,7 @@ const printDetalles = () => {
     }
 }
 
-window.addEventListener("load", printDetalles)
+$(window).on("load", printDetalles);
 
 
 const deleteTour = () => {
@@ -93,3 +95,6 @@ const deleteTour = () => {
     location.reload()
 
 }
+
+
+

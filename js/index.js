@@ -229,10 +229,4 @@ modalCarrito.appendChild(printTourModal);
 
 document.querySelector('#close-modal').addEventListener("click", () => {
     location.reload();
-    addNotification();
-})
-
-document.querySelector('#back-tours').addEventListener("click", () => {
-    location.reload();
-    addNotification();
 })
