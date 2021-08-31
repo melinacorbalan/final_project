@@ -1,6 +1,5 @@
 const printDetalles = () => {
 
-    let confirm = $(".confirm-user");
     let detalleCompra = $(".detalle-carrito");
 
     let printCompra = JSON.parse(localStorage.getItem("compra"));
@@ -36,44 +35,16 @@ const printDetalles = () => {
         //IMPRIMIR FORM SI HAY COMPRAS EN EL CARRITO
 
         if (sum == 0) {
-            let valorTotal = detalleCompra.append(`<p>No tienes tours en tu carrito</p>`);
+            let valorTotal = detalleCompra.append(`<p class="no-tours">No tienes tours en tu carrito</p>`);
+            $("form").addClass("no-display");
+
         } else {
             valorTotal = detalleCompra.append(`<p class="valor-total">Precio total: ${sum} EUR</p>`);
-
-            let confirm_user = confirm.append(`
-
-            <form>
-                <div class="ingreso-email">
-                    <label for="email">Ingresa tu email para recibir tickets y confirmación de compra<span>*</span></label>
-                    <input type="email" required>
-                    <div class="suscripcion">
-                        <input type="checkbox" name="checkbox" id="checkboxSubscribe">
-                        <label for="checkbox">Quiero suscribirme a los emails promociones y recibir ofertas y descuentos exclusivos.</label>
-                    </div>
-                </div>
-                
-                <div class="aceptar">
-                    <div class="checkboxes">
-                        <div class="checkboxTerms">
-                            <label for="checkboxTerms">Acepto los Términos y Condiciones<span>*</span></label>
-                            <input type="checkbox" name="checkboxTerms" required>
-                        </div>
-                        <div class="checkboxPrivacy">
-                        <label for="checkboxPrivacy">Acepto la Política de Privacidad<span>*</span></label>
-                        <input type="checkbox" name="checkboxPrivacy" required>
-                        </div>
-                    </div>
-                    <div class="btn-continuar">
-                        <button id="btn-continue" class="btn btn-danger" data-bs-target="#exampleModal">Continuar</button>
-                    </div>
-                </div>
-            </form>
-
-            `)
         }
 
     } else {
-        let carritoVacio = detalleCompra.append(`<p>No tienes tours en tu carrito</p>`);
+        let carritoVacio = detalleCompra.append(`<p class="no-tours">No tienes tours en tu carrito</p>`);
+        $("form").addClass("no-display");
     }
 }
 

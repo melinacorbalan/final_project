@@ -201,6 +201,8 @@ header {
     border-bottom: 1px solid lightgrey; }
   .carrito .detalle-carrito {
     height: fit-content; }
+    .carrito .detalle-carrito .no-tours {
+      text-align: center; }
     .carrito .detalle-carrito p {
       margin: 0; }
     .carrito .detalle-carrito .valor-total {
@@ -234,32 +236,35 @@ header {
         justify-self: center; }
         .carrito .detalle-carrito .carrito-tour .opciones button {
           font-size: 0.8rem; }
-  .carrito .confirm-user {
+  .carrito #confirm-user {
     grid-area: confirmar;
-    margin: 30px 10px; }
-    .carrito .confirm-user form .ingreso-email {
+    margin: 30px 10px;
+    height: 250px; }
+    .carrito #confirm-user .no-display {
+      display: none; }
+    .carrito #confirm-user form .ingreso-email {
       background-color: #cedbee;
       padding: 10px; }
-      .carrito .confirm-user form .ingreso-email label {
+      .carrito #confirm-user form .ingreso-email label {
         font-size: 0.7rem; }
-        .carrito .confirm-user form .ingreso-email label span {
+        .carrito #confirm-user form .ingreso-email label span {
           color: red; }
-      .carrito .confirm-user form .ingreso-email input {
+      .carrito #confirm-user form .ingreso-email input {
         font-size: 0.7rem;
         display: inline-block;
         width: 100%; }
-      .carrito .confirm-user form .ingreso-email .suscripcion {
+      .carrito #confirm-user form .ingreso-email .suscripcion {
         margin-top: 5px;
         display: flex;
         flex-direction: row;
         align-items: flex-end; }
-        .carrito .confirm-user form .ingreso-email .suscripcion label {
+        .carrito #confirm-user form .ingreso-email .suscripcion label {
           font-size: 0.5rem;
           padding-left: 5px; }
-        .carrito .confirm-user form .ingreso-email .suscripcion input {
+        .carrito #confirm-user form .ingreso-email .suscripcion input {
           display: block;
           width: auto; }
-    .carrito .confirm-user form .aceptar {
+    .carrito #confirm-user form .aceptar {
       margin-top: 10px;
       padding-top: 10px;
       border-top: 1px solid #d3d3d3;
@@ -267,24 +272,24 @@ header {
       flex-direction: row;
       align-items: center;
       justify-content: space-between; }
-      .carrito .confirm-user form .aceptar .checkboxes label {
+      .carrito #confirm-user form .aceptar .checkboxes label {
         font-size: 0.7rem; }
-        .carrito .confirm-user form .aceptar .checkboxes label span {
+        .carrito #confirm-user form .aceptar .checkboxes label span {
           color: #ff0000; }
-      .carrito .confirm-user form .aceptar .checkboxes .checkboxTerms {
+      .carrito #confirm-user form .aceptar .checkboxes .checkboxTerms {
         display: flex;
         flex-direction: row;
         align-items: flex-start; }
-        .carrito .confirm-user form .aceptar .checkboxes .checkboxTerms input {
+        .carrito #confirm-user form .aceptar .checkboxes .checkboxTerms input {
           margin-left: 5px; }
-      .carrito .confirm-user form .aceptar .checkboxes .checkboxPrivacy {
+      .carrito #confirm-user form .aceptar .checkboxes .checkboxPrivacy {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         margin-top: 5px; }
-        .carrito .confirm-user form .aceptar .checkboxes .checkboxPrivacy input {
+        .carrito #confirm-user form .aceptar .checkboxes .checkboxPrivacy input {
           margin-left: 5px; }
-      .carrito .confirm-user form .aceptar .btn-continuar button {
+      .carrito #confirm-user form .aceptar .btn-continuar button {
         font-size: 0.8rem;
         width: 10rem; }
 
@@ -554,24 +559,24 @@ header {
     margin: 0 100px 50px 100px; }
     .carrito .detalle-carrito .carrito-tour .opciones button {
       font-size: 1rem; }
-  .carrito .confirm-user {
+  .carrito #confirm-user {
     margin: 50px 100px; }
-    .carrito .confirm-user form .ingreso-email label {
+    .carrito #confirm-user form .ingreso-email label {
       font-size: 1rem; }
-    .carrito .confirm-user form .ingreso-email input {
+    .carrito #confirm-user form .ingreso-email input {
       font-size: 1rem; }
-    .carrito .confirm-user form .ingreso-email .suscripcion {
+    .carrito #confirm-user form .ingreso-email .suscripcion {
       align-items: flex-start;
       margin-top: 10px; }
-      .carrito .confirm-user form .ingreso-email .suscripcion label {
+      .carrito #confirm-user form .ingreso-email .suscripcion label {
         font-size: 0.7rem; }
-    .carrito .confirm-user form .aceptar .checkboxes label {
+    .carrito #confirm-user form .aceptar .checkboxes label {
       font-size: 0.8rem; }
-    .carrito .confirm-user form .aceptar .checkboxes .checkboxTerms {
+    .carrito #confirm-user form .aceptar .checkboxes .checkboxTerms {
       align-items: center; }
-    .carrito .confirm-user form .aceptar .checkboxes .checkboxPrivacy {
+    .carrito #confirm-user form .aceptar .checkboxes .checkboxPrivacy {
       align-items: center; }
-    .carrito .confirm-user form .aceptar .btn-continuar button {
+    .carrito #confirm-user form .aceptar .btn-continuar button {
       font-size: 1rem;
       width: 10rem; } }
 
@@ -731,26 +736,26 @@ header {
       font-size: 1rem; }
     .carrito .detalle-carrito .carrito-tour .detalles-tour .total-tour {
       font-size: 1.2rem; }
-  .carrito .confirm-user {
+  .carrito #confirm-user {
     grid-area: confirmar;
     margin: 50px 200px; }
-    .carrito .confirm-user form .ingreso-email label {
+    .carrito #confirm-user form .ingreso-email label {
       font-size: 1.3rem; }
-    .carrito .confirm-user form .ingreso-email input {
+    .carrito #confirm-user form .ingreso-email input {
       font-size: 1.3rem; }
-    .carrito .confirm-user form .ingreso-email .suscripcion {
+    .carrito #confirm-user form .ingreso-email .suscripcion {
       margin-top: 10px; }
-      .carrito .confirm-user form .ingreso-email .suscripcion label {
+      .carrito #confirm-user form .ingreso-email .suscripcion label {
         font-size: 0.9rem; }
-    .carrito .confirm-user form .aceptar {
+    .carrito #confirm-user form .aceptar {
       margin-top: 15px;
       padding-top: 15px; }
-      .carrito .confirm-user form .aceptar .checkboxes label {
+      .carrito #confirm-user form .aceptar .checkboxes label {
         font-size: 0.9em; }
-      .carrito .confirm-user form .aceptar .checkboxes .checkboxTerms {
+      .carrito #confirm-user form .aceptar .checkboxes .checkboxTerms {
         align-items: center; }
-      .carrito .confirm-user form .aceptar .checkboxes .checkboxPrivacy {
+      .carrito #confirm-user form .aceptar .checkboxes .checkboxPrivacy {
         align-items: center; }
-      .carrito .confirm-user form .aceptar .btn-continuar button {
+      .carrito #confirm-user form .aceptar .btn-continuar button {
         font-size: 1rem;
         width: 12rem; } }

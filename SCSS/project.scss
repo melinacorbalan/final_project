@@ -329,6 +329,10 @@ header {
 
     .detalle-carrito {
 
+        .no-tours {
+            text-align: center;
+        }
+
         p {
             margin: 0;
         }
@@ -389,9 +393,17 @@ header {
         }
     }
 
-    .confirm-user {
+    
+
+    #confirm-user {
+
         grid-area: confirmar;
         margin: 30px 10px;
+        height: 250px;
+
+        .no-display {
+            display: none;    
+        }
 
         form {
             .ingreso-email {
@@ -1021,7 +1033,7 @@ header {
             }
         }
 
-        .confirm-user {
+        #confirm-user {
             margin: 50px 100px;
 
             form {
@@ -1427,7 +1439,7 @@ header {
             }
         }
 
-        .confirm-user {
+        #confirm-user {
             grid-area: confirmar;
             margin: 50px 200px;
     
