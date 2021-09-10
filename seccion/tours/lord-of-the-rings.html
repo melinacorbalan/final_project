@@ -141,7 +141,7 @@
 
         <!-- MODAL BOOKING -->
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -152,8 +152,7 @@
                         <form action="">
                             <div>
                                 <label for="date">Seleccione una fecha:</label>
-                                <input type="date" name="date" id="date" value="2021-09-01" min="2021-09-01"
-                                    max="2021-09-30">
+                                <input type="date" name="date" id="date"  min="2021-09-20">
                             </div>
                             <div>
                                 <label for="horario">Seleccione hora de salida:</label>
@@ -168,7 +167,7 @@
                             </div>
                             <div>
                                 <label for="cantidad">Cantidad de personas:</label>
-                                <input id="cantidad" type="number" min="1" max="8" required>
+                                <input id="cantidad" type="number" min="1" required>
                             </div>
                             <div class="modal-footer">
                                 <p class="valorTotal"></p>

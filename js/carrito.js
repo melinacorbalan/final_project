@@ -72,7 +72,8 @@ const deleteTour = (id) => {
 
 $("#btn-continue").on("click", (e) => {
     e.preventDefault();
-});
+})
+
 
 // IMPRIMIR NOMBRE TOUR EN MODAL
 
@@ -139,14 +140,14 @@ $("#btn-volver").on("click", () => {
 $("#btn-checkout").on("click", (e) => {
 
     e.preventDefault();
-    
+
     $("#alert").append(`
     <img src="https://qrtag.net/api/qr_8.png" alt="qrtag">
     `)
 
     $("#alert").removeClass("no-alert");
     $("#alert").addClass("alert");
-    
+
     $("#carrito").removeClass("carrito");
     $("#carrito").addClass("carrito-no-display");
 
@@ -155,16 +156,12 @@ $("#btn-checkout").on("click", (e) => {
 });
 
 const reload = () => {
-    
+
     $(window).on("load", () => {
         $("#alert").removeClass("alert");
         $("#alert").addClass("no-alert");
     });
-    
+
 };
 
 reload();
-
-
-
-
