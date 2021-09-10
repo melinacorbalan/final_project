@@ -446,6 +446,8 @@ header {
       .container-tour-LOTR .main-tour .description h3, .container-tour-HA .main-tour .description h3, .container-tour-HP .main-tour .description h3, .container-tour-GOT .main-tour .description h3, .container-tour-EPL .main-tour .description h3, .container-tour-AM .main-tour .description h3 {
         color: gray;
         margin-bottom: 3rem; }
+      .container-tour-LOTR .main-tour .description p, .container-tour-HA .main-tour .description p, .container-tour-HP .main-tour .description p, .container-tour-GOT .main-tour .description p, .container-tour-EPL .main-tour .description p, .container-tour-AM .main-tour .description p {
+        line-height: 2rem; }
     .container-tour-LOTR .main-tour .booking, .container-tour-HA .main-tour .booking, .container-tour-HP .main-tour .booking, .container-tour-GOT .main-tour .booking, .container-tour-EPL .main-tour .booking, .container-tour-AM .main-tour .booking {
       grid-area: booking;
       justify-self: center;
@@ -573,8 +575,14 @@ header {
 .container-tour-HA .header-tour {
   background-image: url("../Multimedia/tours/central-park.jpeg"); }
 
+.container-tour-HA .main-tour .description ul li {
+  line-height: 2.5rem; }
+
 .container-tour-HP .header-tour {
   background-image: url("../Multimedia/tours/millenium-bridge.jpeg"); }
+
+.container-tour-HP .main-tour .description ul li {
+  line-height: 2.5rem; }
 
 .container-tour-GOT .header-tour {
   background-image: url("../Multimedia/tours/dubrovnik.jpeg"); }
@@ -582,8 +590,14 @@ header {
 .container-tour-EPL .header-tour {
   background-image: url("../Multimedia/tours/rome.jpeg"); }
 
+.container-tour-EPL .main-tour .description ul li {
+  line-height: 2.5rem; }
+
 .container-tour-AM .header-tour {
   background-image: url("../Multimedia/tours/montmartre.jpeg"); }
+
+.container-tour-AM .main-tour .description ul li {
+  line-height: 2.5rem; }
 
 @media only screen and (min-width: 576px) {
   header {

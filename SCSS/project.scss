@@ -754,6 +754,10 @@ header {
                 color: gray;
                 margin-bottom: 3rem;
             }
+
+            p {
+                line-height: 2rem;
+            }
         }
 
         .booking {
@@ -944,6 +948,16 @@ header {
     .header-tour {
         background-image: url('../Multimedia/tours/central-park.jpeg')
     }
+
+    .main-tour {
+        .description {
+            ul {
+                li {
+                    line-height: 2.5rem
+                }
+            }
+        }
+    }
 }
 
 .container-tour-HP {
@@ -951,6 +965,16 @@ header {
 
     .header-tour {
         background-image: url('../Multimedia/tours/millenium-bridge.jpeg')
+    }
+
+    .main-tour {
+        .description {
+            ul {
+                li {
+                    line-height: 2.5rem;
+                }
+            }
+        }
     }
 }
 
@@ -968,6 +992,16 @@ header {
     .header-tour {
         background-image: url('../Multimedia/tours/rome.jpeg')
     }
+
+    .main-tour {
+        .description {
+            ul {
+                li {
+                    line-height: 2.5rem;
+                }
+            }
+        }
+    }
 }
 
 .container-tour-AM {
@@ -975,6 +1009,16 @@ header {
 
     .header-tour {
         background-image: url('../Multimedia/tours/montmartre.jpeg')
+    }
+
+    .main-tour {
+        .description {
+            ul {
+                li {
+                    line-height: 2.5rem;
+                }
+            }
+        }
     }
 }
 
