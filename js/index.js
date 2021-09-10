@@ -158,8 +158,6 @@ const data = () => {
             compra.push(nuevo_tour);
             localStorage.setItem("compra", JSON.stringify(compra)); // Actualizo array
 
-            console.log(compra);
-
         } else {
             cantidad.style.border = "1px solid red";
         }

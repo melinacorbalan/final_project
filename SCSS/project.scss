@@ -327,7 +327,7 @@ header {
         border-bottom: 1px solid lightgrey;
     }
 
-    .detalle-carrito {
+    #detalle-carrito {
 
         .no-tours {
             text-align: center;
@@ -393,8 +393,6 @@ header {
         }
     }
 
-    
-
     #confirm-user {
 
         grid-area: confirmar;
@@ -402,7 +400,7 @@ header {
         height: 250px;
 
         .no-display {
-            display: none;    
+            display: none;
         }
 
         form {
@@ -497,6 +495,198 @@ header {
         }
 
     }
+
+    #data-user {
+
+        margin-top: 20px;
+
+        .modal-header {
+
+            display: flex;
+            flex-direction: column;
+            padding: 0.5rem;
+
+            .modal-title {
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 0.7rem;
+                margin: 0 0 0.3rem 0;
+            }
+
+        }
+
+        .modal-body {
+            .form-1 {
+                font-size: 0.7rem;
+                margin: 0 10px;
+
+                span {
+                    color: red;
+                }
+
+                .grid-form {
+                    margin-top: 10px;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    grid-template-rows: auto;
+                    grid-template-areas:
+                        "column1 column2"
+                        "modal-footer modal-footer";
+
+                    .column-1,
+                    .column-2 {
+                        display: flex;
+                        flex-direction: column;
+
+                        input {
+                            margin: 2px 10px 10px 0;
+                            height: 1.2rem;
+                        }
+
+                        select {
+                            margin: 2px 10px 10px 0;
+                            height: 1.2rem;
+                        }
+                    }
+
+                    .modal-footer {
+                        grid-area: modal-footer;
+                        margin-top: 0.5rem;
+                        padding: 0.5rem 0.5rem 0 0.5rem;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        button {
+                            font-size: 0.7rem;
+                            width: 6rem;
+                        }
+                    }
+                }
+
+
+            }
+
+            .form-2 {
+                display: none;
+                margin: 0 10px;
+
+                h5 {
+                    font-size: 1rem;
+                }
+
+                .accordion {
+                    .accordion-item {
+                        border: none;
+
+                        .accordion-header {
+                            margin: 0;
+
+                            .accordion-btn {
+                                font-size: 0.7rem;
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                width: 100%;
+                                padding: 1rem 1.25rem;
+                                color: #212529;
+                                background-color: #fff;
+                                border: 0;
+                                border-radius: 0;
+                                overflow-anchor: none;
+                                transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, border-radius .15s ease;
+                            
+                                img {
+                                    width: 5rem;
+                                    border-radius: 0.5rem;
+                                }
+
+                                label {
+                                    
+                                    .fa-credit-card {
+                                        color: rgb(116, 113, 113);
+                                    }
+                                    
+                                    .fa-money-bill {
+                                        color: #217721;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .accordion-body {
+                        font-size: 0.7rem;
+                        .container-icons {
+                            display: flex;
+                            justify-content: flex-end;
+
+                            i {
+                                padding: 0 0.2rem;
+                                font-size: 1rem;
+                            }
+
+                            .fa-cc-visa {
+                                color: navy;
+                            }
+                            .fa-cc-mastercard {
+                                color: red;
+                            }
+                            .fa-cc-amex {
+                                color: blue;
+                            }
+                        }
+
+                        .card-details {
+                            input {
+                                display: block;
+                                margin-bottom: 0.3rem;
+                            }
+                            label {
+                                margin-top: 0.3rem;
+                            }
+                        }
+                    }
+                }
+
+                .btn-checkout {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1rem;
+
+                    button {
+                        font-size: 0.7rem;
+                    }
+                }
+
+
+            }
+        }
+
+    }
+
+}
+
+.no-alert {
+    display: none;
+}
+
+.alert {
+    padding: 3rem 0;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.carrito-no-display {
+    display: none;
 }
 
 // TOUR
@@ -1011,7 +1201,7 @@ header {
             margin: 50px 100px;
         }
 
-        .detalle-carrito {
+        #detalle-carrito {
 
             .valor-total {
                 margin: 0 100px;
@@ -1406,7 +1596,7 @@ header {
             margin: 50px 200px;
         }
 
-        .detalle-carrito {
+        #detalle-carrito {
 
             p {
                 margin: 0 200px;
@@ -1442,58 +1632,58 @@ header {
         #confirm-user {
             grid-area: confirmar;
             margin: 50px 200px;
-    
+
             form {
                 .ingreso-email {
-    
+
                     label {
                         font-size: 1.3rem;
                     }
-    
+
                     input {
                         font-size: 1.3rem;
                     }
-    
+
                     .suscripcion {
                         margin-top: 10px;
-    
+
                         label {
                             font-size: 0.9rem;
                         }
                     }
-    
+
                 }
-    
+
                 .aceptar {
                     margin-top: 15px;
                     padding-top: 15px;
-    
+
                     .checkboxes {
-    
+
                         label {
                             font-size: 0.9em;
                         }
-    
-                        .checkboxTerms {  
+
+                        .checkboxTerms {
                             align-items: center;
                         }
-    
+
                         .checkboxPrivacy {
-                            align-items: center;    
+                            align-items: center;
                         }
                     }
-    
+
                     .btn-continuar {
                         button {
                             font-size: 1rem;
                             width: 12rem;
                         }
                     }
-    
-    
+
+
                 }
             }
-    
+
         }
 
 

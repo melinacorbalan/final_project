@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../CSS/style.css">
     <title>Un lugar de pelicula: tu compra</title>
@@ -76,39 +78,187 @@
 
     <!-- MAIN -->
 
-    <main class="carrito">
+    <main id="carrito" class="carrito">
         <h2>Carrito</h2>
-        <div class="detalle-carrito">
+        <div id="detalle-carrito">
         </div>
+
         <section id="confirm-user">
             <form>
                 <div class="ingreso-email">
-                    <label for="email">Ingresa tu email para recibir tickets y confirmación de compra<span>*</span></label>
-                    <input type="email" required>
+                    <label for="email">Ingresa tu email para recibir tickets y confirmación de
+                        compra<span>*</span></label>
+                    <input type="email" id="email">
                     <div class="suscripcion">
                         <input type="checkbox" name="checkbox" id="checkboxSubscribe">
-                        <label for="checkbox">Quiero suscribirme a los emails promociones y recibir ofertas y descuentos exclusivos.</label>
+                        <label for="checkbox">Quiero suscribirme a los emails promociones y recibir ofertas y descuentos
+                            exclusivos.</label>
                     </div>
                 </div>
-                
                 <div class="aceptar">
                     <div class="checkboxes">
                         <div class="checkboxTerms">
                             <label for="checkboxTerms">Acepto los Términos y Condiciones<span>*</span></label>
-                            <input type="checkbox" name="checkboxTerms" required>
+                            <input type="checkbox" name="checkboxTerms">
                         </div>
                         <div class="checkboxPrivacy">
-                        <label for="checkboxPrivacy">Acepto la Política de Privacidad<span>*</span></label>
-                        <input type="checkbox" name="checkboxPrivacy" required>
+                            <label for="checkboxPrivacy">Acepto la Política de Privacidad<span>*</span></label>
+                            <input type="checkbox" name="checkboxPrivacy">
                         </div>
                     </div>
                     <div class="btn-continuar">
-                        <button id="btn-continue" class="btn btn-danger" data-bs-target="#exampleModal">Continuar</button>
+                        <button id="btn-continue" class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#modal-user">Continuar</button>
                     </div>
                 </div>
             </form>
         </section>
+
+        <section id="data-user">
+            <div class="modal fade" id="modal-user" data-bs-backdrop="static" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        </div>
+                        <div class="modal-body">
+                            <form action="" class="form-1">
+                                <div class="gender">
+                                    <label for="select-gender">Sexo:</label>
+                                    <div>
+                                        <input type="radio" name="gender" value="Mujer" class="gender">
+                                        <label for="gender">Mujer</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="gender" value="Hombre" class="gender">
+                                        <label for="gender">Hombre</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="gender" value="Otro" class="gender">
+                                        <label for="gender">Otro</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="gender" value="Prefiero no decirlo" class="gender">
+                                        <label for="gender">Prefiero no decirlo</label>
+                                    </div>
+                                </div>
+                                <div class="grid-form">
+                                    <div class="column-1">
+                                        <label for="nombre">Nombre<span>*</span></label>
+                                        <input type="text" name="nombre" id="nombre">
+                                        <label for="pais">País de residencia<span>*</span></label>
+                                        <select name="pais" id="country">
+                                            <option selected></option>
+                                        </select>
+                                    </div>
+                                    <div class="column-2">
+                                        <label for="apellido">Apellido<span>*</span></label>
+                                        <input type="text" name="apellido" id="apellido">
+                                        <label for="fuente">Como nos conociste<span>*</span></label>
+                                        <select name="fuente" id="fuente">
+                                            <option value="none" selected></option>
+                                            <option value="recomendacion">Recomendación</option>
+                                            <option value="google">Google.com</option>
+                                            <option value="website">Website</option>
+                                            <option value="civitatis">Civitatis</option>
+                                        </select>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button id="btn-volver" type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Atrás</button>
+                                        <button id="btn-confirm" class="btn btn-danger" type="button">Continuar</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <form action="" class="form-2">
+                                <h5>Elige el método de pago</h5>
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-btn collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                aria-expanded="false" aria-controls="collapseOne">
+                                                <label for="pago">Tarjeta de crédito <i class="fas fa-credit-card"></i></label>
+                                                <input type="radio" name="pago" id="credit-card"
+                                                    value="tarjeta de credito" class="pago">
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="container-icons">
+                                                    <i class="fab fa-cc-visa"></i>
+                                                    <i class="fab fa-cc-mastercard"></i>
+                                                    <i class="fab fa-cc-amex"></i>
+                                                </div>
+                                                <div class="card-details">
+                                                    <div class="card-name">
+                                                        <label for="name">Nombre en la tarjeta</label>
+                                                        <input type="text" name="name" id="name">
+                                                    </div>
+                                                    <div class="card-number">
+                                                        <label for="number">Número de la tarjeta</label>
+                                                        <input type="number" name="number" id="number" maxlength="16">
+                                                    </div>
+                                                    <div class="expiration">
+                                                        <label for="expiration">Mes y año de expiración</label>
+                                                        <input type="month" name="expiration" id="expiration">
+                                                    </div>
+                                                    <div class="CVV">
+                                                        <label for="cvv">CVV</label>
+                                                        <input type="text" name="cvv" id="cvv" maxlength="3">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-btn collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                <img src="../Multimedia/icons/paypal.png" alt="pay-pal">
+                                                <input type="radio" name="pago" class="pago" value="PayPal">
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-btn collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                <label for="pago">Efectivo <i class="fas fa-money-bill"></i></label>
+                                                <input type="radio" name="pago" class="pago" value="efectivo">
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body" id="pay-cash">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-checkout">
+                                    <button class="btn btn-secondary" id="btn-back-form">Atrás</button>
+                                    <button class="btn btn-warning" id="btn-checkout" data-bs-dismiss="modal">Finalizar compra</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <div id="alert" class="alert">
+        <h3>Muchas gracias por tu compra!</h3>
+        <p>Por favor presenta el código QR antes de comenzar el tour</p>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
