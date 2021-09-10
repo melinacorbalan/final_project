@@ -498,8 +498,6 @@ header {
 
     #data-user {
 
-        margin-top: 20px;
-
         .modal-header {
 
             display: flex;
@@ -598,18 +596,18 @@ header {
                                 border-radius: 0;
                                 overflow-anchor: none;
                                 transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, border-radius .15s ease;
-                            
+
                                 img {
                                     width: 5rem;
                                     border-radius: 0.5rem;
                                 }
 
                                 label {
-                                    
+
                                     .fa-credit-card {
                                         color: rgb(116, 113, 113);
                                     }
-                                    
+
                                     .fa-money-bill {
                                         color: #217721;
                                     }
@@ -620,6 +618,7 @@ header {
 
                     .accordion-body {
                         font-size: 0.7rem;
+
                         .container-icons {
                             display: flex;
                             justify-content: flex-end;
@@ -632,9 +631,11 @@ header {
                             .fa-cc-visa {
                                 color: navy;
                             }
+
                             .fa-cc-mastercard {
                                 color: red;
                             }
+
                             .fa-cc-amex {
                                 color: blue;
                             }
@@ -645,6 +646,7 @@ header {
                                 display: block;
                                 margin-bottom: 0.3rem;
                             }
+
                             label {
                                 margin-top: 0.3rem;
                             }
@@ -1686,8 +1688,126 @@ header {
 
         }
 
+        #data-user {
+            .modal-header {
+                padding: 1.5rem;
 
+                .modal-title {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                    margin: 0.3rem 0 0.3rem 0;
+                }
+
+            }
+
+            .modal-body {
+                .form-1 {
+                    font-size: 1rem;
+                    margin: 0 15px;
+
+                    .grid-form {
+                        margin-top: 20px;
+
+                        .column-1,
+                        .column-2 {
+                            input {
+                                margin: 5px 20px 20px 0;
+                                height: 1.5rem;
+                            }
+
+                            select {
+                                margin: 5px 20px 20px 0;
+                                height: 1.5rem;
+                            }
+                        }
+
+                        .modal-footer {
+                            margin-top: 1rem;
+                            padding: 1rem 1rem 0 1rem;
+    
+                            button {
+                                font-size: 1rem;
+                                width: 10rem;
+                            }
+                        }
+
+                    }
+                }
+
+                .form-2 {
+                    margin: 0 10px;
+    
+                    h5 {
+                        font-size: 1.2rem;
+                        margin-bottom: 2rem;
+                    }
+    
+                    .accordion {
+                        .accordion-item {    
+                            .accordion-header {
+    
+                                .accordion-btn {
+                                    font-size: 1rem;
+                                    
+                                    img {
+                                        width: 6rem;
+                                    }
+                                }
+                            }
+                        }
+    
+                        .accordion-body {
+                            font-size: 1rem;
+    
+                            .container-icons {
+                                display: flex;
+                                justify-content: flex-end;
+    
+                                i {
+                                    padding: 0 0.3rem;
+                                    font-size: 1.8rem;
+                                }
+                            }
+    
+                            .card-details {
+                                input {
+                                    margin-bottom: 0.5rem;
+                                    margin-top: 0.3rem;
+                                }
+    
+                                label {
+                                    margin-top: 0.5rem;
+                                }
+                            }
+                        }
+                    }
+    
+                    .btn-checkout {
+
+                        margin-top: 1.8rem;
+    
+                        button {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 
+    .alert {
+        padding: 6rem 0;
+        h3 {
+            font-size: 2.3rem;
+        }
+        p {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 3rem;
+        }
+    }
 
 }
