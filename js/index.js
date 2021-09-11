@@ -123,11 +123,11 @@ classIdiomas[1].appendChild(printEN_form);
 
 //DATOS DEL INPUT
 
-let dia = document.querySelector('#date').value;
+let dia = document.querySelector('#date');
 
-let horario = document.querySelector('#horario').value;
+let horario = document.querySelector('#horario');
 
-let idioma = document.querySelector('#idioma').value;
+let idioma = document.querySelector('#idioma');
 
 let cantidad = document.querySelector('#cantidad');
 
@@ -150,34 +150,32 @@ const data = () => {
 
     if (JSON.parse(localStorage.getItem("compra") != null)) {
 
-        if ((document.querySelector('#cantidad').value) > 0) {
+        if (cantidad.value > 0 && dia.value !== null) {
 
             compra = JSON.parse(localStorage.getItem("compra")) //actualizo con la informacion del local mi array
             let id = compra.length + 1
-            let nuevo_tour = new TOUR(locacion, name_tour, dia, horario, idioma, tickets, precioFinal, id); // Creo nuevo tour
+            let nuevo_tour = new TOUR(locacion, name_tour, dia.value, horario.value, idioma.value, tickets, precioFinal, id); // Creo nuevo tour
             compra.push(nuevo_tour);
             localStorage.setItem("compra", JSON.stringify(compra)); // Actualizo array
 
         } else {
             cantidad.style.border = "1px solid red";
+            dia.style.border = "1px solid red";
         }
 
     } else {
 
-        if ((document.querySelector('#cantidad').value) > 0) {
-
+        if (cantidad.value > 0 && dia.value !== null) {
 
             let id = 1;
-            let nuevo_tour = new TOUR(locacion, name_tour, dia, horario, idioma, tickets, precioFinal, id);
+            let nuevo_tour = new TOUR(locacion, name_tour, dia.value, horario.value, idioma.value, tickets, precioFinal, id);
             compra.push(nuevo_tour);
 
             localStorage.setItem("compra", JSON.stringify(compra));
 
-            console.log(compra);
-
-
         } else {
             cantidad.style.border = "1px solid red";
+            dia.style.border = "1px solid red";
         }
     }
 
@@ -187,7 +185,7 @@ const data = () => {
 
 const closeModal = () => {
 
-    if ((document.querySelector('#cantidad').value) > 0) {
+    if (cantidad.value > 0 && dia.value != null) {
 
         btnCarrito.setAttribute("data-bs-dismiss", "modal");
         btnCarrito.setAttribute("data-bs-toggle", "modal");
