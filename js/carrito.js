@@ -70,9 +70,39 @@ const deleteTour = (id) => {
     })
 }
 
-$("#btn-continue").on("click", (e) => {
+// HABILITAR - DESAHABILITAR BOTON CON CHECKBOX
+
+const checkbox_checked = () => {
+    let checkbox1 = document.querySelector('#checkboxTerms').checked;
+    let checkbox2 = document.querySelector('#checkboxPrivacy').checked;
+    let btn = document.querySelector('#btn-continue');
+    let email = document.querySelector('#email').value;
+
+    if ((checkbox1 == true) && (checkbox2 == true) && (email != "")) {
+        btn.toggleAttribute("disabled");
+    } else {
+        document.querySelector('#email').style.border = "1px solid red"
+    }
+
+    document.querySelector('#email').addEventListener("focusout", () => {
+        let btn = document.querySelector('#btn-continue');
+        let email = document.querySelector('#email').value;
+    
+        if (email != "") {
+            btn.toggleAttribute("disabled");
+        }
+    })
+}
+
+(document.querySelector('#checkboxTerms')), (document.querySelector('#checkboxPrivacy'))
+.addEventListener("click", () => {
+    checkbox_checked()
+})
+
+document.querySelector('#btn-continue').addEventListener("click", (e) => {
     e.preventDefault();
 })
+
 
 
 // IMPRIMIR NOMBRE TOUR EN MODAL
@@ -97,7 +127,7 @@ $(window).on("load", () => {
 });
 
 
-// AJAX
+// API
 
 const URL = "https://restcountries.eu/rest/v2/all";
 
@@ -116,28 +146,27 @@ $.get(URL, (data, status) => {
 
 
 // ESCONDER FORM ANTERIOR AL CONTINUAR
-$("#btn-confirm").on("click", () => {
+$("#btn-confirm").click(() => {
     $(".form-1").hide();
 
     $(".form-2").fadeIn("slow", "linear");
 })
 
 // MOSTRAR EL FORM ANTERIOR AL VOLVER
-$("#btn-back-form").on("click", (e) => {
+$("#btn-back-form").click((e) => {
 
     e.preventDefault();
 
     $(".form-1").fadeIn("fast", "linear")
 
     $(".form-2").hide();
-})
+});
 
-$("#btn-volver").on("click", () => {
+$("#btn-volver").click(() => {
     location.reload();
-})
+});
 
-
-$("#btn-checkout").on("click", (e) => {
+$("#btn-checkout").click((e) => {
 
     e.preventDefault();
 
@@ -152,8 +181,8 @@ $("#btn-checkout").on("click", (e) => {
     $("#carrito").addClass("carrito-no-display");
 
     localStorage.clear();
+})
 
-});
 
 const reload = () => {
 
@@ -165,5 +194,3 @@ const reload = () => {
 };
 
 reload();
-
-

@@ -84,13 +84,13 @@
         </div>
 
         <section id="confirm-user">
-            <form>
+            <form name="form-email">
                 <div class="ingreso-email">
                     <label for="email">Ingresa tu email para recibir tickets y confirmación de
                         compra<span>*</span></label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" name="email" required> 
                     <div class="suscripcion">
-                        <input type="checkbox" name="checkbox" id="checkboxSubscribe">
+                        <input type="checkbox" name="checkboxSubscribe" id="checkboxSubscribe">
                         <label for="checkbox">Quiero suscribirme a los emails promociones y recibir ofertas y descuentos
                             exclusivos.</label>
                     </div>
@@ -99,16 +99,16 @@
                     <div class="checkboxes">
                         <div class="checkboxTerms">
                             <label for="checkboxTerms">Acepto los Términos y Condiciones<span>*</span></label>
-                            <input type="checkbox" name="checkboxTerms">
+                            <input type="checkbox" name="checkboxTerms" id="checkboxTerms">
                         </div>
                         <div class="checkboxPrivacy">
                             <label for="checkboxPrivacy">Acepto la Política de Privacidad<span>*</span></label>
-                            <input type="checkbox" name="checkboxPrivacy">
+                            <input type="checkbox" name="checkboxPrivacy" id="checkboxPrivacy">
                         </div>
                     </div>
                     <div class="btn-continuar">
-                        <button id="btn-continue" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#modal-user">Continuar</button>
+                        <button id="btn-continue" class="btn btn-danger" 
+                            data-bs-target="#modal-user" data-bs-toggle="modal" disabled>Continuar</button>
                     </div>
                 </div>
             </form>
