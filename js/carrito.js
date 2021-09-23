@@ -94,6 +94,7 @@ const checkbox_checked = () => {
     })
 }
 
+
 (document.querySelector('#checkboxTerms')), (document.querySelector('#checkboxPrivacy'))
 .addEventListener("click", () => {
     checkbox_checked()
@@ -129,7 +130,7 @@ $(window).on("load", () => {
 
 // API
 
-const URL = "https://restcountries.eu/rest/v2/all";
+const URL = "https://restcountries.com/v3/all";
 
 $.get(URL, (data, status) => {
     if (status === "success") {
@@ -137,7 +138,7 @@ $.get(URL, (data, status) => {
         data.forEach(e => {
 
             $("#country").append(`
-           <option value="${e.name}">${e.name}</option>
+           <option value="${e.name.common}">${e.name.common}</option>
            `)
 
         });
@@ -165,6 +166,10 @@ $("#btn-back-form").click((e) => {
 $("#btn-volver").click(() => {
     location.reload();
 });
+
+
+
+// API QR
 
 $("#btn-checkout").click((e) => {
 
